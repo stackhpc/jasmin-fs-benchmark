@@ -1,0 +1,30 @@
+- hosts: localhost
+  become: no
+  gather_facts: no
+  vars:
+    smatrix_template_src: "{{ item.template_file }}"
+    smatrix_dimensions:
+      template_file:
+        - io500.sh.j2
+        - config.ini.j2
+      nodes: [1]
+      ntasks_per_node: [2]
+      filesystem:
+        - pansas
+        - quobyte
+        - pure
+      stonewall: [300]
+    smatrix_template_dest_dir: sbatch
+    smatrix_template_suffix: ".{{ [item.nodes, item.ntasks_per_node, item.filesystem] | join('-') }}" # don't want template_file in there
+    smatrix_submit_when: "item.template_file != 'config.ini.j2'"
+    filesystems:
+      pansas:
+        mountpoint: /work/scratch-pw2/{{ lookup('env', 'USER') }}
+      quobyte:
+        mountpoint: /work/scratch-nopw/{{ lookup('env', 'USER') }}
+      pure:
+        mountpoint: /work/stackhpc-pure/{{ lookup('env', 'USER') }}
+  tasks:
+    - name: Run test matrix
+      import_role:
+        name: stackhpc.smatrix

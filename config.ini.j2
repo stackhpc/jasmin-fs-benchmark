@@ -1,0 +1,8 @@
+[global]
+datadir = ./io500
+resultdir = {{ lookup('env', 'PWD') }}/results/{{ item.filesystem }}
+timestamp-datadir = FALSE
+timestamp-resultdir = TRUE
+
+[debug]
+stonewall-time = {{ item.stonewall }}

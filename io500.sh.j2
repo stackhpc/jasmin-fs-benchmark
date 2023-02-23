@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+#SBATCH --job-name=test
+#SBATCH --reservation=ssummers_29
+#SBATCH --partition=par-single
+#SBATCH --nodes={{ item.nodes }}
+#SBATCH --ntasks-per-node={{ item.ntasks_per_node }}
+#SBATCH --dependency=singleton
+
+export IO500_CONTAINER_TAG="bb942db"
+
+echo SLURM_JOB_ID: $SLURM_JOB_ID
+echo dimensions: '{{ item | to_json }}'
+echo SLURM_JOB_NODELIST: $SLURM_JOB_NODELIST
+
+mkdir -p {{ filesystems[item.filesystem].mountpoint }}/io500
+cd !$
+module load eb/OpenMPI/gcc/4.0.0
+timestamp=$(date +%Y.%m.%d-%H.%M.%S)
+mpirun singularity exec docker://ghcr.io/stackhpc/io500-singularity:${IO500_CONTAINER_TAG} /io500 ${SLURM_SUBMIT_DIR}/{{ smatrix_template_dest_dir }}/config{{ smatrix_template_suffix }}.ini --timestamp $timestamp
