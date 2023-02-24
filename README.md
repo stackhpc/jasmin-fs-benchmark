@@ -9,30 +9,19 @@ pip install -r requirements.txt
 ansible-galaxy role install -fr requirements.yml -p ansible/roles
 ```
 
-# Run
-
-```
-. venv/bin/activate # if not already
-# template and submit runs
-ansible-playbook run.yml
-
-# once finished, postprocess:
-python3 read_summary.py 'runs/*/result_summary.txt' > table.txt
-```
-
 # IO500
 
-Everything goes to `runs/`, looks something like:
+
 ```
-runs
-├── pansas
-│   ├── config.ini
-│   ├── config-orig.ini
-│   ├── config.pansas-1-2.ini # <- i500 file written by smatrix
-│   ├── dimensions.pansas-1-2.json <- smatrix item file
-│   ├── io500.pansas-1-2.sh <- smatrix sbatch script
-│   ├── ior-easy-write.csv
-│   ├── ior-easy-write.txt
-│   ├── result_summary.txt <- summary of interest
-│   └── result.txt
+# from repo root:
+. venv/bin/activate # if not already
+# template and submit runs
+ansible-playbook io500/run.yml
+
+# once finished, postprocess:
+python3 read_summary.py 'io500/runs/*/result_summary.txt' > io500/table.txt
 ```
+
+- `sbatch` output goes to `io500/slurm-<jobid>*.out` (NB: From Slurm's point of view, the submission directory is the playbook directory, which is perhaps unexpected)
+- Everything else (templates, outputs) goes to `/runs/<filesystem_name>/`. Probably this needs changing to add parameterisation into that subdirectory name.
+- For summary of summary results, see `io500/table.txt`

@@ -19,7 +19,7 @@
           mountpoint: /work/stackhpc-pure/
       stonewall: [30] # TODO: change to 300 for a proper run
       time: ['2:0:0'] # job time, hours:minutes:seconds
-    smatrix_template_dest_dir: "runs/{{ item.filesystem.name }}"
+    smatrix_template_dest_dir: "{{ lookup('env', 'PWD') }}/io500/runs/{{ item.filesystem.name }}"
     smatrix_template_suffix: ".{{ [item.filesystem.name, item.nodes, item.ntasks_per_node] | join('-') }}" # don't want template_file in there
     smatrix_exclude_submit:
       - template_file: config.ini.j2

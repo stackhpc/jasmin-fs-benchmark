@@ -20,4 +20,4 @@ echo SLURM_JOB_NODELIST: $SLURM_JOB_NODELIST
 mkdir -p {{ item.filesystem.mountpoint }}{{ lookup('env', 'USER') }}
 module load eb/OpenMPI/gcc/4.0.0
 timestamp=$(date +%Y.%m.%d-%H.%M.%S)
-mpirun singularity exec --bind {{ item.filesystem.mountpoint }}:{{ item.filesystem.mountpoint }} docker://ghcr.io/stackhpc/io500-singularity:${IO500_CONTAINER_TAG} /io500 ./{{ smatrix_template_dest_dir }}/config{{ smatrix_template_suffix }}.ini --timestamp $timestamp
+mpirun singularity exec --bind {{ item.filesystem.mountpoint }}:{{ item.filesystem.mountpoint }} docker://ghcr.io/stackhpc/io500-singularity:${IO500_CONTAINER_TAG} /io500 {{ smatrix_template_dest_dir }}/config{{ smatrix_template_suffix }}.ini --timestamp $timestamp
