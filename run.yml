@@ -7,6 +7,7 @@
       template_file:
         - io500.sh.j2
         - config.ini.j2
+        - dimensions.json.j2
       nodes: [1]
       ntasks_per_node: [2]
       filesystem:
@@ -16,11 +17,13 @@
           mountpoint: /work/scratch-nopw/
         - name: pure
           mountpoint: /work/stackhpc-pure/
-      stonewall: [1]
-    smatrix_template_dest_dir: "results/{{ item.filesystem.name }}"
+      stonewall: [30] # TODO: change to 300 for a proper run
+      time: ['2:0:0'] # job time, hours:minutes:seconds
+    smatrix_template_dest_dir: "runs/{{ item.filesystem.name }}"
     smatrix_template_suffix: ".{{ [item.filesystem.name, item.nodes, item.ntasks_per_node] | join('-') }}" # don't want template_file in there
     smatrix_exclude_submit:
       - template_file: config.ini.j2
+      - template_file: dimensions.json.j2
 
   tasks:
     - name: Run test matrix
