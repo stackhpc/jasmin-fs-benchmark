@@ -1,5 +1,5 @@
 [global]
-datadir = {{ item.filesystem.mountpoint }}/{{ lookup('env', 'USER') }}/io500
+datadir = {{ item.filesystem.mountpoint }}/{{ lookup('env', 'USER') }}/io500/{{ smatrix_template_suffix }}
 resultdir = ./results/{{ item.filesystem.name }}
 timestamp-datadir = FALSE
 timestamp-resultdir = TRUE
