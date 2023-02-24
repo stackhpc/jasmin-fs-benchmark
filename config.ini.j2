@@ -1,6 +1,6 @@
 [global]
-datadir = {{ filesystems[item.filesystem].mountpoint }}/io500
-resultdir = ./results/{{ item.filesystem }}
+datadir = {{ item.filesystem.mountpoint }}/{{ lookup('env', 'USER') }}/io500
+resultdir = ./results/{{ item.filesystem.name }}
 timestamp-datadir = FALSE
 timestamp-resultdir = TRUE
 
