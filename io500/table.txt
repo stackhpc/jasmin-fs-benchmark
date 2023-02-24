@@ -1,0 +1,17 @@
+fsname              -      runs                                  runs                                   runs                              
+path                -      io500/runs/pansas/result_summary.txt  io500/runs/quobyte/result_summary.txt  io500/runs/pure/result_summary.txt
+ior-easy-write      GiB/s  1.499828                              0.494224                               1.373586                          
+mdtest-easy-write   kIOPS  0.848059                              0.402185                               2.839452                          
+ior-hard-write      GiB/s  0.208796                              0.388591                               1.080965                          
+mdtest-hard-write   kIOPS  0.402667                              0.227586                               1.489737                          
+find                kIOPS  317.44043                             1.929709                               10.256281                         
+ior-easy-read       GiB/s  12.675014                             0.842119                               1.541244                          
+mdtest-easy-stat    kIOPS  123.347275                            2.453827                               15.473307                         
+ior-hard-read       GiB/s  5.0698                                0.775098                               1.511967                          
+mdtest-hard-stat    kIOPS  250.432977                            1.461586                               17.777006                         
+mdtest-easy-delete  kIOPS  5.966518                              0.475905                               3.261692                          
+mdtest-hard-read    kIOPS  130.286733                            0.824416                               5.384367                          
+mdtest-hard-delete  kIOPS  3.09555                               0.378915                               1.557033                          
+bandwidth-score     GiB/s  2.118                                 0.595027                               1.363862                          
+iops-score          kiops  17.309195                             0.74429                                4.888846                          
+total-score         -      6.054822                              0.665487                               2.582191                          
