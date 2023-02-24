@@ -1,0 +1,30 @@
+git describe: heads/main-0-gdbcc0ce-dirty
+SLURM_JOB_ID: 42969457
+dimensions: {"template_file": "io500.sh.j2", "nodes": 1, "ntasks_per_node": 2, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 30, "time": "2:0:0"}
+SLURM_JOB_NODELIST: host823
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+ERROR INVALID (src/phase_dbg.c:13) stonewall-time < 300s
+WARNING: The file "/work/stackhpc-pure//steveb/io500/.pure-1-2/ior-easy/ior_file_easy.00000001" exists already and will be overwritten
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-easy-write        1.384046 GiB/s : time 58.267 seconds [INVALID]
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-easy-write        2.566742 kIOPS : time 34.935 seconds [INVALID]
+[      ]            timestamp        0.000000 kIOPS : time 0.258 seconds
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-hard-write        1.003744 GiB/s : time 50.167 seconds [INVALID]
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-hard-write        1.396592 kIOPS : time 32.079 seconds [INVALID]
+[RESULT]                 find       10.071862 kIOPS : time 12.824 seconds
+[RESULT]        ior-easy-read        1.550572 GiB/s : time 52.703 seconds
+[RESULT]     mdtest-easy-stat       17.529535 kIOPS : time 6.384 seconds
+[RESULT]        ior-hard-read        1.457564 GiB/s : time 35.060 seconds
+[RESULT]     mdtest-hard-stat       17.740448 kIOPS : time 4.355 seconds
+[RESULT]   mdtest-easy-delete        3.296220 kIOPS : time 28.178 seconds
+[RESULT]     mdtest-hard-read        5.024521 kIOPS : time 10.134 seconds
+[RESULT]   mdtest-hard-delete        1.601204 kIOPS : time 28.968 seconds
+[SCORE ] Bandwidth 1.331138 GiB/s : IOPS 4.833166 kiops : TOTAL 2.536457 [INVALID]
+
+The result files are stored in the directory: ./runs/pure
+[1677249570.570403] [host823:158114:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x1954280 was not matched

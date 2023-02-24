@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Feb 24 14:30:45 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1434497467 -k -e -o /work/scratch-nopw//steveb/io500/.quobyte-1-2/ior-hard/file -O stoneWallingStatusFile=./runs/quobyte/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./runs/quobyte/ior-hard-read.csv
+Machine             : Linux host823.jc.rl.ac.uk
+TestID              : 0
+StartTime           : Fri Feb 24 14:30:45 2023
+Path                : /work/scratch-nopw//steveb/io500/.quobyte-1-2/ior-hard/file
+FS                  : 90.0 TiB   Used FS: 37.1%   Inodes: 184320.0 Mi   Used Inodes: 37.1%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /work/scratch-nopw//steveb/io500/.quobyte-1-2/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 875.59 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 940160000000
+WARNING: Stat() of aggregate file size      = 57188616576
+WARNING: Using actual aggregate bytes moved = 57188616576
+read      960.48     21425      56.78       45.91      45.91      0.000705   56.78      0.000009   56.78      0   

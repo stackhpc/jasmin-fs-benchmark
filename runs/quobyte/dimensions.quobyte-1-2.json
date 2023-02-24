@@ -1,0 +1,1 @@
+{"template_file": "dimensions.json.j2", "nodes": 1, "ntasks_per_node": 2, "filesystem": {"name": "quobyte", "mountpoint": "/work/scratch-nopw/"}, "stonewall": 30, "time": "2:0:0"}
