@@ -1,5 +1,5 @@
 ---
 roles:
   - src: https://github.com/stackhpc/smatrix
-    version: 87b917758328c57695d283122f43375e3423b43e
+    version: 9fd39722840efb878ac470dae265595d3c8071e5
     name: stackhpc.smatrix

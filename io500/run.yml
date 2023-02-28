@@ -2,28 +2,23 @@
   become: no
   gather_facts: no
   vars:
-    smatrix_template_src: "{{ item.template_file }}"
+    smatrix_template_src: '*.j2'
     smatrix_dimensions:
-      template_file:
-        - io500.sh.j2
-        - config.ini.j2
-        - dimensions.json.j2
       nodes: [1]
       ntasks_per_node: [2]
       filesystem:
         - name: pansas
-          mountpoint: /work/scratch-pw2/
+          mountpoint: /gws/pw/j07/perf_testing/stackhpc
         - name: quobyte
-          mountpoint: /work/scratch-nopw/
+          mountpoint: /gws/nopw/j04/perf_testing/stackhpc
         - name: pure
           mountpoint: /work/stackhpc-pure/
-      stonewall: [300]
+      stonewall: [30]
       time: ['2:0:0'] # job time, hours:minutes:seconds
-    smatrix_template_dest_dir: "{{ lookup('env', 'PWD') }}/io500/runs/{{ item.filesystem.name }}"
-    smatrix_template_suffix: ".{{ [item.filesystem.name, item.nodes, item.ntasks_per_node] | join('-') }}" # don't want template_file in there
-    smatrix_exclude_submit:
-      - template_file: config.ini.j2
-      - template_file: dimensions.json.j2
+    run_description: "{{ [item.filesystem.name, item.nodes, item.ntasks_per_node] | join('-') }}" # only want fs.name
+    smatrix_template_suffix: ".{{ run_description }}"
+    smatrix_template_dest_dir: "{{ lookup('env', 'PWD') }}/io500/runs/{{ run_description }}"
+    smatrix_submit_src: "{{ smatrix_template_dest_dir }}/io500{{smatrix_template_suffix }}.sh"
 
   tasks:
     - name: Run test matrix
