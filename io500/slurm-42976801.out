@@ -1,3 +1,9 @@
+git describe: heads/main-0-gb571edf-dirty
+SLURM_JOB_ID: 42976801
+dimensions: {"template_file": "io500.sh.j2", "nodes": 1, "ntasks_per_node": 2, "filesystem": {"name": "quobyte", "mountpoint": "/work/scratch-nopw/"}, "stonewall": 300, "time": "2:0:0"}
+SLURM_JOB_NODELIST: host823
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
 IO500 version io500-isc22_v1 (standard)
 [RESULT]       ior-easy-write        0.473244 GiB/s : time 381.511 seconds
 [RESULT]    mdtest-easy-write        0.320963 kIOPS : time 317.606 seconds
@@ -13,3 +19,6 @@ IO500 version io500-isc22_v1 (standard)
 [RESULT]     mdtest-hard-read        1.966026 kIOPS : time 41.214 seconds
 [RESULT]   mdtest-hard-delete        0.428830 kIOPS : time 185.390 seconds
 [SCORE ] Bandwidth 0.596956 GiB/s : IOPS 0.958652 kiops : TOTAL 0.756487
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/quobyte
+[1677262372.917926] [host823:182251:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x193f9c0 was not matched

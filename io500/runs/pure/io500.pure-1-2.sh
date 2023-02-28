@@ -12,9 +12,9 @@ set -euo pipefail
 
 export IO500_CONTAINER_TAG="bb942db"
 
-echo git describe: heads/main-0-g2162fa3-dirty
+echo git describe: heads/main-0-gb571edf-dirty
 echo SLURM_JOB_ID: $SLURM_JOB_ID
-echo dimensions: '{"template_file": "io500.sh.j2", "nodes": 1, "ntasks_per_node": 2, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 30, "time": "2:0:0"}'
+echo dimensions: '{"template_file": "io500.sh.j2", "nodes": 1, "ntasks_per_node": 2, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "time": "2:0:0"}'
 echo SLURM_JOB_NODELIST: $SLURM_JOB_NODELIST
 
 mkdir -p /work/stackhpc-pure/steveb

@@ -1,33 +1,33 @@
--- started at 02/24/2023 16:25:43 --
+-- started at 02/24/2023 18:18:41 --
 
 mdtest-3.4.0+dev was launched with 2 total task(s) on 1 node(s)
-Command line used: ./mdtest '--dataPacketType=timestamp' '-n' '1000000' '-u' '-L' '-F' '-P' '-G' '-548322231' '-N' '1' '-d' '/work/stackhpc-pure//steveb/io500/.pure-1-2/mdtest-easy' '-x' '/home/users/steveb/io500-lotus/io500/runs/pure/mdtest-easy.stonewall' '-C' '-Y' '-W' '30' '--saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/pure/mdtest-easy-write.csv' '-a' 'POSIX'
+Command line used: ./mdtest '--dataPacketType=timestamp' '-n' '1000000' '-u' '-L' '-F' '-P' '-G' '-548314375' '-N' '1' '-d' '/work/stackhpc-pure//steveb/io500/.pure-1-2/mdtest-easy' '-x' '/home/users/steveb/io500-lotus/io500/runs/pure/mdtest-easy.stonewall' '-C' '-Y' '-W' '300' '--saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/pure/mdtest-easy-write.csv' '-a' 'POSIX'
 Path                : /work/stackhpc-pure//steveb/io500/.pure-1-2/mdtest-easy
-FS                  : 100.0 TiB   Used FS: 0.1%   Inodes: 204800.0 Mi   Used Inodes: 0.1%
+FS                  : 100.0 TiB   Used FS: 0.4%   Inodes: 204800.0 Mi   Used Inodes: 0.4%
 Nodemap: 11
 V-0: Rank   0 Line  2479 Shifting ranks by 1 for each phase.
 2 tasks, 2000000 files
-Continue stonewall hit min: 42678 max: 42684 avg: 42681.0 
+Continue stonewall hit min: 344497 max: 344537 avg: 344517.0 
 
 
 SUMMARY rate: (of 1 iterations)
    Operation                     Max            Min           Mean        Std Dev
    ---------                     ---            ---           ----        -------
-   File creation                2839.452       2839.452       2839.452          0.000
+   File creation                2295.420       2295.420       2295.420          0.000
    File stat                       0.000          0.000          0.000          0.000
    File read                       0.000          0.000          0.000          0.000
    File removal                    0.000          0.000          0.000          0.000
-   Tree creation                 429.744        429.744        429.744          0.000
+   Tree creation                 391.552        391.552        391.552          0.000
    Tree removal                    0.000          0.000          0.000          0.000
 
 SUMMARY time: (of 1 iterations)
    Operation                     Max            Min           Mean        Std Dev
    ---------                     ---            ---           ----        -------
-   File creation                  30.065         30.065         30.065          0.000
+   File creation                 300.195        300.195        300.195          0.000
    File stat                       0.000          0.000          0.000          0.000
    File read                       0.000          0.000          0.000          0.000
    File removal                    0.000          0.000          0.000          0.000
-   Tree creation                   0.002          0.002          0.002          0.000
+   Tree creation                   0.003          0.003          0.003          0.000
    Tree removal                    0.000          0.000          0.000          0.000
--- finished at 02/24/2023 16:26:14 --
+-- finished at 02/24/2023 18:23:42 --
 

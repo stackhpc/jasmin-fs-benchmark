@@ -1,9 +1,9 @@
 IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
-Began               : Fri Feb 24 16:14:39 2023
-Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1434489737 -k -e -o /work/scratch-pw2//steveb/io500/.pansas-1-2/ior-hard/file -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/pansas/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/pansas/ior-hard-read.csv
+Began               : Fri Feb 24 17:30:00 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1434485771 -k -e -o /work/scratch-pw2//steveb/io500/.pansas-1-2/ior-hard/file -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/pansas/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/pansas/ior-hard-read.csv
 Machine             : Linux host824.jc.rl.ac.uk
 TestID              : 0
-StartTime           : Fri Feb 24 16:14:39 2023
+StartTime           : Fri Feb 24 17:30:00 2023
 Path                : /work/scratch-pw2//steveb/io500/.pansas-1-2/ior-hard/file
 FS                  : 1182.3 TiB   Used FS: 10.7%   Inodes: 147.8 Mi   Used Inodes: 10.7%
 
@@ -30,6 +30,6 @@ Results:
 access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
 ------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
 WARNING: Expected aggregate file size       = 940160000000
-WARNING: Stat() of aggregate file size      = 7140515200
-WARNING: Using actual aggregate bytes moved = 7140515200
-read      5191       115806     1.31        45.91      45.91      0.000027   1.31       0.000012   1.31       0   
+WARNING: Stat() of aggregate file size      = 15000064768
+WARNING: Using actual aggregate bytes moved = 15000064768
+read      5681       126714     2.52        45.91      45.91      0.000023   2.52       0.000013   2.52       0   

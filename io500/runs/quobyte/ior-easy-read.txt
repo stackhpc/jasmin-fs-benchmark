@@ -1,11 +1,11 @@
 IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
-Began               : Fri Feb 24 16:21:01 2023
-Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1434500216 -k -e -o /work/scratch-nopw//steveb/io500/.quobyte-1-2/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/quobyte/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/quobyte/ior-easy-read.csv
-Machine             : Linux host824.jc.rl.ac.uk
+Began               : Fri Feb 24 17:58:55 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1434495803 -k -e -o /work/scratch-nopw//steveb/io500/.quobyte-1-2/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/quobyte/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/quobyte/ior-easy-read.csv
+Machine             : Linux host823.jc.rl.ac.uk
 TestID              : 0
-StartTime           : Fri Feb 24 16:21:01 2023
+StartTime           : Fri Feb 24 17:58:55 2023
 Path                : /work/scratch-nopw//steveb/io500/.quobyte-1-2/ior-easy/ior_file_easy.00000000
-FS                  : 90.0 TiB   Used FS: 36.1%   Inodes: 184320.0 Mi   Used Inodes: 36.1%
+FS                  : 90.0 TiB   Used FS: 35.9%   Inodes: 184320.0 Mi   Used Inodes: 35.9%
 
 Options: 
 api                 : POSIX
@@ -30,6 +30,6 @@ Results:
 access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
 ------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
 WARNING: Expected aggregate file size       = 20803747840000
-WARNING: Stat() of aggregate file size      = 58883833856
-WARNING: Using actual aggregate bytes moved = 58883833856
-read      862.33     431.17     0.000013    10158080000 2048.00    0.000919   65.12      0.000009   65.12      0   
+WARNING: Stat() of aggregate file size      = 193852342272
+WARNING: Using actual aggregate bytes moved = 193852342272
+read      873.38     436.69     0.000043    10158080000 2048.00    0.001096   211.67     0.000009   211.67     0   

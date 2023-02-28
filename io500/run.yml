@@ -17,7 +17,7 @@
           mountpoint: /work/scratch-nopw/
         - name: pure
           mountpoint: /work/stackhpc-pure/
-      stonewall: [30] # TODO: change to 300 for a proper run
+      stonewall: [300]
       time: ['2:0:0'] # job time, hours:minutes:seconds
     smatrix_template_dest_dir: "{{ lookup('env', 'PWD') }}/io500/runs/{{ item.filesystem.name }}"
     smatrix_template_suffix: ".{{ [item.filesystem.name, item.nodes, item.ntasks_per_node] | join('-') }}" # don't want template_file in there
