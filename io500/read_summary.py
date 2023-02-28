@@ -6,7 +6,7 @@
     NB: the quotes are important to avoid shell globbing.
 """
 
-import sys, json, pprint, glob
+import sys, json, pprint, glob, os, json
 
 
 def read_io500_summary(path):
@@ -31,12 +31,17 @@ def read_io500_summary(path):
             #   [SCORE ] Bandwidth 0.585873 GiB/s    : IOPS 4.148649 kiops     : TOTAL 1.559032 [INVALID]
                 score = line.split()
                 bw, bw_unit, iops, iops_unit, total = score[3], score[4], score[7], score[8], score[11]
-                data['score'] = {
-                    'bandwidth': float(bw),
-                    'iops': float(iops),
-                    'bandwidth_unit': bw_unit,
-                    'iops_unit': iops_unit,
-                    'total': float(total),
+                data['bandwidth-score'] = {
+                    'value': float(bw),
+                    'unit': bw_unit,
+                }
+                data['iops-score'] = {
+                    'value': float(iops),
+                    'unit': iops_unit,
+                }
+                data['total-score'] = {
+                    'value': float(total),
+                    'unit': '-',
                 }
 
     return data
@@ -54,19 +59,16 @@ def summarise(pattern):
 
     rows = []
     for path in glob.glob(pattern):
-        fsname = path.split('/')[1]
+        run_dir = os.path.dirname(path)
         results = read_io500_summary(path)
-        no_score = dict(((k, v) for (k, v) in results.items() if k != 'score'))
-        score_keys = ['bandwidth', 'iops', 'total']
         
-        header1 = ['fsname', 'path'] + list(no_score.keys()) + [s + '-score' for s in score_keys]
-        header2 = ['-', '-'] + [v['unit'] for v in no_score.values()] + ['GiB/s', 'kiops', '-']
+        header1 = ['run_dir', 'mountpoint'] + list(results.keys())
+        header2 = ['-', '-'] + [v['unit'] for v in results.values()]
         if not rows:
             rows.extend([header1, header2])
 
         # have to convert back to strings!
-        scores = [str(results['score'][k]) for k in score_keys]
-        values = [fsname, path] + [str(v['value']) for v in no_score.values()] + scores
+        values = [run_dir, mountpoint] + [str(v['value']) for v in results.values()]
         rows.append(values)
 
     cols = transpose(rows)
