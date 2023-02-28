@@ -1,0 +1,59 @@
+#!/usr/bin/bash
+#SBATCH --job-name=warp-benchmark-run
+#SBATCH --nodes={{ item.nodes }}
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task={{ item.threads }}
+#SBATCH --dependency=singleton
+#SBATCH --partition={{ partition }}
+#SBATCH --account={{ account }}
+
+# Check required env vars are set 
+if [[ -z $S3_ENDPOINT || -z $S3_ACCESS_KEY || -z $S3_SECRET_KEY ]]; then
+    echo "The environment variables S3_ENDPOINT, S3_ACCESS_KEY and S3_SECRET_KEY must be set."
+    exit 1
+fi
+
+# Print a message about the git status of the checked out repo version
+echo "Git repo local checkout status: {{ smatrix_git_describe }}"
+
+# Pull in docker image and build singularity image from it
+CONTAINER_FILENAME=warp.sif
+if [[ ! -f $CONTAINER_FILENAME ]]; then 
+    singularity build $CONTAINER_FILENAME docker://ghcr.io/stackhpc/s3-warp-singularity:latest
+fi
+
+# Benchmark config
+# ----------------
+# Number of concurrent threads to use of S3 requests
+THREADS_PER_NODE={{ item.threads }}
+# Number of test files to upload
+NUM_FILES_PER_NODE={{ item.num_files }}
+# Min/max size for any single test file
+MAX_FILE_SIZE={{ item.max_file_size }}
+MIN_FILE_SIZE={{ item.min_file_size }}
+# Duration for which the benchmark should run
+BENCHMARK_DURATION={{ item.duration }}
+# ----------------
+
+# Start a warp client on each job node
+srun --spread-job singularity run warp.sif client --no-color &
+
+#Unpack list of nodes which have a warp client running
+CLIENT_NODES=$(scontrol show hostname $SLURM_JOB_NODELIST | paste -d, -s)
+
+#FIXME: Remove for proper test runs
+echo $CLIENT_NODES
+sleep 30
+
+# Trigger benchmark run on all clients
+# singularity run warp.sif get \
+#     --host $S3_ENDPOINT \
+#     --access-key $S3_ACCESS_KEY \
+#     --secret-key $S3_SECRET_KEY \
+#     --concurrent $THREADS_PER_NODE \
+#     --objects $NUM_FILES_PER_NODE \
+#     --obj.size "$MIN_FILE_SIZE,$MAX_FILE_SIZE" \
+#     --obj.randsize \
+#     --duration $BENCHMARK_DURATION \
+#     --no-color \
+#     --warp-client $CLIENT_NODES

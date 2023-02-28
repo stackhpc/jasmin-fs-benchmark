@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+  gather_facts: no
+  vars:
+    smatrix_template_src: "s3-warp.sh.j2"
+    smatrix_dimensions:
+      nodes: [1, 2]
+      threads: [5, 10]
+      num_files: [100]
+      min_file_size: ["1KiB"]
+      max_file_size: ["10MiB"]
+      duration: ["1m"]
+    # Use this to produce sbatch files without submitting jobs
+    # smatrix_dryrun: true
+    partition: stackhpc
+    account: stackhpc
+  tasks:
+    - name: Run object storage benchmarks
+      import_role:
+        name: smatrix
