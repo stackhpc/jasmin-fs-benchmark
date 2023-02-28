@@ -4,17 +4,18 @@
   vars:
     smatrix_template_src: '*.j2'
     smatrix_dimensions:
-      nodes: [1]
-      ntasks_per_node: [2]
+      nodes: [1, 2]
+      ntasks_per_node: [2, 8, 16]
       filesystem:
-        - name: pansas
-          mountpoint: /gws/pw/j07/perf_testing/stackhpc
-        - name: quobyte
-          mountpoint: /gws/nopw/j04/perf_testing/stackhpc
+        # - name: pansas
+        #   mountpoint: /gws/pw/j07/perf_testing/stackhpc
+        # - name: quobyte
+        #   mountpoint: /gws/nopw/j04/perf_testing/stackhpc
         - name: pure
           mountpoint: /work/stackhpc-pure/
-      stonewall: [30]
+      stonewall: [30, 300]
       time: ['2:0:0'] # job time, hours:minutes:seconds
+      git_describe: [ "{{ smatrix_git_describe }}" ]
     run_description: "{{ [item.filesystem.name, item.nodes, item.ntasks_per_node] | join('-') }}" # only want fs.name
     smatrix_template_suffix: ".{{ run_description }}"
     smatrix_template_dest_dir: "{{ lookup('env', 'PWD') }}/io500/runs/{{ run_description }}"
