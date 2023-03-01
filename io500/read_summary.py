@@ -7,12 +7,12 @@
 """
 
 import sys, json, pprint, glob, os, json
-
+import pandas
 
 def read_io500_summary(path):
     """ Read a result_summary.txt file and return a dict.
     
-        For dict format see below.
+        Returns a dict with keys test name (or 'score-*') and value a tuple of (number, str unit).
     """
 
     data = {}
@@ -22,28 +22,15 @@ def read_io500_summary(path):
             #   [RESULT]       ior-easy-write        0.764612 GiB/s : time 34.035 seconds [INVALID]
                 result = line.split()
                 testname, value, unit, seconds = result[1], result[2], result[3], result[6]
-                data[testname] = {
-                    'value': float(value),
-                    'unit': unit,
-                    'seconds': float(seconds),
-                }
+                data[testname] = (float(value), unit)
             if line.startswith('[SCORE ]'):
             #   [SCORE ] Bandwidth 0.585873 GiB/s    : IOPS 4.148649 kiops     : TOTAL 1.559032 [INVALID]
                 score = line.split()
                 bw, bw_unit, iops, iops_unit, total = score[3], score[4], score[7], score[8], score[11]
-                data['bandwidth-score'] = {
-                    'value': float(bw),
-                    'unit': bw_unit,
-                }
-                data['iops-score'] = {
-                    'value': float(iops),
-                    'unit': iops_unit,
-                }
-                data['total-score'] = {
-                    'value': float(total),
-                    'unit': '-',
-                }
-
+                data['bandwidth-score'] = (float(bw), bw_unit)
+                data['iops-score'] = (float(iops), iops_unit)
+                data['total-score'] = (float(total), None)
+    # print(data)
     return data
 
 def transpose(rows):
@@ -55,24 +42,73 @@ def tabulate(rows):
     for row in rows:
         print("  ".join((val.ljust(width) for val, width in zip(row, widths))))
 
+def load_run_dimensions(dir_path):
+    """ Load a dimensions.*.json file from a specified directory.
+
+        Returns a dict in same format as read_io500_summary() - nested dicts are transformed to flattened
+        dotted keys.
+    """
+    
+    dim_paths = glob.glob(os.path.join(dir_path, 'dimensions.*.json'))
+    if len(dim_paths) != 1:
+        raise ValueError('Found %i dimension files in %s, expected 1' % (len(dim_paths), dir_path))
+    dims = {}
+    with open(dim_paths[0]) as f:
+        data = json.load(f)
+    for k, v in data.items():
+        if isinstance(v, dict):
+            for subkey, subvalue in v.items():
+                dims['%s.%s' % (k, subkey)] = (subvalue, None)
+        else:
+            dims[k] = (v, None)
+    return dims
+
+def df_from_pattern(pattern):
+    """ Returns (DataFrame, units) where units is a dict of strs keyed by DataFrame.column """
+    # NB: assumes each file found has the same columns!
+    
+    df = None
+    units = {}
+    for path in glob.glob(pattern):
+        rows = []
+        run_dir = os.path.dirname(path)
+        results = load_run_dimensions(run_dir)
+        outputs = read_io500_summary(path)
+        results.update(outputs)
+        colnames = list(results.keys())
+        unitnames = [v[1] for v in results.values()]
+        rows.append([v[0] for v in results.values()])
+        run_df = pandas.DataFrame(data=rows, columns=colnames)
+        run_units = dict(zip(colnames, unitnames))
+        if df is None:
+            df = run_df
+        else:
+            df = pandas.concat([df, run_df], ignore_index=True)
+        units.update(run_units)
+    return (df, units)
+
 def summarise(pattern):
 
     rows = []
     for path in glob.glob(pattern):
+        # print('path:', path)
         run_dir = os.path.dirname(path)
-        results = read_io500_summary(path)
-        
-        header1 = ['run_dir', 'mountpoint'] + list(results.keys())
-        header2 = ['-', '-'] + [v['unit'] for v in results.values()]
+        dims = load_run_dimensions(run_dir)
+        outputs = read_io500_summary(path)
+        results = dims
+        results.update(outputs)
+        header1 = list(results.keys())
+        header2 = [v[1] for v in results.values()]
         if not rows:
             rows.extend([header1, header2])
-
+        
         # have to convert back to strings!
-        values = [run_dir, mountpoint] + [str(v['value']) for v in results.values()]
+        values = [str(v[0]) for v in results.values()]
         rows.append(values)
 
-    cols = transpose(rows)
-    tabulate(cols)
+    tabulate(rows)
+    # cols = transpose(rows)
+    # tabulate(cols)
 
 if __name__ == '__main__':
     summarise(sys.argv[1])

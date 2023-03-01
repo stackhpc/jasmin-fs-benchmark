@@ -14,14 +14,19 @@
         - name: pure
           mountpoint: /work/stackhpc-pure/
       stonewall: [30, 300]
+      iters: [0, 1, 2]
       time: ['2:0:0'] # job time, hours:minutes:seconds
       git_describe: [ "{{ smatrix_git_describe }}" ]
-    run_description: "{{ [item.filesystem.name, item.nodes, item.ntasks_per_node] | join('-') }}" # only want fs.name
+    run_description: "{{ timestamp }}.{{ item_idx }}"
     smatrix_template_suffix: ".{{ run_description }}"
     smatrix_template_dest_dir: "{{ lookup('env', 'PWD') }}/io500/runs/{{ run_description }}"
     smatrix_submit_src: "{{ smatrix_template_dest_dir }}/io500{{smatrix_template_suffix }}.sh"
 
   tasks:
+    - name: Set timestamp for this play
+      set_fact:
+        timestamp: "{{ lookup('pipe','date -u +%Y%m%d.%H%M%S') }}"
+      tags: always
     - name: Run test matrix
       import_role:
         name: stackhpc.smatrix

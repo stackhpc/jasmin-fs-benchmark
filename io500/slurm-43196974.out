@@ -1,0 +1,38 @@
+git describe: heads/main-0-g93620a6-dirty
+SLURM_JOB_ID: 43196974
+dimensions: {"nodes": 2, "ntasks_per_node": 8, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "time": "2:0:0", "git_describe": "heads/main-0-g93620a6-dirty"}
+SLURM_JOB_NODELIST: host[823-824]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        2.759539 GiB/s : time 337.486 seconds
+[RESULT]    mdtest-easy-write       15.363297 kIOPS : time 309.442 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.314876 GiB/s : time 488.881 seconds
+[RESULT]    mdtest-hard-write        2.085803 kIOPS : time 308.036 seconds
+[RESULT]                 find        4.703977 kIOPS : time 1143.439 seconds
+[RESULT]        ior-easy-read        3.092351 GiB/s : time 301.158 seconds
+[RESULT]     mdtest-easy-stat       75.436168 kIOPS : time 63.822 seconds
+[RESULT]        ior-hard-read        1.055543 GiB/s : time 145.843 seconds
+[RESULT]     mdtest-hard-stat       15.201827 kIOPS : time 43.133 seconds
+[RESULT]   mdtest-easy-delete       18.188887 kIOPS : time 261.844 seconds
+[RESULT]     mdtest-hard-read       16.921021 kIOPS : time 38.853 seconds
+[RESULT]   mdtest-hard-delete        1.936405 kIOPS : time 331.876 seconds
+[SCORE ] Bandwidth 1.297732 GiB/s : IOPS 10.037277 kiops : TOTAL 3.609113
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pure-2-8
+[1677625165.893246] [host823:184644:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x1272a40 was not matched

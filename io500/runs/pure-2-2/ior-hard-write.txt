@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Feb 28 21:02:38 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1433448379 -k -e -o /work/stackhpc-pure//steveb/io500/pure-2-2/ior-hard/file -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/pure-2-2/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/pure-2-2/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux host823.jc.rl.ac.uk
+TestID              : 0
+StartTime           : Tue Feb 28 21:02:38 2023
+Path                : /work/stackhpc-pure//steveb/io500/pure-2-2/ior-hard/file
+FS                  : 100.0 TiB   Used FS: 0.9%   Inodes: 204800.0 Mi   Used Inodes: 0.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /work/stackhpc-pure//steveb/io500/pure-2-2/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 2
+tasks               : 4
+clients per node    : 2
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 1.71 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 673729 max: 1005242 -- min data: 29.5 GiB mean data: 36.8 GiB time: 300.8s
+WARNING: Expected aggregate file size       = 1880320000000
+WARNING: Stat() of aggregate file size      = 189017663744
+WARNING: Using actual aggregate bytes moved = 189017663744
+WARNING: Maybe caused by deadlineForStonewalling
+write     335.22     7478       301.51      45.91      45.91      0.002010   537.74     0.000569   537.74     0   

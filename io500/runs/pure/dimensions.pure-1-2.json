@@ -1,1 +1,0 @@
-{"template_file": "dimensions.json.j2", "nodes": 1, "ntasks_per_node": 2, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "time": "2:0:0"}
