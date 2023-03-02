@@ -17,16 +17,14 @@
       iters: [0, 1, 2]
       time: ['2:0:0'] # job time, hours:minutes:seconds
       git_describe: [ "{{ smatrix_git_describe }}" ]
-    run_description: "{{ timestamp }}.{{ item_idx }}"
+      ior_api: ['MPIIO', 'POSIX'] # 'HDFS5' failed
+    run_description: "{{ [item.filesystem.name, item.nodes, item.ntasks_per_node, item.stonewall, item.iters, item.ior_api] | join('-') }}" # only want fs.name, don't want time, git_describe
     smatrix_template_suffix: ".{{ run_description }}"
     smatrix_template_dest_dir: "{{ lookup('env', 'PWD') }}/io500/runs/{{ run_description }}"
     smatrix_submit_src: "{{ smatrix_template_dest_dir }}/io500{{smatrix_template_suffix }}.sh"
+    smatrix_output_path: "{{ smatrix_template_dest_dir }}/result_summary.txt"
 
   tasks:
-    - name: Set timestamp for this play
-      set_fact:
-        timestamp: "{{ lookup('pipe','date -u +%Y%m%d.%H%M%S') }}"
-      tags: always
     - name: Run test matrix
       import_role:
         name: stackhpc.smatrix
