@@ -1,0 +1,30 @@
+git describe: heads/main-0-g3119f9a-dirty
+SLURM_JOB_ID: 43332691
+dimensions: {"nodes": 1, "ntasks_per_node": 8, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "iters": 2, "time": "2:0:0", "git_describe": "heads/main-0-g3119f9a-dirty", "ior_api": "MPIIO"}
+SLURM_JOB_NODELIST: host823
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        1.061339 GiB/s : time 303.495 seconds
+[RESULT]    mdtest-easy-write        7.296566 kIOPS : time 308.673 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.006909 GiB/s : time 709.797 seconds
+[RESULT]    mdtest-hard-write        1.029780 kIOPS : time 308.486 seconds
+[RESULT]                 find        5.139540 kIOPS : time 498.376 seconds
+[RESULT]        ior-easy-read        0.248951 GiB/s : time 1293.649 seconds
+[RESULT]     mdtest-easy-stat       42.725421 kIOPS : time 53.546 seconds
+[RESULT]        ior-hard-read        0.019095 GiB/s : time 256.824 seconds
+[RESULT]     mdtest-hard-stat       43.025189 kIOPS : time 8.365 seconds
+[RESULT]   mdtest-easy-delete        8.464891 kIOPS : time 266.471 seconds
+[RESULT]     mdtest-hard-read       14.948150 kIOPS : time 22.186 seconds
+[RESULT]   mdtest-hard-delete        1.253017 kIOPS : time 253.723 seconds
+[SCORE ] Bandwidth 0.076838 GiB/s : IOPS 7.610624 kiops : TOTAL 0.764712
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pure-1-8-300-2-MPIIO
+[1677733632.306636] [host823:161898:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x16d8d40 was not matched

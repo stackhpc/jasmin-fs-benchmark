@@ -1,0 +1,31 @@
+git describe: heads/main-0-g3119f9a-dirty
+SLURM_JOB_ID: 43332782
+dimensions: {"nodes": 2, "ntasks_per_node": 2, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 30, "iters": 1, "time": "2:0:0", "git_describe": "heads/main-0-g3119f9a-dirty", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host[823,825]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+ERROR INVALID (src/phase_dbg.c:13) stonewall-time < 300s
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-easy-write        2.629222 GiB/s : time 59.525 seconds [INVALID]
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-easy-write        3.806502 kIOPS : time 40.283 seconds [INVALID]
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-hard-write        0.545143 GiB/s : time 43.383 seconds [INVALID]
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-hard-write        1.950495 kIOPS : time 35.340 seconds [INVALID]
+[RESULT]                 find       10.766993 kIOPS : time 20.103 seconds
+[RESULT]        ior-easy-read        3.122620 GiB/s : time 50.119 seconds
+[RESULT]     mdtest-easy-stat       27.305546 kIOPS : time 6.482 seconds
+[RESULT]        ior-hard-read        0.870572 GiB/s : time 27.167 seconds
+[RESULT]     mdtest-hard-stat       14.336168 kIOPS : time 5.686 seconds
+[RESULT]   mdtest-easy-delete        5.305734 kIOPS : time 29.261 seconds
+[RESULT]     mdtest-hard-read        9.204606 kIOPS : time 8.283 seconds
+[RESULT]   mdtest-hard-delete        1.970784 kIOPS : time 35.008 seconds
+[SCORE ] Bandwidth 1.404965 GiB/s : IOPS 6.454385 kiops : TOTAL 3.011343 [INVALID]
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pure-2-2-30-1-POSIX
+[1677768452.941885] [host823:21480:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x2a78a00 was not matched

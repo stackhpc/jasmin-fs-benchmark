@@ -1,0 +1,10 @@
+rank,items,rate-Directory creation,time-Directory creation,rate-Directory stat,time-Directory stat,rate-Directory read,time-Directory read,rate-Directory rename,time-Directory rename,rate-Directory removal,time-Directory removal,rate-File creation,time-File creation,rate-File stat,time-File stat,rate-File read,time-File read,rate-File removal,time-File removal,rate-Tree creation,time-Tree creation,rate-Tree removal,time-Tree removal
+all,3108,,,,,,,,,,,,,,,,,9.8096519145e+02,2.5346465111e+01,,,5.7363886894e+02,1.3946056366e-02
+0,,,,,,,,,,,,,,,,,,1.2265960181e+02,2.5338415861e+01
+1,,,,,,,,,,,,,,,,,,1.2264692825e+02,2.5341034174e+01
+2,,,,,,,,,,,,,,,,,,1.2265520581e+02,2.5339323997e+01
+3,,,,,,,,,,,,,,,,,,1.2262907176e+02,2.5344724178e+01
+4,,,,,,,,,,,,,,,,,,1.2263743806e+02,2.5342995167e+01
+5,,,,,,,,,,,,,,,,,,1.2264395700e+02,2.5341648102e+01
+6,,,,,,,,,,,,,,,,,,1.2262075043e+02,2.5346444130e+01
+7,,,,,,,,,,,,,,,,,,1.2262640706e+02,2.5345274925e+01

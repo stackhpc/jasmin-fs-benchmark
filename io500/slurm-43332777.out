@@ -1,0 +1,38 @@
+git describe: heads/main-0-g3119f9a-dirty
+SLURM_JOB_ID: 43332777
+dimensions: {"nodes": 1, "ntasks_per_node": 16, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "iters": 2, "time": "2:0:0", "git_describe": "heads/main-0-g3119f9a-dirty", "ior_api": "MPIIO"}
+SLURM_JOB_NODELIST: host823
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        1.501305 GiB/s : time 306.371 seconds
+[RESULT]    mdtest-easy-write       12.190276 kIOPS : time 329.594 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.006793 GiB/s : time 644.213 seconds
+[RESULT]    mdtest-hard-write        0.932787 kIOPS : time 326.837 seconds
+[RESULT]                 find        7.559441 kIOPS : time 569.973 seconds
+[RESULT]        ior-easy-read        0.234512 GiB/s : time 1960.715 seconds
+[RESULT]     mdtest-easy-stat       33.904396 kIOPS : time 119.126 seconds
+[RESULT]        ior-hard-read        0.010378 GiB/s : time 422.184 seconds
+[RESULT]     mdtest-hard-stat       38.993588 kIOPS : time 8.801 seconds
+[RESULT]   mdtest-easy-delete       12.779559 kIOPS : time 314.990 seconds
+[RESULT]     mdtest-hard-read       16.034601 kIOPS : time 19.960 seconds
+[RESULT]   mdtest-hard-delete        0.932859 kIOPS : time 326.851 seconds
+[SCORE ] Bandwidth 0.070584 GiB/s : IOPS 8.262580 kiops : TOTAL 0.763681
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pure-1-16-300-2-MPIIO
+[1677763567.928709] [host823:8216 :0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x29f6940 was not matched

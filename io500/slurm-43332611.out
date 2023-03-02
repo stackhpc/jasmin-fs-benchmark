@@ -1,0 +1,29 @@
+git describe: heads/main-0-g3119f9a-dirty
+SLURM_JOB_ID: 43332611
+dimensions: {"nodes": 1, "ntasks_per_node": 2, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 30, "iters": 2, "time": "2:0:0", "git_describe": "heads/main-0-g3119f9a-dirty", "ior_api": "MPIIO"}
+SLURM_JOB_NODELIST: host824
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+ERROR INVALID (src/phase_dbg.c:13) stonewall-time < 300s
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-easy-write        0.318667 GiB/s : time 30.182 seconds [INVALID]
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-easy-write        1.915965 kIOPS : time 32.269 seconds [INVALID]
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-hard-write        0.012815 GiB/s : time 34.777 seconds [INVALID]
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-hard-write        0.886517 kIOPS : time 32.330 seconds [INVALID]
+[RESULT]                 find       10.476417 kIOPS : time 8.369 seconds
+[RESULT]        ior-easy-read        0.188024 GiB/s : time 51.121 seconds
+[RESULT]     mdtest-easy-stat       16.279606 kIOPS : time 4.684 seconds
+[RESULT]        ior-hard-read        0.035027 GiB/s : time 12.728 seconds
+[RESULT]     mdtest-hard-stat       18.498197 kIOPS : time 2.510 seconds
+[RESULT]   mdtest-easy-delete        2.183425 kIOPS : time 28.451 seconds
+[RESULT]     mdtest-hard-read        5.131786 kIOPS : time 6.417 seconds
+[RESULT]   mdtest-hard-delete        1.075608 kIOPS : time 26.831 seconds
+[SCORE ] Bandwidth 0.072014 GiB/s : IOPS 3.992687 kiops : TOTAL 0.536217 [INVALID]
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pure-1-2-30-2-MPIIO
+[1677693360.774707] [host824:89371:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x11fda00 was not matched

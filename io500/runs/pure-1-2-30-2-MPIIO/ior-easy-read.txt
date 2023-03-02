@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Mar  1 17:53:48 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1420601727 -k -e -o /work/stackhpc-pure//steveb/io500/pure-1-2-30-2-MPIIO/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/pure-1-2-30-2-MPIIO/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a MPIIO -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/pure-1-2-30-2-MPIIO/ior-easy-read.csv
+Machine             : Linux host824.jc.rl.ac.uk
+TestID              : 0
+StartTime           : Wed Mar  1 17:53:48 2023
+Path                : /work/stackhpc-pure//steveb/io500/pure-1-2-30-2-MPIIO/ior-easy/ior_file_easy.00000000
+FS                  : 100.0 TiB   Used FS: 0.0%   Inodes: 204800.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.1)
+test filename       : /work/stackhpc-pure//steveb/io500/pure-1-2-30-2-MPIIO/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 18.92 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 20803747840000
+WARNING: Stat() of aggregate file size      = 10317987840
+WARNING: Using actual aggregate bytes moved = 10317987840
+read      192.54     96.28      0.000010    10158080000 2048.00    0.005245   51.10      0.000382   51.11      0   

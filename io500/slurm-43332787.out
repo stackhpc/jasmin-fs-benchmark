@@ -1,0 +1,26 @@
+git describe: heads/main-0-g3119f9a-dirty
+SLURM_JOB_ID: 43332787
+dimensions: {"nodes": 2, "ntasks_per_node": 2, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "iters": 0, "time": "2:0:0", "git_describe": "heads/main-0-g3119f9a-dirty", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host[823-824]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        2.875980 GiB/s : time 329.772 seconds
+[RESULT]    mdtest-easy-write        3.959507 kIOPS : time 311.483 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.316191 GiB/s : time 537.853 seconds
+[RESULT]    mdtest-hard-write        2.083161 kIOPS : time 302.227 seconds
+[RESULT]                 find        1.744260 kIOPS : time 1064.488 seconds
+[RESULT]        ior-easy-read        3.047106 GiB/s : time 311.247 seconds
+[RESULT]     mdtest-easy-stat       18.376886 kIOPS : time 67.902 seconds
+[RESULT]        ior-hard-read        0.704473 GiB/s : time 241.413 seconds
+[RESULT]     mdtest-hard-stat        7.743083 kIOPS : time 82.046 seconds
+[RESULT]   mdtest-easy-delete        4.605106 kIOPS : time 268.142 seconds
+[RESULT]     mdtest-hard-read        4.668869 kIOPS : time 135.403 seconds
+[RESULT]   mdtest-hard-delete        1.598939 kIOPS : time 393.628 seconds
+[SCORE ] Bandwidth 1.182012 GiB/s : IOPS 4.035808 kiops : TOTAL 2.184118
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pure-2-2-300-0-POSIX
+[1677777126.302586] [host823:27872:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x1a22ac0 was not matched
