@@ -3,17 +3,19 @@
   gather_facts: no
   vars:
     smatrix_template_src: "s3-warp.sh.j2"
+    smatrix_template_dest_dir: ./benchmark-runs
     smatrix_dimensions:
+      benchmark_type: ["mixed"]
       nodes: [1, 2]
-      threads: [5, 10]
-      num_files: [100]
-      min_file_size: ["1KiB"]
-      max_file_size: ["10MiB"]
-      duration: ["1m"]
-    # Use this to produce sbatch files without submitting jobs
-    # smatrix_dryrun: true
+      threads_per_node: [1, 20, 50]
+      files_total: [1000]
+      # obj_sizes: ["1KiB", "100KiB", "10MiB", "1KiB-10MiB"]
+      # duration: ["1m"]
+      obj_sizes: ["1KiB-5GiB"]
+      duration: ["30m"]
     partition: stackhpc
     account: stackhpc
+    job_name: s3-warp-pure
   tasks:
     - name: Run object storage benchmarks
       import_role:
