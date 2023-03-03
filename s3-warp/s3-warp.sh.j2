@@ -2,7 +2,7 @@
 #SBATCH --job-name={{ job_name }}
 #SBATCH --nodes={{ item.nodes }}
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task={{ item.threads_per_node }}
+#SBATCH --cpus-per-task={{ (1 + item.threads_per_node / 2) | int }}
 #SBATCH --dependency=singleton
 #SBATCH --partition={{ partition }}
 #SBATCH --account={{ account }}
@@ -38,6 +38,10 @@ singularity run warp.sif {{ item.benchmark_type }} \
     {{ "--obj.randsize" if "-" in item.obj_sizes }} \
     --benchdata $OUTPUT_FILE \
     --no-color \
+    --get-distrib 45 \
+    --stat-distrib value 30 \
+    --put-distrib value 15 \
+    --delete-distrib value 15 \
     --duration {{ item.duration }} \
     --warp-client $CLIENT_NODES \
 
