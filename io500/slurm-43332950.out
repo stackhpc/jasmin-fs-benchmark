@@ -1,0 +1,59 @@
+git describe: heads/main-0-g3119f9a-dirty
+SLURM_JOB_ID: 43332950
+dimensions: {"nodes": 2, "ntasks_per_node": 16, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 30, "iters": 0, "time": "2:0:0", "git_describe": "heads/main-0-g3119f9a-dirty", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host[823-824]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+ERROR INVALID (src/phase_dbg.c:13) stonewall-time < 300s
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-easy-write        2.924051 GiB/s : time 66.774 seconds [INVALID]
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-easy-write       16.382320 kIOPS : time 52.732 seconds [INVALID]
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-hard-write        0.263861 GiB/s : time 102.637 seconds [INVALID]
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-hard-write        1.319677 kIOPS : time 52.929 seconds [INVALID]
+[RESULT]                 find       31.791751 kIOPS : time 28.792 seconds
+[RESULT]        ior-easy-read        3.097179 GiB/s : time 62.995 seconds
+[RESULT]     mdtest-easy-stat       78.819964 kIOPS : time 11.752 seconds
+[RESULT]        ior-hard-read        1.058044 GiB/s : time 25.602 seconds
+[RESULT]     mdtest-hard-stat       11.184853 kIOPS : time 7.136 seconds
+[RESULT]   mdtest-easy-delete       34.408509 kIOPS : time 25.850 seconds
+[RESULT]     mdtest-hard-read       31.670587 kIOPS : time 3.192 seconds
+[RESULT]   mdtest-hard-delete        1.928125 kIOPS : time 36.567 seconds
+[SCORE ] Bandwidth 1.260978 GiB/s : IOPS 13.743905 kiops : TOTAL 4.163023 [INVALID]
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pure-2-16-30-0-POSIX
+[1677830433.515695] [host823:98562:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x1a00700 was not matched

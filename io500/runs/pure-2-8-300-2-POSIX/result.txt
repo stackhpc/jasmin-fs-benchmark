@@ -1,0 +1,6 @@
+[run]
+procs           = 16
+version         = io500-isc22_v1
+config-hash     = 70CDC9B2
+result-dir      = /home/users/steveb/io500-lotus/io500/runs/pure-2-8-300-2-POSIX
+mode            = standard
