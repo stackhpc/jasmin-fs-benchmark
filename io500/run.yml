@@ -4,7 +4,7 @@
   vars:
     smatrix_template_src: '*.j2'
     smatrix_dimensions:
-      nodes: [1, 2]
+      nodes: [1, 2, 10]
       ntasks_per_node: [2, 8, 16]
       filesystem:
         # - name: pansas
