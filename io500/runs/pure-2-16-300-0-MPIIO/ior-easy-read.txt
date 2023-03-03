@@ -26,3 +26,10 @@ blocksize           : 9.46 TiB
 aggregate filesize  : 302.73 TiB
 
 Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 332859965440000
+WARNING: Stat() of aggregate file size      = 986030538752
+WARNING: Using actual aggregate bytes moved = 986030538752
+read      482.83     241.42     0.000393    10158080000 2048.00    0.037148   1947.54    0.001092   1947.58    0   
