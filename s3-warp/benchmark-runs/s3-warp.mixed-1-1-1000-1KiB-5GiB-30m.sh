@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 #SBATCH --job-name=s3-warp-pure
+#SBATCH --time=4:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
@@ -14,7 +15,7 @@ if [[ -z $WARP_HOST || -z $WARP_ACCESS_KEY || -z $WARP_SECRET_KEY ]]; then
 fi
 
 # Print a message about the git status of the checked out repo version
-echo "Git repo local checkout status: heads/warp-s3-0-gf1be256-dirty"
+echo "Git repo local checkout status: heads/warp-s3-0-g3ccc6f3-dirty"
 
 # Pull in docker image and build singularity image from it
 CONTAINER_FILENAME=warp.sif
@@ -38,6 +39,10 @@ singularity run warp.sif mixed \
     --obj.randsize \
     --benchdata $OUTPUT_FILE \
     --no-color \
+    --get-distrib 45 \
+    --stat-distrib 30 \
+    --put-distrib 15 \
+    --delete-distrib 15 \
     --duration 30m \
     --warp-client $CLIENT_NODES \
 

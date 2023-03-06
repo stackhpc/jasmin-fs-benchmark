@@ -1,0 +1,15 @@
+Mixed operations.
+Operation: DELETE, 14%, Concurrency: 1, Ran 9m58s.
+ * Throughput: 0.93 obj/s
+
+Operation: GET, 43%, Concurrency: 1, Ran 9m59s.
+ * Throughput: 278.50 MiB/s, 2.78 obj/s
+
+Operation: PUT, 14%, Concurrency: 1, Ran 9m56s.
+ * Throughput: 93.93 MiB/s, 0.94 obj/s
+
+Operation: STAT, 29%, Concurrency: 1, Ran 9m59s.
+ * Throughput: 1.87 obj/s
+
+Cluster Total: 371.97 MiB/s, 6.51 obj/s over 10m0s.
+Aggregated data saved to ./benchmark-runs/warp-results-summary.mixed-1-1-1100-100MiB-10m.csv

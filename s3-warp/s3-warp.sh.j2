@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 #SBATCH --job-name={{ job_name }}
+#SBATCH --time={{ max_job_time }}
 #SBATCH --nodes={{ item.nodes }}
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task={{ (1 + item.threads_per_node / 2) | int }}
@@ -38,10 +39,11 @@ singularity run warp.sif {{ item.benchmark_type }} \
     {{ "--obj.randsize" if "-" in item.obj_sizes }} \
     --benchdata $OUTPUT_FILE \
     --no-color \
+    --autoterm \
     --get-distrib 45 \
-    --stat-distrib value 30 \
-    --put-distrib value 15 \
-    --delete-distrib value 15 \
+    --stat-distrib 30 \
+    --put-distrib 15 \
+    --delete-distrib 15 \
     --duration {{ item.duration }} \
     --warp-client $CLIENT_NODES \
 
