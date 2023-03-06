@@ -44,7 +44,19 @@ singularity run warp.sif {{ item.benchmark_type }} \
     --stat-distrib 30 \
     --put-distrib 15 \
     --delete-distrib 15 \
-    --duration {{ item.duration }} \
+    --duration 
+    {%- if item.duration is defined %} 
+        {{- ' ' + item.duration -}}
+    {%- else %} 
+        {%- if 'GiB' in item.obj_sizes %}
+            {{- ' 30m' -}}
+        {%- elif 'MiB' in item.obj_sizes %}
+            {{- ' 5m' -}}
+        {%- else  %}
+            {{- ' 1m' -}}
+        {%- endif %}
+    {%- endif %}
+    \
     --warp-client $CLIENT_NODES \
 
 # Run warp analysis tool on output file
