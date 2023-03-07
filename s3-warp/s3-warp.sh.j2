@@ -31,19 +31,23 @@ CLIENT_NODES=$(scontrol show hostname $SLURM_JOB_NODELIST | paste -d, -s)
 echo Client nodes: $CLIENT_NODES
 
 # Trigger benchmark run on all clients
-OUTPUT_FILE={{ smatrix_template_dest_dir }}/warp-results-full{{ smatrix_template_suffix }}
+OUTPUT_FILE={{ smatrix_template_dest_dir }}/{{ job_name }}-full{{ smatrix_template_suffix }}
 singularity run warp.sif {{ item.benchmark_type }} \
     --concurrent {{ item.threads_per_node }} \
-    --objects {{ item.files_total // item.nodes }} \
+    {% if item.benchmark_type != 'put' %}
+        --objects {{ item.files_total // item.nodes }} \
+    {% endif %}
     --obj.size "{{ item.obj_sizes | replace("-", ",", 1) }}" \
     {{ "--obj.randsize" if "-" in item.obj_sizes }} \
     --benchdata $OUTPUT_FILE \
     --no-color \
     --autoterm \
-    --get-distrib 45 \
-    --stat-distrib 30 \
-    --put-distrib 15 \
-    --delete-distrib 15 \
+    {% if item.benchmark_type == 'mixed' %}
+        --get-distrib 45 \
+        --stat-distrib 30 \
+        --put-distrib 15 \
+        --delete-distrib 15 \
+    {% endif %}
     --duration 
     {%- if item.duration is defined %} 
         {{- ' ' + item.duration -}}
@@ -52,13 +56,15 @@ singularity run warp.sif {{ item.benchmark_type }} \
             {{- ' 30m' -}}
         {%- elif 'MiB' in item.obj_sizes %}
             {{- ' 5m' -}}
-        {%- else  %}
+        {%- elif 'KiB' in item.obj_sizes %}
             {{- ' 1m' -}}
+        {%- else %}
+            {{ undef(hint="Could not determine duration since none of 'GiB', 'MiB' or 'KiB' in obj_sizes. Please set 'duration' manually.")}}
         {%- endif %}
     {%- endif %}
     \
     --warp-client $CLIENT_NODES \
 
 # Run warp analysis tool on output file
-SUMMARY_FILE={{ smatrix_template_dest_dir }}/warp-results-summary{{ smatrix_template_suffix }}
+SUMMARY_FILE={{ smatrix_template_dest_dir }}/{{ job_name }}-summary{{ smatrix_template_suffix }}
 singularity run warp.sif analyze $OUTPUT_FILE.csv.zst --analyze.out $SUMMARY_FILE.csv > $SUMMARY_FILE.txt

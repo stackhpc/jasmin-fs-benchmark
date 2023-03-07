@@ -1,20 +1,26 @@
 ---
+
+###
+# Add task to read credential secrets
+###
+
 - hosts: localhost
   gather_facts: no
   vars:
-    smatrix_template_src: "s3-warp.sh.j2"
-    smatrix_template_dest_dir: ./benchmark-runs
-    smatrix_dimensions:
-      benchmark_type: ["mixed"]
-      nodes: [10, 2, 1]
-      threads_per_node: [100, 50, 20, 1]
-      files_total: [1100]
-      obj_sizes: ["10KiB", "100MiB", "1GiB", "1KiB-5GiB"]
-      duration: ["10m"]
     partition: stackhpc
     account: stackhpc
-    job_name: s3-warp-pure
+    job_name: s3-pure
     max_job_time: "4:00:00"
+    smatrix_template_src: "s3-warp.sh.j2"
+    smatrix_template_dest_dir: ./benchmark-runs
+    smatrix_template_basename: pure
+    smatrix_dimensions:
+      benchmark_type: ["get"]
+      nodes: [5, 10]
+      threads_per_node: [1, 20, 50, 100]
+      files_total: [1100]
+      obj_sizes: ["10KiB", "100MiB", "1GiB", "1KiB-5GiB"]
+      # duration: ["1m"]
   tasks:
     - name: Run object storage benchmarks
       import_role:
