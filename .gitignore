@@ -1,7 +1,9 @@
 # Only track summary text files
-s3-warp/benchmark-runs/**/*.csv
-s3-warp/benchmark-runs/**/*.csv.zst
-s3-warp/benchmark-runs/**/*.sh
+# s3-warp/benchmark-runs/**/*.csv
+# s3-warp/benchmark-runs/**/*.csv.zst
+# s3-warp/benchmark-runs/**/*.sh
+# Ignore all benchmark runs for now
+s3-warp/benchmark-runs/**
 # Ignore slurm output file
 s3-warp/*.out
 # Ignore singularity images
