@@ -1,0 +1,31 @@
+git describe: heads/main-0-gfd48d0d-dirty
+SLURM_JOB_ID: 44313500
+dimensions: {"nodes": 2, "ntasks_per_node": 2, "filesystem": {"name": "pansas", "mountpoint": "/gws/pw/j07/perf_testing/stackhpc"}, "stonewall": 30, "iters": 0, "time": "2:0:0", "git_describe": "heads/main-0-gfd48d0d-dirty", "ior_api": "MPIIO"}
+SLURM_JOB_NODELIST: host[823-824]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+ERROR INVALID (src/phase_dbg.c:13) stonewall-time < 300s
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-easy-write        2.617916 GiB/s : time 32.984 seconds [INVALID]
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-easy-write        1.517630 kIOPS : time 32.156 seconds [INVALID]
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-hard-write        0.017255 GiB/s : time 30.202 seconds [INVALID]
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-hard-write        0.613931 kIOPS : time 32.153 seconds [INVALID]
+[RESULT]                 find      395.224591 kIOPS : time 0.170 seconds
+[RESULT]        ior-easy-read        1.763088 GiB/s : time 48.947 seconds
+[RESULT]     mdtest-easy-stat       17.565851 kIOPS : time 3.697 seconds
+[RESULT]        ior-hard-read        0.071193 GiB/s : time 7.333 seconds
+[RESULT]     mdtest-hard-stat        9.183790 kIOPS : time 3.089 seconds
+[RESULT]   mdtest-easy-delete        7.038243 kIOPS : time 8.333 seconds
+[RESULT]     mdtest-hard-read      258.924714 kIOPS : time 1.081 seconds
+[RESULT]   mdtest-hard-delete        3.160528 kIOPS : time 7.579 seconds
+[SCORE ] Bandwidth 0.274408 GiB/s : IOPS 11.662114 kiops : TOTAL 1.788902 [INVALID]
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pansas-2-2-30-0-MPIIO
+[1678211115.163729] [host823:177876:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x2a2e640 was not matched

@@ -1,0 +1,73 @@
+[run]
+procs           = 8
+version         = io500-isc22_v1
+config-hash     = 594A3D53
+result-dir      = /home/users/steveb/io500-lotus/io500/runs/pansas-1-8-300-0-POSIX
+mode            = standard
+; START 2023-03-07 18:53:19
+
+
+[ior-easy-write]
+t_start         = 2023-03-07 18:53:20
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1419024643 -k -e -o /gws/pw/j07/perf_testing/stackhpc/steveb/io500/pansas-1-8-300-0-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/pansas-1-8-300-0-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/pansas-1-8-300-0-POSIX/ior-easy-write.csv
+throughput-stonewall = 3.38
+score           = 3.290502
+t_delta         = 316.9887
+t_end           = 2023-03-07 18:58:37
+
+[mdtest-easy-write]
+t_start         = 2023-03-07 18:58:37
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -532846849 -N 1 -d /gws/pw/j07/perf_testing/stackhpc/steveb/io500/pansas-1-8-300-0-POSIX/mdtest-easy -x /home/users/steveb/io500-lotus/io500/runs/pansas-1-8-300-0-POSIX/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/pansas-1-8-300-0-POSIX/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 2.229735
+score           = 2.210046
+t_delta         = 305.9793
+t_end           = 2023-03-07 19:03:42
+
+[timestamp]
+t_start         = 2023-03-07 19:03:42
+t_delta         = 0.0009
+t_end           = 2023-03-07 19:03:42
+
+[ior-hard-write]
+t_start         = 2023-03-07 19:03:42
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1419013955 -k -e -o /gws/pw/j07/perf_testing/stackhpc/steveb/io500/pansas-1-8-300-0-POSIX/ior-hard/file -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/pansas-1-8-300-0-POSIX/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/pansas-1-8-300-0-POSIX/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 0.03
+score           = 0.027151
+t_delta         = 559.2105
+t_end           = 2023-03-07 19:13:02
+
+[mdtest-hard-write]
+t_start         = 2023-03-07 19:13:02
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-532836161 -N 1 -F -d /gws/pw/j07/perf_testing/stackhpc/steveb/io500/pansas-1-8-300-0-POSIX/mdtest-hard -x /home/users/steveb/io500-lotus/io500/runs/pansas-1-8-300-0-POSIX/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/pansas-1-8-300-0-POSIX/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 0.306736
+score           = 0.306283
+t_delta         = 302.9456
+t_end           = 2023-03-07 19:18:05
+
+[find]
+t_start         = 2023-03-07 19:18:05
+exe             = ./pfind /gws/pw/j07/perf_testing/stackhpc/steveb/io500/pansas-1-8-300-0-POSIX -newer /home/users/steveb/io500-lotus/io500/runs/pansas-1-8-300-0-POSIX/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 8
+found           = 2592
+total-files     = 766377
+score           = 696.877458
+t_delta         = 1.1028
+t_end           = 2023-03-07 19:18:06
+
+[ior-easy-read]
+t_start         = 2023-03-07 19:18:06
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1419024643 -k -e -o /gws/pw/j07/perf_testing/stackhpc/steveb/io500/pansas-1-8-300-0-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/pansas-1-8-300-0-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/pansas-1-8-300-0-POSIX/ior-easy-read.csv
+score           = 3.102284
+t_delta         = 336.2177
+t_end           = 2023-03-07 19:23:42
+
+[mdtest-easy-stat]
+t_start         = 2023-03-07 19:23:42
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -532846849 -N 1 -d /gws/pw/j07/perf_testing/stackhpc/steveb/io500/pansas-1-8-300-0-POSIX/mdtest-easy -x /home/users/steveb/io500-lotus/io500/runs/pansas-1-8-300-0-POSIX/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/pansas-1-8-300-0-POSIX/mdtest-easy-stat.csv -a POSIX
+score           = 36.723719
+t_delta         = 19.3760
+t_end           = 2023-03-07 19:24:01
+
+[ior-hard-read]
+t_start         = 2023-03-07 19:24:01
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1419013955 -k -e -o /gws/pw/j07/perf_testing/stackhpc/steveb/io500/pansas-1-8-300-0-POSIX/ior-hard/file -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/pansas-1-8-300-0-POSIX/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/pansas-1-8-300-0-POSIX/ior-hard-read.csv

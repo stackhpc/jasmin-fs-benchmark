@@ -1,0 +1,26 @@
+git describe: heads/main-0-gfd48d0d-dirty
+SLURM_JOB_ID: 44313634
+dimensions: {"nodes": 2, "ntasks_per_node": 2, "filesystem": {"name": "pansas", "mountpoint": "/gws/pw/j07/perf_testing/stackhpc"}, "stonewall": 300, "iters": 0, "time": "2:0:0", "git_describe": "heads/main-0-gfd48d0d-dirty", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host[823-824]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        2.527513 GiB/s : time 309.617 seconds
+[RESULT]    mdtest-easy-write        1.315349 kIOPS : time 302.904 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.017501 GiB/s : time 301.596 seconds
+[RESULT]    mdtest-hard-write        0.612245 kIOPS : time 304.281 seconds
+[RESULT]                 find      298.825063 kIOPS : time 1.953 seconds
+[RESULT]        ior-easy-read        1.872339 GiB/s : time 418.140 seconds
+[RESULT]     mdtest-easy-stat       25.809721 kIOPS : time 16.397 seconds
+[RESULT]        ior-hard-read        0.017621 GiB/s : time 299.529 seconds
+[RESULT]     mdtest-hard-stat       14.164594 kIOPS : time 14.116 seconds
+[RESULT]   mdtest-easy-delete        6.058216 kIOPS : time 67.653 seconds
+[RESULT]     mdtest-hard-read        3.491830 kIOPS : time 54.194 seconds
+[RESULT]   mdtest-hard-delete        2.934681 kIOPS : time 64.608 seconds
+[SCORE ] Bandwidth 0.195452 GiB/s : IOPS 6.952904 kiops : TOTAL 1.165745
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pansas-2-2-300-0-POSIX
+[1678215180.566192] [host823:180951:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x1425d80 was not matched

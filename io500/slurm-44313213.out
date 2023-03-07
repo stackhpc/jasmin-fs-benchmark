@@ -1,0 +1,43 @@
+git describe: heads/main-0-gfd48d0d-dirty
+SLURM_JOB_ID: 44313213
+dimensions: {"nodes": 1, "ntasks_per_node": 16, "filesystem": {"name": "pansas", "mountpoint": "/gws/pw/j07/perf_testing/stackhpc"}, "stonewall": 30, "iters": 0, "time": "2:0:0", "git_describe": "heads/main-0-gfd48d0d-dirty", "ior_api": "MPIIO"}
+SLURM_JOB_NODELIST: host824
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+ERROR INVALID (src/phase_dbg.c:13) stonewall-time < 300s
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-easy-write        3.571730 GiB/s : time 36.534 seconds [INVALID]
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-easy-write        3.776510 kIOPS : time 35.854 seconds [INVALID]
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-hard-write        0.042691 GiB/s : time 66.745 seconds [INVALID]
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-hard-write        0.330446 kIOPS : time 34.907 seconds [INVALID]
+[RESULT]                 find      772.818859 kIOPS : time 0.187 seconds
+[RESULT]        ior-easy-read       57.510985 GiB/s : time 2.329 seconds
+[RESULT]     mdtest-easy-stat      117.464730 kIOPS : time 2.125 seconds
+[RESULT]        ior-hard-read        3.588447 GiB/s : time 0.846 seconds
+[RESULT]     mdtest-hard-stat      114.207581 kIOPS : time 1.104 seconds
+[RESULT]   mdtest-easy-delete        9.889206 kIOPS : time 16.577 seconds
+[RESULT]     mdtest-hard-read       67.218815 kIOPS : time 1.173 seconds
+[RESULT]   mdtest-hard-delete        2.351653 kIOPS : time 5.892 seconds
+[SCORE ] Bandwidth 2.368468 GiB/s : IOPS 19.419454 kiops : TOTAL 6.781914 [INVALID]
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pansas-1-16-30-0-MPIIO
+[1678210593.517774] [host824:100296:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x1831040 was not matched
