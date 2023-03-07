@@ -63,6 +63,19 @@ def load_run_dimensions(dir_path):
             dims[k] = (v, None)
     return dims
 
+def df_from_summary(path):
+    """ Return (df, units) from a path to a result_summary.txt file, where ...
+            df: dataframe with values
+            units: dict with keys = df.columns and values = str giving column unit.
+    """
+    outputs = read_io500_summary(path)
+    colnames = list(outputs.keys())
+    unitnames = [v[1] for v in results.values()]
+    rows.append([v[0] for v in results.values()])
+    run_df = pandas.DataFrame(data=rows, columns=colnames)
+    run_units = dict(zip(colnames, unitnames))
+    return run_df, run_units
+
 def df_from_pattern(pattern):
     """ Returns (DataFrame, units) where units is a dict of strs keyed by DataFrame.column """
     # NB: assumes each file found has the same columns!

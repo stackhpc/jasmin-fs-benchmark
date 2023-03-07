@@ -6,7 +6,7 @@
 #SBATCH --nodes=10
 #SBATCH --ntasks-per-node=16
 #SBATCH --dependency=singleton
-#SBATCH --time=2:0:0
+#SBATCH --time=3:0:0
 
 set -euo pipefail
 
