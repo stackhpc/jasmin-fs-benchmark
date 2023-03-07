@@ -1,6 +1,6 @@
 git describe: heads/main-0-gcbf28c2-dirty
-SLURM_JOB_ID: 43771266
-dimensions: {"nodes": 10, "ntasks_per_node": 16, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "iters": 0, "time": "2:0:0", "git_describe": "heads/main-0-gcbf28c2-dirty", "ior_api": "POSIX"}
+SLURM_JOB_ID: 44062134
+dimensions: {"nodes": 10, "ntasks_per_node": 16, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 30, "iters": 0, "time": "2:0:0", "git_describe": "heads/main-0-gcbf28c2-dirty", "ior_api": "POSIX"}
 SLURM_JOB_NODELIST: host[823-832]
 INFO:    Using cached SIF image
 INFO:    Using cached SIF image
@@ -162,4 +162,4 @@ INFO:    Using cached SIF image
 INFO:    Using cached SIF image
 INFO:    Using cached SIF image
 INFO:    Using cached SIF image
-slurmstepd: error: *** JOB 43771266 ON host823 CANCELLED AT 2023-03-03T17:13:51 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 44062134 ON host823 CANCELLED AT 2023-03-05T21:10:36 DUE TO TIME LIMIT ***

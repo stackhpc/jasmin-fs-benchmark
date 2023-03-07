@@ -1,5 +1,5 @@
 git describe: heads/main-0-gcbf28c2-dirty
-SLURM_JOB_ID: 43771266
+SLURM_JOB_ID: 43800454
 dimensions: {"nodes": 10, "ntasks_per_node": 16, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "iters": 0, "time": "2:0:0", "git_describe": "heads/main-0-gcbf28c2-dirty", "ior_api": "POSIX"}
 SLURM_JOB_NODELIST: host[823-832]
 INFO:    Using cached SIF image
@@ -162,4 +162,21 @@ INFO:    Using cached SIF image
 INFO:    Using cached SIF image
 INFO:    Using cached SIF image
 INFO:    Using cached SIF image
-slurmstepd: error: *** JOB 43771266 ON host823 CANCELLED AT 2023-03-03T17:13:51 DUE TO TIME LIMIT ***
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        4.663961 GiB/s : time 545.128 seconds
+[RESULT]    mdtest-easy-write      102.240800 kIOPS : time 359.302 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.244641 GiB/s : time 1226.249 seconds
+[RESULT]    mdtest-hard-write        2.670708 kIOPS : time 339.490 seconds
+[RESULT]                 find       13.289382 kIOPS : time 2823.745 seconds
+[RESULT]        ior-easy-read       13.760319 GiB/s : time 184.769 seconds
+[RESULT]     mdtest-easy-stat      390.212167 kIOPS : time 94.872 seconds
+[RESULT]        ior-hard-read        3.542579 GiB/s : time 84.699 seconds
+[RESULT]     mdtest-hard-stat       62.025330 kIOPS : time 15.595 seconds
+[RESULT]   mdtest-easy-delete      105.514310 kIOPS : time 352.193 seconds
+[RESULT]     mdtest-hard-read       41.253298 kIOPS : time 23.065 seconds
+[RESULT]   mdtest-hard-delete        2.732581 kIOPS : time 332.050 seconds
+[SCORE ] Bandwidth 2.730914 GiB/s : IOPS 31.795893 kiops : TOTAL 9.318362
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pure-10-16-300-0-POSIX
+[1677879282.541684] [host823:155787:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x1349400 was not matched

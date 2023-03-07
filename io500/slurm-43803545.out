@@ -1,0 +1,104 @@
+git describe: heads/main-0-gcbf28c2-dirty
+SLURM_JOB_ID: 43803545
+dimensions: {"nodes": 10, "ntasks_per_node": 8, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "iters": 0, "time": "2:0:0", "git_describe": "heads/main-0-gcbf28c2-dirty", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host[823-832]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+[host831.jc.rl.ac.uk:50079] pml_ucx.c:857  Error: ucx send failed: Shared memory error
+[1677879355.994542] [host831:50079:0]         mm_sysv.c:57   UCX  ERROR shmat(shmid=262169) failed: Invalid argument
+[1677879356.021318] [host830:183847:0]            sock.c:327  UCX  ERROR connect(fd=81, dest_addr=192.168.116.131:56926) failed: Connection refused
+[1677879356.021348] [host830:183847:0]          tcp_ep.c:1156 UCX  ERROR try to increase "net.core.somaxconn", "net.core.netdev_max_backlog", "net.ipv4.tcp_max_syn_backlog" to the maximum value on the remote node or increase UCX_TCP_MAX_CONN_RETRIES (=25)
+[1677879356.021425] [host830:183847:0]            sock.c:327  UCX  ERROR connect(fd=82, dest_addr=172.26.66.18:47252) failed: Connection refused
+[1677879356.021431] [host830:183847:0]          tcp_ep.c:1156 UCX  ERROR try to increase "net.core.somaxconn", "net.core.netdev_max_backlog", "net.ipv4.tcp_max_syn_backlog" to the maximum value on the remote node or increase UCX_TCP_MAX_CONN_RETRIES (=25)
+[1677879356.004672] [host830:183921:0]            sock.c:327  UCX  ERROR   connect(fd=78, dest_addr=192.168.116.131:56618) failed: Connection refused
+[host830.jc.rl.ac.uk:183921] pml_ucx.c:419  Error: ucp_ep_create(proc=71) failed: Destination is unreachable
+[host830.jc.rl.ac.uk:183921] pml_ucx.c:472  Error: Failed to resolve UCX endpoint for rank 71
+[1677879356.021443] [host829:25002:0]            sock.c:327  UCX  ERROR connect(fd=81, dest_addr=192.168.116.131:56926) failed: Connection refused
+[1677879356.021475] [host829:25002:0]          tcp_ep.c:1156 UCX  ERROR try to increase "net.core.somaxconn", "net.core.netdev_max_backlog", "net.ipv4.tcp_max_syn_backlog" to the maximum value on the remote node or increase UCX_TCP_MAX_CONN_RETRIES (=25)
+[1677879356.021565] [host829:25002:0]            sock.c:327  UCX  ERROR connect(fd=82, dest_addr=172.26.66.18:47252) failed: Connection refused
+[1677879356.021571] [host829:25002:0]          tcp_ep.c:1156 UCX  ERROR try to increase "net.core.somaxconn", "net.core.netdev_max_backlog", "net.ipv4.tcp_max_syn_backlog" to the maximum value on the remote node or increase UCX_TCP_MAX_CONN_RETRIES (=25)
+[1677879356.021387] [host827:52020:0]            sock.c:327  UCX  ERROR connect(fd=81, dest_addr=192.168.116.131:56926) failed: Connection refused
+[1677879356.021423] [host827:52020:0]          tcp_ep.c:1156 UCX  ERROR try to increase "net.core.somaxconn", "net.core.netdev_max_backlog", "net.ipv4.tcp_max_syn_backlog" to the maximum value on the remote node or increase UCX_TCP_MAX_CONN_RETRIES (=25)
+[1677879356.021499] [host827:52020:0]            sock.c:327  UCX  ERROR connect(fd=82, dest_addr=172.26.66.18:47252) failed: Connection refused
+[1677879356.021505] [host827:52020:0]          tcp_ep.c:1156 UCX  ERROR try to increase "net.core.somaxconn", "net.core.netdev_max_backlog", "net.ipv4.tcp_max_syn_backlog" to the maximum value on the remote node or increase UCX_TCP_MAX_CONN_RETRIES (=25)
+[1677879356.004590] [host827:52078:0]            sock.c:327  UCX  ERROR   connect(fd=87, dest_addr=192.168.116.131:56618) failed: Connection refused
+[host827.jc.rl.ac.uk:52078] pml_ucx.c:419  Error: ucp_ep_create(proc=71) failed: Destination is unreachable
+[host827.jc.rl.ac.uk:52078] pml_ucx.c:472  Error: Failed to resolve UCX endpoint for rank 71

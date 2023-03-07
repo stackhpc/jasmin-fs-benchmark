@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Mar  5 23:20:30 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1419543436 -k -e -o /work/stackhpc-pure//steveb/io500/pure-10-8-300-0-POSIX/ior-hard/file -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/pure-10-8-300-0-POSIX/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/pure-10-8-300-0-POSIX/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux host823.jc.rl.ac.uk
+TestID              : 0
+StartTime           : Sun Mar  5 23:20:30 2023
+Path                : /work/stackhpc-pure//steveb/io500/pure-10-8-300-0-POSIX/ior-hard/file
+FS                  : 100.0 TiB   Used FS: 3.8%   Inodes: 204800.0 Mi   Used Inodes: 3.8%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /work/stackhpc-pure//steveb/io500/pure-10-8-300-0-POSIX/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 80
+clients per node    : 8
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 34.20 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 49 max: 87181 -- min data: 0.0 GiB mean data: 1.5 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 37606400000000
+WARNING: Stat() of aggregate file size      = 327856355840
+WARNING: Using actual aggregate bytes moved = 327856355840
+WARNING: Maybe caused by deadlineForStonewalling
+write     331.28     7390       879.20      45.91      45.91      0.006302   943.80     0.001019   943.81     0   

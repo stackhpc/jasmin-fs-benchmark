@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Mar  5 21:11:29 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1419562372 -k -e -o /work/stackhpc-pure//steveb/io500/pure-10-8-30-0-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/pure-10-8-30-0-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 30 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/pure-10-8-30-0-POSIX/ior-easy-write.csv
+Machine             : Linux host823.jc.rl.ac.uk
+TestID              : 0
+StartTime           : Sun Mar  5 21:11:29 2023
+Path                : /work/stackhpc-pure//steveb/io500/pure-10-8-30-0-POSIX/ior-easy/ior_file_easy.00000000
+FS                  : 100.0 TiB   Used FS: 1.5%   Inodes: 204800.0 Mi   Used Inodes: 1.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /work/stackhpc-pure//steveb/io500/pure-10-8-30-0-POSIX/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 80
+clients per node    : 8
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 756.84 TiB
+stonewallingTime    : 30
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 2965 max: 3912 -- min data: 5.8 GiB mean data: 6.6 GiB time: 30.0s
+WARNING: Expected aggregate file size       = 832149913600000
+WARNING: Stat() of aggregate file size      = 656324689920
+WARNING: Using actual aggregate bytes moved = 656324689920
+WARNING: Maybe caused by deadlineForStonewalling
+write     4673       2336.79    0.000021    10158080000 2048.00    0.027130   133.93     0.001174   133.96     0   

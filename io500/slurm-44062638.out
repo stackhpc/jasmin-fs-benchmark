@@ -1,0 +1,42 @@
+git describe: heads/main-0-gcbf28c2-dirty
+SLURM_JOB_ID: 44062638
+dimensions: {"nodes": 10, "ntasks_per_node": 2, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "iters": 1, "time": "2:0:0", "git_describe": "heads/main-0-gcbf28c2-dirty", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host[823-832]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        4.411519 GiB/s : time 485.030 seconds
+[RESULT]    mdtest-easy-write       20.551740 kIOPS : time 318.668 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.505423 GiB/s : time 716.170 seconds
+[RESULT]    mdtest-hard-write        2.900300 kIOPS : time 303.345 seconds
+[RESULT]                 find        2.529504 kIOPS : time 2927.298 seconds
+[RESULT]        ior-easy-read       13.599824 GiB/s : time 157.319 seconds
+[RESULT]     mdtest-easy-stat      124.305958 kIOPS : time 53.526 seconds
+[RESULT]        ior-hard-read        0.600475 GiB/s : time 602.804 seconds
+[RESULT]     mdtest-hard-stat       66.458692 kIOPS : time 14.204 seconds
+[RESULT]   mdtest-easy-delete       19.655076 kIOPS : time 333.867 seconds
+[RESULT]     mdtest-hard-read       28.200100 kIOPS : time 32.107 seconds
+[RESULT]   mdtest-hard-delete        2.684516 kIOPS : time 327.792 seconds
+[SCORE ] Bandwidth 2.065702 GiB/s : IOPS 14.404402 kiops : TOTAL 5.454834
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pure-10-2-300-1-POSIX
+[1678078401.934640] [host823:8048 :0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x24bc880 was not matched
