@@ -1,9 +1,9 @@
 IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
-Began               : Wed Mar  8 11:09:01 2023
-Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1418784257 -k -e -o /gws/pw/j07/perf_testing/stackhpc/steveb/io500/pansas-2-16-300-0-MPIIO/ior-hard/file -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/pansas-2-16-300-0-MPIIO/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a MPIIO -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/pansas-2-16-300-0-MPIIO/ior-hard-write.csv -O stoneWallingWearOut=1
+Began               : Wed Mar  8 11:40:01 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1418784257 -k -e -o /gws/pw/j07/perf_testing/stackhpc/steveb/io500/pansas-2-16-300-0-MPIIO/ior-hard/file -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/pansas-2-16-300-0-MPIIO/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a MPIIO -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/pansas-2-16-300-0-MPIIO/ior-hard-read.csv
 Machine             : Linux host823.jc.rl.ac.uk
 TestID              : 0
-StartTime           : Wed Mar  8 11:09:01 2023
+StartTime           : Wed Mar  8 11:40:01 2023
 Path                : /gws/pw/j07/perf_testing/stackhpc/steveb/io500/pansas-2-16-300-0-MPIIO/ior-hard/file
 FS                  : 0.5 GiB   Used FS: 0.3%   Inodes: 250.0 Mi   Used Inodes: 0.3%
 
@@ -24,16 +24,12 @@ repetitions         : 1
 xfersize            : 47008 bytes
 blocksize           : 47008 bytes
 aggregate filesize  : 13.68 TiB
-stonewallingTime    : 300
-stoneWallingWearOut : 1
 
 Results: 
 
 access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
 ------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
-stonewalling pairs accessed min: 1780 max: 9143 -- min data: 0.1 GiB mean data: 0.1 GiB time: 300.2s
 WARNING: Expected aggregate file size       = 15042560000000
 WARNING: Stat() of aggregate file size      = 13753412608
 WARNING: Using actual aggregate bytes moved = 13753412608
-WARNING: Maybe caused by deadlineForStonewalling
-write     10.57      235.83     1240.60     45.91      45.91      0.078493   1240.60    0.673926   1241.36    0   
+read      4.83       107.81     2713.83     45.91      45.91      0.062935   2713.83    0.003413   2713.90    0   

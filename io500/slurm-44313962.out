@@ -1,0 +1,41 @@
+git describe: heads/main-0-gfd48d0d-dirty
+SLURM_JOB_ID: 44313962
+dimensions: {"nodes": 2, "ntasks_per_node": 8, "filesystem": {"name": "pansas", "mountpoint": "/gws/pw/j07/perf_testing/stackhpc"}, "stonewall": 300, "iters": 0, "time": "2:0:0", "git_describe": "heads/main-0-gfd48d0d-dirty", "ior_api": "MPIIO"}
+SLURM_JOB_NODELIST: host[823,825]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        6.548835 GiB/s : time 324.003 seconds
+[RESULT]    mdtest-easy-write        3.849380 kIOPS : time 305.196 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+mca_fbtl_posix_pwritev: error in (p)write(v):Input/output error
+mca_fbtl_posix_pwritev: error in (p)write(v):Input/output error
+mca_fbtl_posix_pwritev: error in (p)write(v):Input/output error
+mca_fbtl_posix_pwritev: error in (p)write(v):Input/output error
+mca_fbtl_posix_pwritev: error in (p)write(v):Input/output error
+mca_fbtl_posix_pwritev: error in (p)write(v):Input/output error
+mca_fbtl_posix_pwritev: error in (p)write(v):Input/output error
+mca_fbtl_posix_pwritev: error in (p)write(v):Input/output error
+mca_fbtl_posix_pwritev: error in (p)write(v):Input/output error
+mca_fbtl_posix_pwritev: error in (p)write(v):Input/output error
+mca_fbtl_posix_pwritev: error in (p)write(v):Input/output error
+[RESULT]       ior-hard-write        0.006290 GiB/s : time 2482.727 seconds
+[RESULT]    mdtest-hard-write        0.724697 kIOPS : time 302.731 seconds
+[RESULT]                 find      261.470437 kIOPS : time 5.314 seconds
+[RESULT]        ior-easy-read        6.754196 GiB/s : time 313.916 seconds
+[RESULT]     mdtest-easy-stat       23.847414 kIOPS : time 50.069 seconds
+slurmstepd: error: *** JOB 44313962 ON host823 CANCELLED AT 2023-03-08T14:31:37 DUE TO TIME LIMIT ***
