@@ -19,3 +19,4 @@ IO500 version io500-isc22_v1 (standard)
 [RESULT]                 find      696.877458 kIOPS : time 1.103 seconds
 [RESULT]        ior-easy-read        3.102284 GiB/s : time 336.218 seconds
 [RESULT]     mdtest-easy-stat       36.723719 kIOPS : time 19.376 seconds
+slurmstepd: error: *** JOB 44313646 ON host823 CANCELLED AT 2023-03-07T20:53:22 DUE TO TIME LIMIT ***

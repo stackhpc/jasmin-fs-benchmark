@@ -1,0 +1,21 @@
+git describe: heads/main-0-gfd48d0d-dirty
+SLURM_JOB_ID: 44313945
+dimensions: {"nodes": 1, "ntasks_per_node": 8, "filesystem": {"name": "pansas", "mountpoint": "/gws/pw/j07/perf_testing/stackhpc"}, "stonewall": 300, "iters": 0, "time": "2:0:0", "git_describe": "heads/main-0-gfd48d0d-dirty", "ior_api": "MPIIO"}
+SLURM_JOB_NODELIST: host823
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        3.291666 GiB/s : time 324.396 seconds
+[RESULT]    mdtest-easy-write        2.412880 kIOPS : time 305.871 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.021053 GiB/s : time 818.781 seconds
+[RESULT]    mdtest-hard-write        0.331217 kIOPS : time 303.105 seconds
+[RESULT]                 find      711.747748 kIOPS : time 1.177 seconds
+[RESULT]        ior-easy-read        3.131275 GiB/s : time 340.955 seconds
+[RESULT]     mdtest-easy-stat       36.628172 kIOPS : time 21.086 seconds
