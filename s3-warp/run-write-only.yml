@@ -25,6 +25,7 @@
       benchmark_type: ["put"]
       nodes: [1, 2, 10]
       threads_per_node: [1, 20, 50, 100]
+      objects_per_node: [0] # 'put' benchmarks only require a duration
       obj_sizes: ["10KiB", "10MiB", "100MiB", "1GiB"]
       duration: ['2m']
 
