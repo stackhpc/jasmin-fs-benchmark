@@ -1,0 +1,22 @@
+[run]
+procs           = 32
+version         = io500-isc22_v1
+config-hash     = DC64005
+result-dir      = /home/users/steveb/io500-lotus/io500/runs/quobyte-2-16-30-0-POSIX
+mode            = standard
+; START 2023-03-08 23:54:25
+; ERROR INVALID stonewall-time < 300s
+
+
+[ior-easy-write]
+t_start         = 2023-03-08 23:54:25
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1418766532 -k -e -o /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-30-0-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/quobyte-2-16-30-0-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 30 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/quobyte-2-16-30-0-POSIX/ior-easy-write.csv
+throughput-stonewall = 2.62
+; ERROR INVALID Runtime is smaller than expected minimum runtime
+score           = 2.104137
+t_delta         = 47.9622
+t_end           = 2023-03-08 23:55:13
+
+[mdtest-easy-write]
+t_start         = 2023-03-08 23:55:13
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -532588738 -N 1 -d /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-30-0-POSIX/mdtest-easy -x /home/users/steveb/io500-lotus/io500/runs/quobyte-2-16-30-0-POSIX/mdtest-easy.stonewall -C -Y -W 30 --saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/quobyte-2-16-30-0-POSIX/mdtest-easy-write.csv -a POSIX

@@ -1,0 +1,10 @@
+-- started at 03/08/2023 23:37:22 --
+
+mdtest-3.4.0+dev was launched with 4 total task(s) on 2 node(s)
+Command line used: ./mdtest '--dataPacketType=timestamp' '-n' '1000000' '-u' '-L' '-F' '-P' '-G' '-532589498' '-N' '1' '-d' '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-2-300-0-POSIX/mdtest-easy' '-x' '/home/users/steveb/io500-lotus/io500/runs/quobyte-2-2-300-0-POSIX/mdtest-easy.stonewall' '-C' '-Y' '-W' '300' '--saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/quobyte-2-2-300-0-POSIX/mdtest-easy-write.csv' '-a' 'POSIX'
+Path                : /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-2-300-0-POSIX/mdtest-easy
+FS                  : 9.1 TiB   Used FS: 20.3%   Inodes: 8796093022208.0 Mi   Used Inodes: 0.0%
+Nodemap: 1100
+V-0: Rank   0 Line  2479 Shifting ranks by 2 for each phase.
+4 tasks, 4000000 files
+ERROR: open64("/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-2-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.2.0/file.mdtest.0.0", 66, 0664) failed. Error: No such file or directory, (aiori-POSIX.c:557)

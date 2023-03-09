@@ -1,0 +1,1 @@
+{"nodes": 10, "ntasks_per_node": 2, "filesystem": {"name": "quobyte", "mountpoint": "/gws/nopw/j04/perf_testing3/stackhpc"}, "stonewall": 300, "iters": 0, "time": "4:0:0", "git_describe": "heads/main-0-g1f83e4c-dirty", "ior_api": "POSIX"}
