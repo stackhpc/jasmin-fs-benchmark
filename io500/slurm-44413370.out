@@ -1,0 +1,29 @@
+SLURM_JOB_ID: 44413370
+dimensions: {"nodes": 1, "ntasks_per_node": 8, "filesystem": {"name": "panasas", "mountpoint": "/gws/pw/j07/perf_testing3"}, "stonewall": 300, "iters": 0, "time": "2:0:0", "git_describe": "heads/main-0-g1f83e4c-dirty", "ior_api": "MPIIO"}
+SLURM_JOB_NODELIST: host824
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        3.436834 GiB/s : time 319.724 seconds
+[RESULT]    mdtest-easy-write        3.058649 kIOPS : time 304.569 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.056403 GiB/s : time 375.542 seconds
+[RESULT]    mdtest-hard-write        0.535645 kIOPS : time 304.603 seconds
+[RESULT]                 find      729.588427 kIOPS : time 1.499 seconds
+[RESULT]        ior-easy-read        3.248581 GiB/s : time 338.180 seconds
+[RESULT]     mdtest-easy-stat       24.513316 kIOPS : time 38.881 seconds
+[RESULT]        ior-hard-read        0.046963 GiB/s : time 450.760 seconds
+[RESULT]     mdtest-hard-stat        3.947321 kIOPS : time 42.204 seconds
+[RESULT]   mdtest-easy-delete        6.403312 kIOPS : time 147.504 seconds
+[RESULT]     mdtest-hard-read       10.665433 kIOPS : time 16.277 seconds
+[RESULT]   mdtest-hard-delete        2.103868 kIOPS : time 78.757 seconds
+[SCORE ] Bandwidth 0.414694 GiB/s : IOPS 7.990498 kiops : TOTAL 1.820333
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/panasas-1-8-300-0-MPIIO
+[1678298716.788286] [host824:25704:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0xe11680 was not matched

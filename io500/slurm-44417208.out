@@ -1,0 +1,45 @@
+SLURM_JOB_ID: 44417208
+dimensions: {"nodes": 10, "ntasks_per_node": 2, "filesystem": {"name": "quobyte", "mountpoint": "/gws/nopw/j04/perf_testing3/stackhpc"}, "stonewall": 300, "iters": 0, "time": "4:0:0", "git_describe": "heads/main-0-g1f83e4c-dirty", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host[823-832]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+ERROR: write(65, 0x2eb3000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(66, 0x21f5000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(73, 0x316f000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(71, 0x2921000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(64, 0x2047000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(73, 0x2e42000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(66, 0x3143000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(73, 0x1f35000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(69, 0x325e000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(69, 0x1db9000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(75, 0x1a2e000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(71, 0x158f000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(73, 0x186f000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(67, 0x140f000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(71, 0x27cb000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(71, 0x1dc9000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(71, 0x2d1f000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(71, 0x1c5d000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(65, 0x1385000, 2097152) failed, (aiori-POSIX.c:704)
+[host823.jc.rl.ac.uk:18391] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host823.jc.rl.ac.uk:18391] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166

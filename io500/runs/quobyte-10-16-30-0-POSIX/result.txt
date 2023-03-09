@@ -1,0 +1,13 @@
+[run]
+procs           = 160
+version         = io500-isc22_v1
+config-hash     = 31FA57E2
+result-dir      = /home/users/steveb/io500-lotus/io500/runs/quobyte-10-16-30-0-POSIX
+mode            = standard
+; START 2023-03-09 15:33:54
+; ERROR INVALID stonewall-time < 300s
+
+
+[ior-easy-write]
+t_start         = 2023-03-09 15:33:54
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1418513146 -k -e -o /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-10-16-30-0-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/quobyte-10-16-30-0-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 30 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/quobyte-10-16-30-0-POSIX/ior-easy-write.csv

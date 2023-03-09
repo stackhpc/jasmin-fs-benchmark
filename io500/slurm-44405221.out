@@ -1,0 +1,37 @@
+SLURM_JOB_ID: 44405221
+dimensions: {"nodes": 1, "ntasks_per_node": 16, "filesystem": {"name": "quobyte", "mountpoint": "/gws/nopw/j04/perf_testing3/stackhpc"}, "stonewall": 300, "iters": 0, "time": "2:0:0", "git_describe": "heads/main-0-g3580f9f-dirty", "ior_api": "MPIIO"}
+SLURM_JOB_NODELIST: host823
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        1.243859 GiB/s : time 314.456 seconds
+[RESULT]    mdtest-easy-write        3.176199 kIOPS : time 303.424 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.000493 GiB/s : time 1782.150 seconds
+[RESULT]    mdtest-hard-write        0.112539 kIOPS : time 321.182 seconds
+[RESULT]                 find      344.172827 kIOPS : time 2.899 seconds
+[RESULT]        ior-easy-read        1.455472 GiB/s : time 259.978 seconds
+[RESULT]     mdtest-easy-stat       57.831503 kIOPS : time 17.615 seconds
+[RESULT]        ior-hard-read        0.039854 GiB/s : time 22.441 seconds
+[RESULT]     mdtest-hard-stat       56.736172 kIOPS : time 1.643 seconds
+[RESULT]   mdtest-easy-delete        5.626664 kIOPS : time 172.127 seconds
+[RESULT]     mdtest-hard-read        0.233516 kIOPS : time 155.312 seconds
+[RESULT]   mdtest-hard-delete        0.339448 kIOPS : time 107.219 seconds
+[SCORE ] Bandwidth 0.077243 GiB/s : IOPS 4.538571 kiops : TOTAL 0.592092
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-0-MPIIO
+[1678314312.161503] [host823:121259:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x2025ec0 was not matched

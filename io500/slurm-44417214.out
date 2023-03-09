@@ -1,0 +1,340 @@
+SLURM_JOB_ID: 44417214
+dimensions: {"nodes": 10, "ntasks_per_node": 16, "filesystem": {"name": "quobyte", "mountpoint": "/gws/nopw/j04/perf_testing3/stackhpc"}, "stonewall": 30, "iters": 0, "time": "4:0:0", "git_describe": "heads/main-0-g1f83e4c-dirty", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host[823-832]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+ERROR INVALID (src/phase_dbg.c:13) stonewall-time < 300s
+ERROR: write(95, 0x1265000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(107, 0x22b5000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(83, 0x262d000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(105, 0x1939000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(105, 0x1422000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(89, 0x141e000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(101, 0x1b6a000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x1a2a000, 2097152) failed, (aiori-POSIX.c:704)
+[host823.jc.rl.ac.uk:18794] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host823.jc.rl.ac.uk:18794] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host823.jc.rl.ac.uk:18794] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+ERROR: write(105, 0x2523000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(92, 0x1376000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x1635000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(102, 0x1a79000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(90, 0x20d4000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(96, 0x212e000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(105, 0x1acc000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(98, 0x22c0000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x3178000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(85, 0x2ba5000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(107, 0x2ac9000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(89, 0x1c68000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(102, 0x13fd000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x1ef0000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(102, 0x1d1e000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(93, 0x2419000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(99, 0x25a6000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x18d1000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(85, 0x200e000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x2081000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(101, 0x121b000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(109, 0x2f1b000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(105, 0x2abf000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(104, 0x307f000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(99, 0x18e4000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(105, 0x2857000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(107, 0x1ae6000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(105, 0x257a000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(102, 0x212f000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(94, 0x1be9000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x13f6000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x2403000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x1fee000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(87, 0x18a4000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(105, 0x25d4000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(90, 0x1d42000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(98, 0x24b3000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x192d000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(94, 0x16dd000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x1f95000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(100, 0x2087000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(94, 0x1c99000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(84, 0x27b3000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(90, 0x2b58000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x222e000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(92, 0x1a81000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x2198000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x25de000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x2933000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(93, 0x2a8e000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(98, 0x300b000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(91, 0x1d1d000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(107, 0x31f1000, 2097152) failed, (aiori-POSIX.c:704)
+[host823.jc.rl.ac.uk:18794] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+ERROR: write(103, 0x217c000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(96, 0x1e5f000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(95, 0x23d4000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(86, 0x17a3000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(105, 0x1a1a000, 2097152) failed, (aiori-POSIX.c:704)
+[host823.jc.rl.ac.uk:18794] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+ERROR: write(102, 0x2f08000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x19dd000, 2097152) failed, (aiori-POSIX.c:704)
+[host823.jc.rl.ac.uk:18794] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+ERROR: write(91, 0x2eb3000, 2097152) failed, (aiori-POSIX.c:704)
+[host823.jc.rl.ac.uk:18794] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+ERROR: write(99, 0x25b2000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(109, 0x377b000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(85, 0x1ca0000, 2097152) failed, (aiori-POSIX.c:704)
+[host823.jc.rl.ac.uk:18794] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+ERROR: write(103, 0x2890000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(101, 0x320a000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x1e76000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(82, 0x2b8c000, 2097152) failed, (aiori-POSIX.c:704)
+[host823.jc.rl.ac.uk:18794] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+ERROR: write(103, 0x1a93000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(105, 0x29c0000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(81, 0x2574000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(104, 0x1bec000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(106, 0x2461000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(79, 0x2ab2000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(93, 0x3059000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(93, 0x2b4b000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(91, 0x24c7000, 2097152) failed, (aiori-POSIX.c:704)
+[host823.jc.rl.ac.uk:18794] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+ERROR: write(95, 0x26f7000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(83, 0x2694000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x39d8000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(89, 0x2bbe000, 2097152) failed, (aiori-POSIX.c:704)
+[host823.jc.rl.ac.uk:18794] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+ERROR: write(97, 0x291e000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(102, 0x1970000, 2097152) failed, (aiori-POSIX.c:704)
+[host823.jc.rl.ac.uk:18794] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+ERROR: write(91, 0x2dfb000, 2097152) failed, (aiori-POSIX.c:704)
+[host823.jc.rl.ac.uk:18794] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+ERROR: write(82, 0x2052000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(93, 0x1aad000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x222e000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(109, 0x2235000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(98, 0x2850000, 2097152) failed, (aiori-POSIX.c:704)
+[host823.jc.rl.ac.uk:18794] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+ERROR: write(93, 0x2073000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x24dc000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(88, 0x2666000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(91, 0x1c11000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(94, 0x31f7000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(88, 0x305d000, 2097152) failed, (aiori-POSIX.c:704)
+[host823.jc.rl.ac.uk:18794] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+ERROR: write(103, 0x2737000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(99, 0x15e4000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(109, 0x2e7a000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(90, 0x20ad000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(89, 0x17c1000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(89, 0x38b0000, 2097152) failed, (aiori-POSIX.c:704)
+[host823.jc.rl.ac.uk:18794] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+ERROR: write(105, 0x29db000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(91, 0x20ee000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(99, 0x1edb000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x28b1000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(98, 0x2fc8000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(109, 0x1ae4000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(98, 0x27a2000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(105, 0x288e000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(93, 0x20a7000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(94, 0x3116000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(89, 0x1cc4000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(109, 0x1fdb000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(107, 0x16a1000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(84, 0x19df000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(80, 0x1b34000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(105, 0x205a000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(91, 0x2fa6000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x251d000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(107, 0x26c9000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x31aa000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(83, 0x249e000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(101, 0x1447000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x2fd0000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(107, 0x2da0000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(79, 0x1fe4000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x205a000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(105, 0x1d5e000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(105, 0x1420000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x3142000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(85, 0x2cdb000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(86, 0x17b8000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(94, 0x176e000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(107, 0x3157000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(86, 0x144f000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x256e000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(109, 0x1cea000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x19e5000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(109, 0x2609000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(105, 0x2b9d000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(102, 0x1b07000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(109, 0x271e000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(86, 0x3628000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(105, 0x2638000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(107, 0x22d9000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(82, 0x1efb000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(109, 0x152c000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(96, 0x1b7a000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(94, 0x31d7000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x175b000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(103, 0x22c8000, 2097152) failed, (aiori-POSIX.c:704)

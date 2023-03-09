@@ -1,0 +1,29 @@
+SLURM_JOB_ID: 44405218
+dimensions: {"nodes": 1, "ntasks_per_node": 8, "filesystem": {"name": "quobyte", "mountpoint": "/gws/nopw/j04/perf_testing3/stackhpc"}, "stonewall": 300, "iters": 0, "time": "2:0:0", "git_describe": "heads/main-0-g3580f9f-dirty", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host823
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        1.744532 GiB/s : time 320.527 seconds
+[RESULT]    mdtest-easy-write        2.212945 kIOPS : time 303.001 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.000545 GiB/s : time 3988.178 seconds
+[RESULT]    mdtest-hard-write        0.062554 kIOPS : time 312.675 seconds
+[RESULT]                 find      272.472377 kIOPS : time 2.527 seconds
+[RESULT]        ior-easy-read        1.799697 GiB/s : time 310.699 seconds
+[RESULT]     mdtest-easy-stat       45.976018 kIOPS : time 15.544 seconds
+[RESULT]        ior-hard-read        0.042149 GiB/s : time 51.562 seconds
+[RESULT]     mdtest-hard-stat       44.871519 kIOPS : time 1.442 seconds
+[RESULT]   mdtest-easy-delete        4.271142 kIOPS : time 157.789 seconds
+[RESULT]     mdtest-hard-read        0.051997 kIOPS : time 375.954 seconds
+[RESULT]   mdtest-hard-delete        0.288232 kIOPS : time 68.882 seconds
+[SCORE ] Bandwidth 0.092147 GiB/s : IOPS 2.898444 kiops : TOTAL 0.516802
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/quobyte-1-8-300-0-POSIX
+[1678309156.635640] [host823:110092:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x110dbc0 was not matched

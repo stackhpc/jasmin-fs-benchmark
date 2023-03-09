@@ -1,0 +1,41 @@
+SLURM_JOB_ID: 44405219
+dimensions: {"nodes": 1, "ntasks_per_node": 16, "filesystem": {"name": "quobyte", "mountpoint": "/gws/nopw/j04/perf_testing3/stackhpc"}, "stonewall": 30, "iters": 0, "time": "2:0:0", "git_describe": "heads/main-0-g3580f9f-dirty", "ior_api": "MPIIO"}
+SLURM_JOB_NODELIST: host823
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+ERROR INVALID (src/phase_dbg.c:13) stonewall-time < 300s
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-easy-write        1.137294 GiB/s : time 33.588 seconds [INVALID]
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-easy-write        3.126945 kIOPS : time 31.731 seconds [INVALID]
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.000561 GiB/s : time 836.147 seconds
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-hard-write        0.048071 kIOPS : time 41.506 seconds [INVALID]
+[RESULT]                 find      431.631196 kIOPS : time 0.228 seconds
+[RESULT]        ior-easy-read        1.411602 GiB/s : time 26.196 seconds
+[RESULT]     mdtest-easy-stat       58.245608 kIOPS : time 2.644 seconds
+[RESULT]        ior-hard-read        0.107516 GiB/s : time 9.934 seconds
+[RESULT]     mdtest-hard-stat       50.168497 kIOPS : time 1.045 seconds
+[RESULT]   mdtest-easy-delete        6.138845 kIOPS : time 16.674 seconds
+[RESULT]     mdtest-hard-read        0.093495 kIOPS : time 21.715 seconds
+[RESULT]   mdtest-hard-delete        0.200832 kIOPS : time 10.651 seconds
+[SCORE ] Bandwidth 0.099180 GiB/s : IOPS 3.486901 kiops : TOTAL 0.588074 [INVALID]
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-30-0-MPIIO
+[1678310212.219005] [host823:117120:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x24f8b00 was not matched
