@@ -1,1 +1,0 @@
-IO500 version io500-isc22_v1 (standard)

@@ -1,1 +1,0 @@
-{"nodes": 1, "ntasks_per_node": 48, "filesystem": {"name": "panasas", "mountpoint": "/gws/pw/j07/perf_testing3"}, "stonewall": 300, "iters": 2, "time": "4:0:0", "ior_api": "POSIX"}

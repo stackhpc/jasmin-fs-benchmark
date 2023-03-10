@@ -1,7 +1,0 @@
-[run]
-procs           = 96
-version         = io500-isc22_v1
-config-hash     = 456A0DBB
-result-dir      = /home/users/steveb/io500-lotus/io500/runs/panasas-1-96-300-1-POSIX
-mode            = standard
-; START 2023-03-10 01:08:56
