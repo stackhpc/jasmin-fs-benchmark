@@ -1,4 +1,0 @@
-runtime: 6.755168 rate: 11645.455126
-rank, errors, unknown, found, total, checked, job steal msgs received, work items send, job steal msgs send, work items stolen, time spend in job stealing in s, number of completion tokens send
-0, 0, 12298, 728, 27680, 27077, 4, 2, 25, 608, 0.839s, 5
-1, 0, 16262, 0, 50987, 51599, 25, 608, 4, 2, 0.002s, 5

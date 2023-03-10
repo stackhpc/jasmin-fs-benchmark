@@ -1,4 +1,0 @@
-rank,items,rate-Directory creation,time-Directory creation,rate-Directory stat,time-Directory stat,rate-Directory read,time-Directory read,rate-Directory rename,time-Directory rename,rate-Directory removal,time-Directory removal,rate-File creation,time-File creation,rate-File stat,time-File stat,rate-File read,time-File read,rate-File removal,time-File removal,rate-Tree creation,time-Tree creation,rate-Tree removal,time-Tree removal
-all,297666,,,,,,,,,,,1.9793391258e+03,3.0077311778e+02,,,,,,,6.2110232489e+02,3.2200813293e-03,,
-0,,,,,,,,,,,,9.9070817647e+02,3.0045780087e+02,,,,,,
-1,,,,,,,,,,,,9.9221785753e+02,3.0000064778e+02,,,,,,

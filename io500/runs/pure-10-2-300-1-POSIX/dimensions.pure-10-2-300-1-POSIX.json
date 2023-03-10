@@ -1,1 +1,0 @@
-{"nodes": 10, "ntasks_per_node": 2, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "iters": 1, "time": "2:0:0", "git_describe": "heads/main-0-gcbf28c2-dirty", "ior_api": "POSIX"}

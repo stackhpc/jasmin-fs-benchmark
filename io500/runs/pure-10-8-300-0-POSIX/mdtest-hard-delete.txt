@@ -1,9 +1,0 @@
--- started at 03/06/2023 01:03:08 --
-
-mdtest-3.4.0+dev was launched with 80 total task(s) on 10 node(s)
-Command line used: ./mdtest '--dataPacketType=timestamp' '-n' '1000000' '-t' '-w' '3901' '-e' '3901' '-P' '-G=-533365642' '-N' '1' '-F' '-d' '/work/stackhpc-pure//steveb/io500/pure-10-8-300-0-POSIX/mdtest-hard' '-x' '/home/users/steveb/io500-lotus/io500/runs/pure-10-8-300-0-POSIX/mdtest-hard.stonewall' '-r' '--saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/pure-10-8-300-0-POSIX/mdtest-hard-delete.csv' '-a' 'POSIX'
-Path                : /work/stackhpc-pure//steveb/io500/pure-10-8-300-0-POSIX/mdtest-hard
-FS                  : 100.0 TiB   Used FS: 4.1%   Inodes: 204800.0 Mi   Used Inodes: 4.1%
-Nodemap: 11111111000000000000000000000000000000000000000000000000000000000000000000000000
-V-0: Rank   0 Line  2479 Shifting ranks by 8 for each phase.
-80 tasks, 80000000 files
