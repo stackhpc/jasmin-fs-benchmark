@@ -3,6 +3,8 @@ datadir = {{ item.filesystem.mountpoint }}/{{ lookup('env', 'USER') }}/io500/{{ 
 resultdir = {{ smatrix_template_dest_dir }}
 timestamp-datadir = FALSE
 timestamp-resultdir = FALSE
+drop-caches = FALSE
+drop-caches-cmd = sudo -n bash -c "echo 3 > /proc/sys/vm/drop_caches"
 
 [debug]
 stonewall-time = {{ item.stonewall }}
