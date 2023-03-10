@@ -1,0 +1,6 @@
+SLURM_JOB_ID: 44627647
+dimensions: {"nodes": 1, "ntasks_per_node": 1, "filesystem": {"name": "quobyte", "mountpoint": "/gws/nopw/j04/perf_testing3/stackhpc"}, "stonewall": 300, "iters": 0, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host824
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[host824.jc.rl.ac.uk:145526] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166

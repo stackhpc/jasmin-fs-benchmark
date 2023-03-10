@@ -1,0 +1,1 @@
+{"nodes": 1, "ntasks_per_node": 48, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "iters": 1, "time": "4:0:0", "ior_api": "POSIX"}

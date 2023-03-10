@@ -1,0 +1,12 @@
+[run]
+procs           = 1
+version         = io500-isc22_v1
+config-hash     = D25A8ECA
+result-dir      = /home/users/steveb/io500-lotus/io500/runs/panasas-1-1-300-0-POSIX
+mode            = standard
+; START 2023-03-09 17:06:33
+
+
+[ior-easy-write]
+t_start         = 2023-03-09 17:06:33
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1418505537 -k -e -o /gws/pw/j07/perf_testing3/steveb/io500/panasas-1-1-300-0-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/panasas-1-1-300-0-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/panasas-1-1-300-0-POSIX/ior-easy-write.csv

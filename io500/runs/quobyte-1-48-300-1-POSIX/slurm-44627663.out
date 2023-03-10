@@ -1,0 +1,132 @@
+SLURM_JOB_ID: 44627663
+dimensions: {"nodes": 1, "ntasks_per_node": 48, "filesystem": {"name": "quobyte", "mountpoint": "/gws/nopw/j04/perf_testing3/stackhpc"}, "stonewall": 300, "iters": 1, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host824
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+ERROR: write(71, 0x1c60000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(48, 0x1a9f000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(60, 0x2fdd000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(76, 0x28c0000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(64, 0x24fd000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(60, 0x2095000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(73, 0x219d000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(77, 0x1ccc000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(49, 0x2e67000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(48, 0x1af0000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(49, 0x3016000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(65, 0x2969000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(60, 0x23e1000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(64, 0x151e000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(48, 0x158e000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(48, 0x2d2f000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(60, 0x2848000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(48, 0x1e95000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(49, 0x25e4000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(62, 0x1a93000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(64, 0x1a4c000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(49, 0x2acd000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(61, 0x2e24000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(49, 0x1797000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(49, 0x24fa000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(65, 0x1524000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(63, 0x1b08000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(60, 0x2d45000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(61, 0x1bdf000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(64, 0x1368000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(48, 0x2788000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(48, 0x2359000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(60, 0x2320000, 2097152) failed, (aiori-POSIX.c:704)
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+ERROR: write(49, 0x1de9000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(49, 0x111d000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(64, 0x2c7b000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(49, 0x14a1000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(61, 0x2f55000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(66, 0x169c000, 2097152) failed, (aiori-POSIX.c:704)
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+ERROR: write(63, 0x1948000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(75, 0x246d000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(49, 0x1ea9000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(48, 0x24f5000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(63, 0x11e0000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(62, 0x229d000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(66, 0x1562000, 2097152) failed, (aiori-POSIX.c:704)
+ERROR: write(63, 0x1ef1000, 2097152) failed, (aiori-POSIX.c:704)
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host824.jc.rl.ac.uk:148390] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166

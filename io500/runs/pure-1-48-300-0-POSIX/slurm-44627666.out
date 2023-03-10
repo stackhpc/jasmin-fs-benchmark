@@ -1,0 +1,69 @@
+SLURM_JOB_ID: 44627666
+dimensions: {"nodes": 1, "ntasks_per_node": 48, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "iters": 0, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host825
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        1.856485 GiB/s : time 338.929 seconds
+[RESULT]    mdtest-easy-write       14.304889 kIOPS : time 366.902 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.183861 GiB/s : time 617.744 seconds
+[RESULT]    mdtest-hard-write        0.928600 kIOPS : time 371.027 seconds
+[RESULT]                 find       12.321919 kIOPS : time 452.592 seconds
+[RESULT]        ior-easy-read        1.537218 GiB/s : time 409.298 seconds
+[RESULT]     mdtest-easy-stat       40.846752 kIOPS : time 129.131 seconds
+[RESULT]        ior-hard-read        1.468914 GiB/s : time 77.333 seconds
+[RESULT]     mdtest-hard-stat       40.585905 kIOPS : time 9.474 seconds
+[RESULT]   mdtest-easy-delete       20.335894 kIOPS : time 258.974 seconds
+[RESULT]     mdtest-hard-read       13.691550 kIOPS : time 26.102 seconds
+[RESULT]   mdtest-hard-delete        1.030075 kIOPS : time 334.617 seconds
+[SCORE ] Bandwidth 0.936975 GiB/s : IOPS 9.691447 kiops : TOTAL 3.013411
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pure-1-48-300-0-POSIX
+[1678394390.692486] [host825:188442:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x1c8a6c0 was not matched
