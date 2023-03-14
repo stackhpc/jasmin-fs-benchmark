@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Mar 14 13:23:31 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1418773362 -k -e -o /work/stackhpc-pure//steveb/io500/pure-1-2-300-1-POSIX/ior-hard/file -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/pure-1-2-300-1-POSIX/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/pure-1-2-300-1-POSIX/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux host824.jc.rl.ac.uk
+TestID              : 0
+StartTime           : Tue Mar 14 13:23:31 2023
+Path                : /work/stackhpc-pure//steveb/io500/pure-1-2-300-1-POSIX/ior-hard/file
+FS                  : 100.0 TiB   Used FS: 0.4%   Inodes: 204800.0 Mi   Used Inodes: 0.4%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /work/stackhpc-pure//steveb/io500/pure-1-2-300-1-POSIX/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 875.59 GiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 2447018 max: 3252856 -- min data: 107.1 GiB mean data: 124.8 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 940160000000
+WARNING: Stat() of aggregate file size      = 305820509696
+WARNING: Using actual aggregate bytes moved = 305820509696
+WARNING: Maybe caused by deadlineForStonewalling
+write     717.66     16008      406.39      45.91      45.91      0.001576   406.39     0.000341   406.40     0   

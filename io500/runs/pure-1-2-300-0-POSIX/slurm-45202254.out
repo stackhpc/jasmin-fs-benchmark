@@ -1,0 +1,23 @@
+SLURM_JOB_ID: 45202254
+dimensions: {"nodes": 1, "ntasks_per_node": 2, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "iters": 0, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host824
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        1.300891 GiB/s : time 336.581 seconds
+[RESULT]    mdtest-easy-write        1.968212 kIOPS : time 301.714 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.763956 GiB/s : time 316.528 seconds
+[RESULT]    mdtest-hard-write        1.173719 kIOPS : time 301.714 seconds
+[RESULT]                 find        2.131392 kIOPS : time 443.276 seconds
+[RESULT]        ior-easy-read        1.525174 GiB/s : time 287.084 seconds
+[RESULT]     mdtest-easy-stat       15.709983 kIOPS : time 38.682 seconds
+[RESULT]        ior-hard-read        1.495665 GiB/s : time 161.679 seconds
+[RESULT]     mdtest-hard-stat       15.317238 kIOPS : time 24.049 seconds
+[RESULT]   mdtest-easy-delete        1.916649 kIOPS : time 309.863 seconds
+[RESULT]     mdtest-hard-read        2.751994 kIOPS : time 129.255 seconds
+[RESULT]   mdtest-hard-delete        0.847735 kIOPS : time 417.428 seconds
+[SCORE ] Bandwidth 1.227060 GiB/s : IOPS 2.920877 kiops : TOTAL 1.893170
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pure-1-2-300-0-POSIX
+[1678799558.887236] [host824:41316:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x1e28080 was not matched

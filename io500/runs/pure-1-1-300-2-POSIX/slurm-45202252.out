@@ -1,0 +1,21 @@
+SLURM_JOB_ID: 45202252
+dimensions: {"nodes": 1, "ntasks_per_node": 1, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "iters": 2, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host824
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        1.226064 GiB/s : time 314.716 seconds
+[RESULT]    mdtest-easy-write        1.178051 kIOPS : time 301.087 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.813867 GiB/s : time 307.256 seconds
+[RESULT]    mdtest-hard-write        0.561116 kIOPS : time 301.056 seconds
+[RESULT]                 find        0.690942 kIOPS : time 755.311 seconds
+[RESULT]        ior-easy-read        1.472968 GiB/s : time 261.961 seconds
+[RESULT]     mdtest-easy-stat        9.857512 kIOPS : time 36.868 seconds
+[RESULT]        ior-hard-read        1.475568 GiB/s : time 169.473 seconds
+[RESULT]     mdtest-hard-stat        9.934517 kIOPS : time 17.956 seconds
+[RESULT]   mdtest-easy-delete        0.853451 kIOPS : time 415.248 seconds
+[RESULT]     mdtest-hard-read        1.447409 kIOPS : time 117.325 seconds
+[RESULT]   mdtest-hard-delete        0.783725 kIOPS : time 215.847 seconds
+[SCORE ] Bandwidth 1.213542 GiB/s : IOPS 1.601634 kiops : TOTAL 1.394149
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pure-1-1-300-2-POSIX

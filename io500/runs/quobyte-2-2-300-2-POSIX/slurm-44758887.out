@@ -1,0 +1,12 @@
+SLURM_JOB_ID: 44758887
+dimensions: {"nodes": 2, "ntasks_per_node": 2, "filesystem": {"name": "quobyte", "mountpoint": "/gws/nopw/j04/perf_testing3/stackhpc"}, "stonewall": 300, "iters": 2, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host[823-824]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        2.317434 GiB/s : time 391.508 seconds
+ERROR: open64("/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-2-300-2-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.3.0/file.mdtest.1.0", 66, 0664) failed. Error: No such file or directory, (aiori-POSIX.c:557)
+[host823.jc.rl.ac.uk:07369] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host823.jc.rl.ac.uk:07369] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166

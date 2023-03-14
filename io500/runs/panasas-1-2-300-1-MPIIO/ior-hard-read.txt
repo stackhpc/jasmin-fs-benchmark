@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Mar 14 12:35:02 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1418777531 -k -e -o /gws/pw/j07/perf_testing3/steveb/io500/panasas-1-2-300-1-MPIIO/ior-hard/file -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/panasas-1-2-300-1-MPIIO/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a MPIIO -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/panasas-1-2-300-1-MPIIO/ior-hard-read.csv
+Machine             : Linux host823.jc.rl.ac.uk
+TestID              : 0
+StartTime           : Tue Mar 14 12:35:02 2023
+Path                : /gws/pw/j07/perf_testing3/steveb/io500/panasas-1-2-300-1-MPIIO/ior-hard/file
+FS                  : 0.5 GiB   Used FS: 0.3%   Inodes: 250.0 Mi   Used Inodes: 0.3%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.1)
+test filename       : /gws/pw/j07/perf_testing3/steveb/io500/panasas-1-2-300-1-MPIIO/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 875.59 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 940160000000
+WARNING: Stat() of aggregate file size      = 30983912960
+WARNING: Using actual aggregate bytes moved = 30983912960
+read      2916.71    65087      10.13       45.91      45.91      0.003792   10.13      0.000179   10.13      0   

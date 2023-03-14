@@ -1,0 +1,21 @@
+SLURM_JOB_ID: 45202541
+dimensions: {"nodes": 1, "ntasks_per_node": 1, "filesystem": {"name": "panasas", "mountpoint": "/gws/pw/j07/perf_testing3"}, "stonewall": 300, "iters": 2, "time": "4:0:0", "ior_api": "MPIIO"}
+SLURM_JOB_NODELIST: host824
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        1.162051 GiB/s : time 300.094 seconds
+[RESULT]    mdtest-easy-write        0.551106 kIOPS : time 301.081 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.902628 GiB/s : time 300.071 seconds
+[RESULT]    mdtest-hard-write        0.268187 kIOPS : time 301.069 seconds
+[RESULT]                 find      249.498126 kIOPS : time 0.991 seconds
+[RESULT]        ior-easy-read        2.031908 GiB/s : time 171.631 seconds
+[RESULT]     mdtest-easy-stat        3.209074 kIOPS : time 52.539 seconds
+[RESULT]        ior-hard-read        1.853777 GiB/s : time 146.107 seconds
+[RESULT]     mdtest-hard-stat        3.923610 kIOPS : time 21.515 seconds
+[RESULT]   mdtest-easy-delete        1.889498 kIOPS : time 88.657 seconds
+[RESULT]     mdtest-hard-read        1.504080 kIOPS : time 54.509 seconds
+[RESULT]   mdtest-hard-delete        2.152239 kIOPS : time 39.367 seconds
+[SCORE ] Bandwidth 1.409853 GiB/s : IOPS 2.701868 kiops : TOTAL 1.951727
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/panasas-1-1-300-2-MPIIO

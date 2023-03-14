@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Mar 11 07:06:53 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1419570487 -k -e -o /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-2-300-0-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/quobyte-2-2-300-0-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/quobyte-2-2-300-0-POSIX/ior-easy-write.csv
+Machine             : Linux host823.jc.rl.ac.uk
+TestID              : 0
+StartTime           : Sat Mar 11 07:06:53 2023
+Path                : /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-2-300-0-POSIX/ior-easy/ior_file_easy.00000000
+FS                  : 9.1 TiB   Used FS: 0.0%   Inodes: 8796093022208.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-2-300-0-POSIX/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 2
+tasks               : 4
+clients per node    : 2
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 37.84 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 86766 max: 120931 -- min data: 169.5 GiB mean data: 208.9 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 41607495680000
+WARNING: Stat() of aggregate file size      = 1014442754048
+WARNING: Using actual aggregate bytes moved = 1014442754048
+WARNING: Maybe caused by deadlineForStonewalling
+write     2437.20    1219.45    0.000061    10158080000 2048.00    0.050584   396.67     0.225779   396.95     0   

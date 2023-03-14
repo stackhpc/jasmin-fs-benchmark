@@ -1,0 +1,10 @@
+SLURM_JOB_ID: 45202259
+dimensions: {"nodes": 1, "ntasks_per_node": 2, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "iters": 2, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host824
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        1.313077 GiB/s : time 332.920 seconds
+[RESULT]    mdtest-easy-write        1.958821 kIOPS : time 302.568 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.709188 GiB/s : time 350.330 seconds

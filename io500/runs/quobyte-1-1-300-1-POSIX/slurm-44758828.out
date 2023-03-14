@@ -1,0 +1,21 @@
+SLURM_JOB_ID: 44758828
+dimensions: {"nodes": 1, "ntasks_per_node": 1, "filesystem": {"name": "quobyte", "mountpoint": "/gws/nopw/j04/perf_testing3/stackhpc"}, "stonewall": 300, "iters": 1, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host825
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        0.648341 GiB/s : time 300.541 seconds
+[RESULT]    mdtest-easy-write        0.279465 kIOPS : time 301.126 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.440433 GiB/s : time 300.522 seconds
+[RESULT]    mdtest-hard-write        0.005339 kIOPS : time 301.049 seconds
+[RESULT]                 find      121.560869 kIOPS : time 0.706 seconds
+[RESULT]        ior-easy-read        0.732987 GiB/s : time 265.834 seconds
+[RESULT]     mdtest-easy-stat        5.660198 kIOPS : time 15.825 seconds
+[RESULT]        ior-hard-read        0.680055 GiB/s : time 194.634 seconds
+[RESULT]     mdtest-hard-stat        5.799993 kIOPS : time 1.283 seconds
+[RESULT]   mdtest-easy-delete        0.710790 kIOPS : time 119.090 seconds
+[RESULT]     mdtest-hard-read        0.013014 kIOPS : time 124.107 seconds
+[RESULT]   mdtest-hard-delete        0.351085 kIOPS : time 5.572 seconds
+[SCORE ] Bandwidth 0.614230 GiB/s : IOPS 0.610665 kiops : TOTAL 0.612445
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/quobyte-1-1-300-1-POSIX

@@ -1,0 +1,41 @@
+SLURM_JOB_ID: 44758890
+dimensions: {"nodes": 10, "ntasks_per_node": 2, "filesystem": {"name": "panasas", "mountpoint": "/gws/pw/j07/perf_testing3"}, "stonewall": 300, "iters": 1, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host[823-832]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write       15.230130 GiB/s : time 315.771 seconds
+[RESULT]    mdtest-easy-write        4.203676 kIOPS : time 305.835 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.063089 GiB/s : time 307.654 seconds
+[RESULT]    mdtest-hard-write        2.773499 kIOPS : time 304.442 seconds
+[RESULT]                 find      408.359370 kIOPS : time 5.200 seconds
+[RESULT]        ior-easy-read        8.546340 GiB/s : time 562.684 seconds
+[RESULT]     mdtest-easy-stat       50.950305 kIOPS : time 26.146 seconds
+[RESULT]        ior-hard-read        0.097051 GiB/s : time 199.992 seconds
+[RESULT]     mdtest-hard-stat       35.228980 kIOPS : time 24.901 seconds
+[RESULT]   mdtest-easy-delete        7.344160 kIOPS : time 177.235 seconds
+[RESULT]     mdtest-hard-read       21.527812 kIOPS : time 40.101 seconds
+[RESULT]   mdtest-hard-delete        2.533316 kIOPS : time 333.315 seconds
+[SCORE ] Bandwidth 0.944844 GiB/s : IOPS 15.552394 kiops : TOTAL 3.833352
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/panasas-10-2-300-1-POSIX
+[1678515734.503409] [host823:193453:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x1c0dd80 was not matched

@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Mar 14 11:23:19 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1418791940 -k -e -o /gws/pw/j07/perf_testing3/steveb/io500/panasas-1-2-300-0-MPIIO/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/panasas-1-2-300-0-MPIIO/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a MPIIO -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/panasas-1-2-300-0-MPIIO/ior-easy-write.csv
+Machine             : Linux host823.jc.rl.ac.uk
+TestID              : 0
+StartTime           : Tue Mar 14 11:23:19 2023
+Path                : /gws/pw/j07/perf_testing3/steveb/io500/panasas-1-2-300-0-MPIIO/ior-easy/ior_file_easy.00000000
+FS                  : 0.5 GiB   Used FS: 0.3%   Inodes: 250.0 Mi   Used Inodes: 0.3%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.1)
+test filename       : /gws/pw/j07/perf_testing3/steveb/io500/panasas-1-2-300-0-MPIIO/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 18.92 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 138226 max: 141620 -- min data: 270.0 GiB mean data: 273.3 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 20803747840000
+WARNING: Stat() of aggregate file size      = 593997332480
+WARNING: Using actual aggregate bytes moved = 593997332480
+WARNING: Maybe caused by deadlineForStonewalling
+write     1847.65    923.90     0.000060    10158080000 2048.00    0.006112   306.57     0.019674   306.60     0   

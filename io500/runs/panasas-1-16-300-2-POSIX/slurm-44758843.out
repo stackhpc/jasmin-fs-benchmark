@@ -1,0 +1,37 @@
+SLURM_JOB_ID: 44758843
+dimensions: {"nodes": 1, "ntasks_per_node": 16, "filesystem": {"name": "panasas", "mountpoint": "/gws/pw/j07/perf_testing3"}, "stonewall": 300, "iters": 2, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host824
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        3.718167 GiB/s : time 324.643 seconds
+[RESULT]    mdtest-easy-write        3.815383 kIOPS : time 309.866 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.058596 GiB/s : time 340.782 seconds
+[RESULT]    mdtest-hard-write        0.521377 kIOPS : time 305.040 seconds
+[RESULT]                 find     1008.591954 kIOPS : time 1.328 seconds
+[RESULT]        ior-easy-read        4.356208 GiB/s : time 277.093 seconds
+[RESULT]     mdtest-easy-stat       41.073294 kIOPS : time 29.690 seconds
+[RESULT]        ior-hard-read        0.042392 GiB/s : time 471.040 seconds
+[RESULT]     mdtest-hard-stat        4.138147 kIOPS : time 39.315 seconds
+[RESULT]   mdtest-easy-delete        7.086298 kIOPS : time 169.201 seconds
+[RESULT]     mdtest-hard-read       19.308228 kIOPS : time 9.228 seconds
+[RESULT]   mdtest-hard-delete        2.099828 kIOPS : time 76.793 seconds
+[SCORE ] Bandwidth 0.447864 GiB/s : IOPS 9.974464 kiops : TOTAL 2.113576
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/panasas-1-16-300-2-POSIX
+[1678499697.863595] [host824:98573:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x204b800 was not matched

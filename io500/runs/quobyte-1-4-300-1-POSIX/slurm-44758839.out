@@ -1,0 +1,25 @@
+SLURM_JOB_ID: 44758839
+dimensions: {"nodes": 1, "ntasks_per_node": 4, "filesystem": {"name": "quobyte", "mountpoint": "/gws/nopw/j04/perf_testing3/stackhpc"}, "stonewall": 300, "iters": 1, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host825
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        2.252743 GiB/s : time 370.522 seconds
+[RESULT]    mdtest-easy-write        0.884165 kIOPS : time 302.252 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.000997 GiB/s : time 991.826 seconds
+[RESULT]    mdtest-hard-write        0.018531 kIOPS : time 320.897 seconds
+[RESULT]                 find      158.946650 kIOPS : time 1.716 seconds
+[RESULT]        ior-easy-read        1.656640 GiB/s : time 503.839 seconds
+[RESULT]     mdtest-easy-stat       23.092167 kIOPS : time 12.541 seconds
+[RESULT]        ior-hard-read        0.070517 GiB/s : time 14.024 seconds
+[RESULT]     mdtest-hard-stat       22.677186 kIOPS : time 1.268 seconds
+[RESULT]   mdtest-easy-delete        2.315901 kIOPS : time 116.058 seconds
+[RESULT]     mdtest-hard-read        0.045864 kIOPS : time 130.263 seconds
+[RESULT]   mdtest-hard-delete        0.326605 kIOPS : time 19.166 seconds
+[SCORE ] Bandwidth 0.127257 GiB/s : IOPS 1.619462 kiops : TOTAL 0.453969
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/quobyte-1-4-300-1-POSIX
+[1678484781.326489] [host825:98320:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x10ae980 was not matched

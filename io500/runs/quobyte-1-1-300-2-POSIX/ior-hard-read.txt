@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Mar 10 18:25:43 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1419801805 -k -e -o /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-1-1-300-2-POSIX/ior-hard/file -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/quobyte-1-1-300-2-POSIX/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/quobyte-1-1-300-2-POSIX/ior-hard-read.csv
+Machine             : Linux host825.jc.rl.ac.uk
+TestID              : 0
+StartTime           : Fri Mar 10 18:25:43 2023
+Path                : /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-1-1-300-2-POSIX/ior-hard/file
+FS                  : 9.1 TiB   Used FS: 3.6%   Inodes: 8796093022208.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-1-1-300-2-POSIX/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 1
+clients per node    : 1
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 437.80 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 470080000000
+WARNING: Stat() of aggregate file size      = 143456381952
+WARNING: Using actual aggregate bytes moved = 143456381952
+read      853.98     19777      154.31      45.91      45.91      5.89       154.31     0.000065   160.20     0   

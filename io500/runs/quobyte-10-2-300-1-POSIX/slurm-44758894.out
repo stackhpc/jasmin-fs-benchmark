@@ -1,0 +1,31 @@
+SLURM_JOB_ID: 44758894
+dimensions: {"nodes": 10, "ntasks_per_node": 2, "filesystem": {"name": "quobyte", "mountpoint": "/gws/nopw/j04/perf_testing3/stackhpc"}, "stonewall": 300, "iters": 1, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host[823-832]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+WARNING: task 1, partial write(), 1703936 of 2097152 bytes at offset 156845998080
+
+ERROR: write(73, 0x1f55000, 393216) failed, (aiori-POSIX.c:704)
+[host823.jc.rl.ac.uk:09495] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+[host823.jc.rl.ac.uk:09495] PMIX ERROR: NOT-FOUND in file server/pmix_server_ops.c at line 2166
+slurmstepd: error: *** JOB 44758894 STEPD TERMINATED ON host823 AT 2023-03-11T07:49:48 DUE TO JOB NOT ENDING WITH SIGNALS ***
+slurmstepd: error: Unable to destroy container 9103 in cgroup plugin, giving up after 319 sec
