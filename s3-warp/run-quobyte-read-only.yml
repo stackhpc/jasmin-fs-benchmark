@@ -15,18 +15,10 @@
     smatrix_dimensions:
       storage: ["quobyte"]
       benchmark_type: ["get"]
-      nodes: [1]
-      threads_per_node: [1]
-      objects_per_node: [10]
-      obj_sizes: ["10KiB"]
-      duration: ["10s"]
-    smatrix_dryrun: true
-      # storage: ["quobyte"]
-      # benchmark_type: ["get"]
-      # nodes: [1, 2, 5]
-      # threads_per_node: [1, 20, 50, 100]
-      # objects_per_node: [250]
-      # obj_sizes: ["10KiB", "10MiB", "100MiB", "1GiB"]
+      nodes: [1, 2, 5]
+      threads_per_node: [1, 20, 50, 100]
+      objects_per_node: [250]
+      obj_sizes: ["10KiB", "10MiB", "100MiB", "1GiB"]
 
   tasks:
   

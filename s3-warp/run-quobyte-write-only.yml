@@ -25,7 +25,7 @@
       threads_per_node: [100]
       objects_per_node: [0] # 'put' benchmarks only require a duration
       obj_sizes: ["1GiB"]
-      duration: ['15m']
+      duration: ['10m']
   tasks:
     - name: Run sanity checks
       import_tasks:
