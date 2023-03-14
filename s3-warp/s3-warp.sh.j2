@@ -65,4 +65,4 @@ singularity run warp.sif {{ item.benchmark_type }} \
 # Run warp analysis tool on output file
 echo "$(date) -- Starting post-benchmark analysis process"
 SUMMARY_FILE={{ smatrix_template_dest_dir }}/{{ smatrix_template_basename }}-summary{{ smatrix_template_suffix }}
-singularity run warp.sif analyze $OUTPUT_FILE.csv.zst --analyze.out $SUMMARY_FILE.csv > $SUMMARY_FILE.txt
+singularity run warp.sif analyze $OUTPUT_FILE.csv.zst --analyze.out $SUMMARY_FILE.csv | tee $SUMMARY_FILE.txt
