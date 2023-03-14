@@ -8,11 +8,10 @@
 #SBATCH --partition={{ partition }}
 #SBATCH --account={{ account }}
 
-source ./creds.env
 echo 'Job parameters: {{ item }}'
 
-# Print a message about the git status of the checked out repo version
-echo "Git repo local checkout status: {{ smatrix_git_describe }}"
+# Set S3 credentials as env vars
+source ./creds.env
 
 # Pull in docker image and build singularity image from it
 CONTAINER_FILENAME=warp.sif
@@ -28,6 +27,7 @@ CLIENT_NODES=$(scontrol show hostname $SLURM_JOB_NODELIST | paste -d, -s)
 echo Client nodes: $CLIENT_NODES
 
 # Trigger benchmark run on all clients
+echo "$(date) -- Starting benchmarking process"
 OUTPUT_FILE={{ smatrix_template_dest_dir }}/{{ smatrix_template_basename }}-full{{ smatrix_template_suffix }}
 singularity run warp.sif {{ item.benchmark_type }} \
     --access-key ${{ item.storage | upper }}_ACCESS_KEY \
@@ -63,5 +63,6 @@ singularity run warp.sif {{ item.benchmark_type }} \
     --warp-client $CLIENT_NODES
 
 # Run warp analysis tool on output file
+echo "$(date) -- Starting post-benchmark analysis process"
 SUMMARY_FILE={{ smatrix_template_dest_dir }}/{{ smatrix_template_basename }}-summary{{ smatrix_template_suffix }}
 singularity run warp.sif analyze $OUTPUT_FILE.csv.zst --analyze.out $SUMMARY_FILE.csv > $SUMMARY_FILE.txt
