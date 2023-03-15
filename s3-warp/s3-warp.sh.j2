@@ -9,6 +9,8 @@
 #SBATCH --account={{ account }}
 
 echo 'Job parameters: {{ item }}'
+OBJ_SIZE={{ item.obj_sizes_and_counts | split("-") | first }}
+OBJ_PER_NODE={{ (item.obj_sizes_and_counts | split("-") | last | int / item.nodes) | int }}
 
 # Set S3 credentials as env vars
 source ./creds.env
@@ -27,42 +29,21 @@ CLIENT_NODES=$(scontrol show hostname $SLURM_JOB_NODELIST | paste -d, -s)
 echo Client nodes: $CLIENT_NODES
 
 # Trigger benchmark run on all clients
-echo "$(date) -- Starting benchmarking process"
+echo "Starting benchmarking process ($(date))"
 OUTPUT_FILE={{ smatrix_template_dest_dir }}/{{ smatrix_template_basename }}-full{{ smatrix_template_suffix }}
 singularity run warp.sif {{ item.benchmark_type }} \
     --access-key ${{ item.storage | upper }}_ACCESS_KEY \
     --secret-key ${{ item.storage | upper }}_SECRET_KEY \
     --host ${{ item.storage | upper }}_ENDPOINT \
     --concurrent {{ item.threads_per_node }} \
-    {% if item.benchmark_type != 'put' -%} --objects {{ item.objects_per_node }} {%- endif %} \
-    --obj.size "{{ item.obj_sizes | replace("-", ",", 1) }}" \
-    {{ "--obj.randsize" if "-" in item.obj_sizes -}} \
+    --objects $OBJ_PER_NODE \
+    --obj.size $OBJ_SIZE \
     --benchdata $OUTPUT_FILE \
     --no-color \
-    --autoterm \
-    {% if item.benchmark_type == 'mixed' -%}
-    --get-distrib 45 \
-    --stat-distrib 30 \
-    --put-distrib 15 \
-    --delete-distrib 15 \
-    {% endif -%}
-    --duration 
-    {%- if item.duration is defined %} 
-        {{- ' ' + item.duration -}}
-    {%- else %} 
-        {%- if 'GiB' in item.obj_sizes %}
-            {{- ' 30m' -}}
-        {%- elif 'MiB' in item.obj_sizes %}
-            {{- ' 5m' -}}
-        {%- elif 'KiB' in item.obj_sizes %}
-            {{- ' 1m' -}}
-        {%- else %}
-            {{ undef(hint="Could not determine duration since none of 'GiB', 'MiB' or 'KiB' in obj_sizes. Please set 'duration' manually.")}}
-        {%- endif %}
-    {%- endif %} \
+    --duration {{ item.duration }} \
     --warp-client $CLIENT_NODES
 
 # Run warp analysis tool on output file
-echo "$(date) -- Starting post-benchmark analysis process"
+echo "Writing post-benchmark analysis to disk ($(date))"
 SUMMARY_FILE={{ smatrix_template_dest_dir }}/{{ smatrix_template_basename }}-summary{{ smatrix_template_suffix }}
-singularity run warp.sif analyze $OUTPUT_FILE.csv.zst --analyze.out $SUMMARY_FILE.csv | tee $SUMMARY_FILE.txt
+singularity run warp.sif analyze $OUTPUT_FILE.csv.zst --analyze.out $SUMMARY_FILE.csv > $SUMMARY_FILE.txt
