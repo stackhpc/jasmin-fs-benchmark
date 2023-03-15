@@ -2,7 +2,7 @@
 # s3-warp/benchmark-runs/**/*.csv
 # s3-warp/benchmark-runs/**/*.csv.zst
 # s3-warp/benchmark-runs/**/*.sh
-# Ignore all benchmark runs for now
+# Ignore all benchmark output
 s3-warp/benchmark-runs/**
 # Ignore slurm output file
 s3-warp/*.out
@@ -12,3 +12,5 @@ s3-warp/*.out
 ansible/
 # Ignore notebook checkpoints
 **/*.ipynb_checkpoints/
+# Ingore env-specific secrets
+**.env
