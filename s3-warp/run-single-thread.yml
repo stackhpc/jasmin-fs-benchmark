@@ -32,15 +32,14 @@
     smatrix_template_dest_dir: ./benchmark-runs
     smatrix_template_basename: s3
     smatrix_dimensions:
-      # storage: ["pure", "quobyte", "caringo"]
-      # storage: ["quobyte"]
-      # storage: ["pure"]
-      storage: ["caringo"]
+      # Run all benchmarks
+      storage: ["pure", "quobyte", "caringo"]
       benchmark_type: ["get"]      
       nodes: [1, 2, 5]
       threads_per_node: [1]
       obj_sizes_and_counts: ['10KiB-10000', '10MiB-1000', '100MiB-250', '1GiB-50']
       duration: ['300s']
+      tag: [v2] #Add tag to distinguish repeated runs
     # smatrix_dryrun: true
 
   tasks:
