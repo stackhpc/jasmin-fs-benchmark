@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Mar 15 01:32:17 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1418539457 -k -e -o /work/stackhpc-pure//steveb/io500/pure-2-1-300-1-POSIX/ior-hard/file -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/pure-2-1-300-1-POSIX/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/pure-2-1-300-1-POSIX/ior-hard-read.csv
+Machine             : Linux host824.jc.rl.ac.uk
+TestID              : 0
+StartTime           : Wed Mar 15 01:32:17 2023
+Path                : /work/stackhpc-pure//steveb/io500/pure-2-1-300-1-POSIX/ior-hard/file
+FS                  : 100.0 TiB   Used FS: 1.0%   Inodes: 204800.0 Mi   Used Inodes: 1.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /work/stackhpc-pure//steveb/io500/pure-2-1-300-1-POSIX/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 2
+tasks               : 2
+clients per node    : 1
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 875.59 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 940160000000
+WARNING: Stat() of aggregate file size      = 301644036928
+WARNING: Using actual aggregate bytes moved = 301644036928
+read      177.62     3962       1619.58     45.91      45.91      0.001007   1619.58    0.000484   1619.58    0   

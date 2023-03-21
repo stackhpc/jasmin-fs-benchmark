@@ -1,0 +1,25 @@
+SLURM_JOB_ID: 45407384
+dimensions: {"nodes": 2, "ntasks_per_node": 2, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "iters": 1, "time": "4:0:0", "ior_api": "MPIIO"}
+SLURM_JOB_NODELIST: host[823-824]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        0.555706 GiB/s : time 305.319 seconds
+[RESULT]    mdtest-easy-write        3.599480 kIOPS : time 306.085 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.008321 GiB/s : time 524.487 seconds
+[RESULT]    mdtest-hard-write        1.583699 kIOPS : time 306.264 seconds
+[RESULT]                 find        1.873585 kIOPS : time 844.106 seconds
+[RESULT]        ior-easy-read        0.379994 GiB/s : time 446.471 seconds
+[RESULT]     mdtest-easy-stat       27.197317 kIOPS : time 41.384 seconds
+[RESULT]        ior-hard-read        0.027660 GiB/s : time 157.788 seconds
+[RESULT]     mdtest-hard-stat       15.416351 kIOPS : time 32.367 seconds
+[RESULT]   mdtest-easy-delete        3.901448 kIOPS : time 282.690 seconds
+[RESULT]     mdtest-hard-read        9.272291 kIOPS : time 53.149 seconds
+[RESULT]   mdtest-hard-delete        1.586953 kIOPS : time 305.759 seconds
+[SCORE ] Bandwidth 0.083495 GiB/s : IOPS 4.745247 kiops : TOTAL 0.629449
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pure-2-2-300-1-MPIIO
+[1679002621.032584] [host823:185403:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x102e700 was not matched

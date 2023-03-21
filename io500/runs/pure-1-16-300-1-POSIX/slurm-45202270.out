@@ -1,0 +1,37 @@
+SLURM_JOB_ID: 45202270
+dimensions: {"nodes": 1, "ntasks_per_node": 16, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "iters": 1, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host824
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        1.676692 GiB/s : time 326.444 seconds
+[RESULT]    mdtest-easy-write       12.258358 kIOPS : time 323.239 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.222805 GiB/s : time 388.096 seconds
+[RESULT]    mdtest-hard-write        1.166320 kIOPS : time 321.690 seconds
+[RESULT]                 find        7.712536 kIOPS : time 560.580 seconds
+[RESULT]        ior-easy-read        1.535582 GiB/s : time 356.433 seconds
+[RESULT]     mdtest-easy-stat       41.543592 kIOPS : time 96.079 seconds
+[RESULT]        ior-hard-read        1.451878 GiB/s : time 59.564 seconds
+[RESULT]     mdtest-hard-stat       41.033581 kIOPS : time 10.124 seconds
+[RESULT]   mdtest-easy-delete       15.624666 kIOPS : time 254.272 seconds
+[RESULT]     mdtest-hard-read       12.073887 kIOPS : time 31.982 seconds
+[RESULT]   mdtest-hard-delete        1.216500 kIOPS : time 308.493 seconds
+[SCORE ] Bandwidth 0.955313 GiB/s : IOPS 9.002384 kiops : TOTAL 2.932591
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pure-1-16-300-1-POSIX
+[1678821456.417513] [host824:74000:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x1850b00 was not matched

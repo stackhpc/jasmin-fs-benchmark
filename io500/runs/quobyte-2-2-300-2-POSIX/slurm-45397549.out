@@ -1,0 +1,31 @@
+SLURM_JOB_ID: 45397549
+dimensions: {"nodes": 2, "ntasks_per_node": 2, "filesystem": {"name": "quobyte", "mountpoint": "/gws/nopw/j04/perf_testing3/stackhpc"}, "stonewall": 300, "iters": 2, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host[829-830]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-2-300-2-POSIX/ior-easy/ior_file_easy.00000001" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-2-300-2-POSIX/ior-easy/ior_file_easy.00000003" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-2-300-2-POSIX/ior-easy/ior_file_easy.00000002" exists already and will be overwritten
+[RESULT]       ior-easy-write        0.957146 GiB/s : time 485.389 seconds
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-2-300-2-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.1.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-2-300-2-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.2.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-2-300-2-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.3.0/'
+[RESULT]    mdtest-easy-write        0.693291 kIOPS : time 302.491 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.000574 GiB/s : time 3220.773 seconds
+[RESULT]    mdtest-hard-write        0.021982 kIOPS : time 321.825 seconds
+[RESULT]                 find      124.355402 kIOPS : time 1.740 seconds
+[RESULT]        ior-easy-read        1.985187 GiB/s : time 233.999 seconds
+[RESULT]     mdtest-easy-stat       14.396093 kIOPS : time 15.527 seconds
+[RESULT]        ior-hard-read        0.043082 GiB/s : time 42.947 seconds
+[RESULT]     mdtest-hard-stat        8.883782 kIOPS : time 1.803 seconds
+[RESULT]   mdtest-easy-delete        1.739908 kIOPS : time 122.015 seconds
+[RESULT]     mdtest-hard-read        0.043124 kIOPS : time 164.540 seconds
+[RESULT]   mdtest-hard-delete        0.392357 kIOPS : time 19.019 seconds
+[SCORE ] Bandwidth 0.082806 GiB/s : IOPS 1.278429 kiops : TOTAL 0.325364
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/quobyte-2-2-300-2-POSIX
+[1678966410.081517] [host829:170060:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x2833e80 was not matched

@@ -1,0 +1,15 @@
+SLURM_JOB_ID: 45326492
+dimensions: {"nodes": 2, "ntasks_per_node": 16, "filesystem": {"name": "panasas", "mountpoint": "/gws/pw/j07/perf_testing3"}, "stonewall": 300, "iters": 2, "time": "4:0:0", "ior_api": "MPIIO"}
+SLURM_JOB_NODELIST: host[824-825]
+FATAL:   Unable to handle docker://ghcr.io/stackhpc/io500-singularity:bb942db uri: failed to get checksum for docker://ghcr.io/stackhpc/io500-singularity:bb942db: Requesting bear token: invalid status code from registry 503 (Service Unavailable)
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[49809,1],9]
+  Exit code:    255
+--------------------------------------------------------------------------

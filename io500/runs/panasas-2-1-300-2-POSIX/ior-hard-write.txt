@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Mar 14 22:31:23 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1418760903 -k -e -o /gws/pw/j07/perf_testing3/steveb/io500/panasas-2-1-300-2-POSIX/ior-hard/file -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/panasas-2-1-300-2-POSIX/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/panasas-2-1-300-2-POSIX/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux host825.jc.rl.ac.uk
+TestID              : 0
+StartTime           : Tue Mar 14 22:31:23 2023
+Path                : /gws/pw/j07/perf_testing3/steveb/io500/panasas-2-1-300-2-POSIX/ior-hard/file
+FS                  : 0.5 GiB   Used FS: 0.3%   Inodes: 250.0 Mi   Used Inodes: 0.3%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gws/pw/j07/perf_testing3/steveb/io500/panasas-2-1-300-2-POSIX/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 2
+tasks               : 2
+clients per node    : 1
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 875.59 GiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 71065 max: 71209 -- min data: 3.1 GiB mean data: 3.1 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 940160000000
+WARNING: Stat() of aggregate file size      = 6694785344
+WARNING: Using actual aggregate bytes moved = 6694785344
+WARNING: Maybe caused by deadlineForStonewalling
+write     21.22      473.79     300.59      45.91      45.91      0.010239   300.59     0.219195   300.82     0   

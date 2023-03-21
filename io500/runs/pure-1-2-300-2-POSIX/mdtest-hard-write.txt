@@ -7,3 +7,27 @@ FS                  : 100.0 TiB   Used FS: 0.7%   Inodes: 204800.0 Mi   Used Ino
 Nodemap: 11
 V-0: Rank   0 Line  2479 Shifting ranks by 1 for each phase.
 2 tasks, 2000000 files
+Continue stonewall hit min: 175225 max: 175422 avg: 175323.5 
+
+
+SUMMARY rate: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                1167.017       1167.017       1167.017          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                 498.018        498.018        498.018          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                 300.633        300.633        300.633          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.002          0.002          0.002          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+-- finished at 03/14/2023 14:30:55 --
+

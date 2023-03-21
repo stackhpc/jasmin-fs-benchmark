@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Mar 16 13:59:21 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1418258305 -k -e -o /work/stackhpc-pure//steveb/io500/pure-1-2-300-1-MPIIO/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/pure-1-2-300-1-MPIIO/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a MPIIO -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/pure-1-2-300-1-MPIIO/ior-easy-write.csv
+Machine             : Linux host827.jc.rl.ac.uk
+TestID              : 0
+StartTime           : Thu Mar 16 13:59:21 2023
+Path                : /work/stackhpc-pure//steveb/io500/pure-1-2-300-1-MPIIO/ior-easy/ior_file_easy.00000000
+FS                  : 100.0 TiB   Used FS: 0.1%   Inodes: 204800.0 Mi   Used Inodes: 0.1%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.1)
+test filename       : /work/stackhpc-pure//steveb/io500/pure-1-2-300-1-MPIIO/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 18.92 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 21150 max: 21392 -- min data: 41.3 GiB mean data: 41.5 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 20803747840000
+WARNING: Stat() of aggregate file size      = 89724551168
+WARNING: Using actual aggregate bytes moved = 89724551168
+WARNING: Maybe caused by deadlineForStonewalling
+write     282.14     141.08     0.000061    10158080000 2048.00    0.020617   303.27     0.000774   303.29     0   

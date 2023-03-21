@@ -1,0 +1,3 @@
+access,rank,runtime-with-openclose,runtime,throughput-withopenclose,throughput
+read,0,2.3934419012e+02,2.3934312105e+02,1.6676508895e+09,1.6676583384e+09
+read,1,2.3934471202e+02,2.3934353209e+02,1.6676472531e+09,1.6676554744e+09

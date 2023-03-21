@@ -8,3 +8,16 @@ IO500 version io500-isc22_v1 (standard)
 [RESULT]    mdtest-easy-write        1.958821 kIOPS : time 302.568 seconds
 [      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
 [RESULT]       ior-hard-write        0.709188 GiB/s : time 350.330 seconds
+[RESULT]    mdtest-hard-write        1.167017 kIOPS : time 301.645 seconds
+[RESULT]                 find        2.158141 kIOPS : time 436.271 seconds
+[RESULT]        ior-easy-read        1.518369 GiB/s : time 287.906 seconds
+[RESULT]     mdtest-easy-stat       16.071472 kIOPS : time 37.762 seconds
+[RESULT]        ior-hard-read        1.493644 GiB/s : time 166.341 seconds
+[RESULT]     mdtest-hard-stat       15.348298 kIOPS : time 23.865 seconds
+[RESULT]   mdtest-easy-delete        1.902302 kIOPS : time 311.631 seconds
+[RESULT]     mdtest-hard-read        2.804059 kIOPS : time 126.127 seconds
+[RESULT]   mdtest-hard-delete        0.877497 kIOPS : time 400.859 seconds
+[SCORE ] Bandwidth 1.205505 GiB/s : IOPS 2.947457 kiops : TOTAL 1.884987
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pure-1-2-300-2-POSIX
+[1678806068.176616] [host824:48994:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x16a9fc0 was not matched

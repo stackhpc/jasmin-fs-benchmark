@@ -1,0 +1,25 @@
+SLURM_JOB_ID: 45326487
+dimensions: {"nodes": 2, "ntasks_per_node": 2, "filesystem": {"name": "panasas", "mountpoint": "/gws/pw/j07/perf_testing3"}, "stonewall": 300, "iters": 0, "time": "4:0:0", "ior_api": "MPIIO"}
+SLURM_JOB_NODELIST: host[829-830]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        3.453512 GiB/s : time 307.390 seconds
+[RESULT]    mdtest-easy-write        1.896342 kIOPS : time 302.254 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.020964 GiB/s : time 300.780 seconds
+[RESULT]    mdtest-hard-write        0.964229 kIOPS : time 302.102 seconds
+[RESULT]                 find      202.651183 kIOPS : time 4.255 seconds
+[RESULT]        ior-easy-read        1.977278 GiB/s : time 536.622 seconds
+[RESULT]     mdtest-easy-stat       13.800206 kIOPS : time 42.600 seconds
+[RESULT]        ior-hard-read        0.097660 GiB/s : time 64.588 seconds
+[RESULT]     mdtest-hard-stat        6.825335 kIOPS : time 43.543 seconds
+[RESULT]   mdtest-easy-delete        6.323331 kIOPS : time 93.378 seconds
+[RESULT]     mdtest-hard-read        4.319757 kIOPS : time 68.215 seconds
+[RESULT]   mdtest-hard-delete        2.639892 kIOPS : time 111.425 seconds
+[SCORE ] Bandwidth 0.343857 GiB/s : IOPS 6.311112 kiops : TOTAL 1.473133
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/panasas-2-2-300-0-MPIIO
+[1678883534.977627] [host829:86041:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x1cbd380 was not matched

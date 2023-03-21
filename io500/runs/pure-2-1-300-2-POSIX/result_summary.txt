@@ -1,0 +1,15 @@
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        2.017884 GiB/s : time 364.893 seconds
+[RESULT]    mdtest-easy-write        2.100580 kIOPS : time 301.572 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.302578 GiB/s : time 965.757 seconds
+[RESULT]    mdtest-hard-write        1.201452 kIOPS : time 302.137 seconds
+[RESULT]                 find        0.606450 kIOPS : time 1637.616 seconds
+[RESULT]        ior-easy-read        2.907641 GiB/s : time 253.230 seconds
+[RESULT]     mdtest-easy-stat       15.040649 kIOPS : time 42.987 seconds
+[RESULT]        ior-hard-read        0.192080 GiB/s : time 1521.313 seconds
+[RESULT]     mdtest-hard-stat       15.328521 kIOPS : time 24.613 seconds
+[RESULT]   mdtest-easy-delete        1.880617 kIOPS : time 336.808 seconds
+[RESULT]     mdtest-hard-read        2.897232 kIOPS : time 125.878 seconds
+[RESULT]   mdtest-hard-delete        1.298460 kIOPS : time 279.722 seconds
+[SCORE ] Bandwidth 0.764169 GiB/s : IOPS 2.658673 kiops : TOTAL 1.425368

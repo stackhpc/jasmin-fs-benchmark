@@ -1,0 +1,53 @@
+SLURM_JOB_ID: 45235844
+dimensions: {"nodes": 1, "ntasks_per_node": 32, "filesystem": {"name": "panasas", "mountpoint": "/gws/pw/j07/perf_testing3"}, "stonewall": 300, "iters": 0, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host823
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        2.235384 GiB/s : time 495.705 seconds
+[RESULT]    mdtest-easy-write        4.661590 kIOPS : time 319.933 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.046563 GiB/s : time 415.244 seconds
+[RESULT]    mdtest-hard-write        0.499537 kIOPS : time 314.723 seconds
+[RESULT]                 find      957.076042 kIOPS : time 1.721 seconds
+[RESULT]        ior-easy-read        2.528863 GiB/s : time 438.177 seconds
+[RESULT]     mdtest-easy-stat       42.793703 kIOPS : time 35.740 seconds
+[RESULT]        ior-hard-read        0.039629 GiB/s : time 487.895 seconds
+[RESULT]     mdtest-hard-stat        6.150307 kIOPS : time 26.494 seconds
+[RESULT]   mdtest-easy-delete        8.724756 kIOPS : time 177.818 seconds
+[RESULT]     mdtest-hard-read       27.448105 kIOPS : time 6.715 seconds
+[RESULT]   mdtest-hard-delete        0.844675 kIOPS : time 186.581 seconds
+[SCORE ] Bandwidth 0.319583 GiB/s : IOPS 10.216096 kiops : TOTAL 1.806900
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/panasas-1-32-300-0-POSIX
+[1678811214.473429] [host823:131076:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x181be00 was not matched

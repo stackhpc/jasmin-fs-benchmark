@@ -1,11 +1,11 @@
 IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
-Began               : Sat Mar 11 07:20:57 2023
-Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1419570358 -k -e -o /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-2-300-2-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/quobyte-2-2-300-2-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/quobyte-2-2-300-2-POSIX/ior-easy-write.csv
-Machine             : Linux host823.jc.rl.ac.uk
+Began               : Thu Mar 16 10:11:02 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1418272182 -k -e -o /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-2-300-2-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/quobyte-2-2-300-2-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/quobyte-2-2-300-2-POSIX/ior-easy-write.csv
+Machine             : Linux host829.jc.rl.ac.uk
 TestID              : 0
-StartTime           : Sat Mar 11 07:20:57 2023
+StartTime           : Thu Mar 16 10:11:02 2023
 Path                : /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-2-300-2-POSIX/ior-easy/ior_file_easy.00000000
-FS                  : 9.1 TiB   Used FS: 19.6%   Inodes: 8796093022208.0 Mi   Used Inodes: 0.0%
+FS                  : 18.2 TiB   Used FS: 72.5%   Inodes: 8796093022208.0 Mi   Used Inodes: 0.0%
 
 Options: 
 api                 : POSIX
@@ -28,12 +28,13 @@ stonewallingTime    : 300
 stoneWallingWearOut : 1
 
 Results: 
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-2-300-2-POSIX/ior-easy/ior_file_easy.00000000" exists already and will be overwritten
 
 access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
 ------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
-stonewalling pairs accessed min: 86421 max: 116103 -- min data: 168.8 GiB mean data: 193.7 GiB time: 300.5s
+stonewalling pairs accessed min: 40545 max: 59457 -- min data: 79.2 GiB mean data: 90.6 GiB time: 300.8s
 WARNING: Expected aggregate file size       = 41607495680000
-WARNING: Stat() of aggregate file size      = 973942554624
-WARNING: Using actual aggregate bytes moved = 973942554624
+WARNING: Stat() of aggregate file size      = 498761465856
+WARNING: Using actual aggregate bytes moved = 498761465856
 WARNING: Maybe caused by deadlineForStonewalling
-write     2373.05    1186.94    0.000061    10158080000 2048.00    0.013485   391.27     0.121128   391.40     0   
+write     980.12     490.07     0.000061    10158080000 2048.00    0.012960   485.29     0.000981   485.31     0   

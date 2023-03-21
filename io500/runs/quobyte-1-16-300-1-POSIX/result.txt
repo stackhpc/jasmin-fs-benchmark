@@ -1,0 +1,111 @@
+[run]
+procs           = 16
+version         = io500-isc22_v1
+config-hash     = B43332A6
+result-dir      = /home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX
+mode            = standard
+; START 2023-03-15 09:15:45
+
+
+[ior-easy-write]
+t_start         = 2023-03-15 09:15:45
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1418513533 -k -e -o /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-1-16-300-1-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/ior-easy-write.csv
+throughput-stonewall = 1.15
+score           = 1.141277
+t_delta         = 303.0231
+t_end           = 2023-03-15 09:20:48
+
+[mdtest-easy-write]
+t_start         = 2023-03-15 09:20:48
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -532335739 -N 1 -d /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-1-16-300-1-POSIX/mdtest-easy -x /home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 2.243801
+score           = 2.214158
+t_delta         = 305.8020
+t_end           = 2023-03-15 09:25:54
+
+[timestamp]
+t_start         = 2023-03-15 09:25:54
+t_delta         = 0.0013
+t_end           = 2023-03-15 09:25:54
+
+[ior-hard-write]
+t_start         = 2023-03-15 09:25:54
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1418502845 -k -e -o /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-1-16-300-1-POSIX/ior-hard/file -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 0.00
+score           = 0.000839
+t_delta         = 2834.4262
+t_end           = 2023-03-15 10:13:08
+
+[mdtest-hard-write]
+t_start         = 2023-03-15 10:13:08
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-532325051 -N 1 -F -d /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-1-16-300-1-POSIX/mdtest-hard -x /home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 0.135201
+score           = 0.114523
+t_delta         = 436.2068
+t_end           = 2023-03-15 10:20:24
+
+[find]
+t_start         = 2023-03-15 10:20:24
+exe             = ./pfind /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-1-16-300-1-POSIX -newer /home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 16
+found           = 976
+total-files     = 724689
+score           = 306.257446
+t_delta         = 2.3688
+t_end           = 2023-03-15 10:20:27
+
+[ior-easy-read]
+t_start         = 2023-03-15 10:20:27
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1418513533 -k -e -o /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-1-16-300-1-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/ior-easy-read.csv
+score           = 1.331647
+t_delta         = 259.7037
+t_end           = 2023-03-15 10:24:46
+
+[mdtest-easy-stat]
+t_start         = 2023-03-15 10:24:46
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -532335739 -N 1 -d /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-1-16-300-1-POSIX/mdtest-easy -x /home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/mdtest-easy-stat.csv -a POSIX
+score           = 38.827504
+t_delta         = 18.3891
+t_end           = 2023-03-15 10:25:05
+
+[ior-hard-read]
+t_start         = 2023-03-15 10:25:05
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1418502845 -k -e -o /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-1-16-300-1-POSIX/ior-hard/file -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/ior-hard-read.csv
+score           = 0.033722
+t_delta         = 70.4890
+t_end           = 2023-03-15 10:26:15
+
+[mdtest-hard-stat]
+t_start         = 2023-03-15 10:26:15
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-532325051 -N 1 -F -d /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-1-16-300-1-POSIX/mdtest-hard -x /home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/mdtest-hard-stat.csv -a POSIX
+score           = 34.347349
+t_delta         = 2.4593
+t_end           = 2023-03-15 10:26:18
+
+[mdtest-easy-delete]
+t_start         = 2023-03-15 10:26:18
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -532335739 -N 1 -d /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-1-16-300-1-POSIX/mdtest-easy -x /home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/mdtest-easy-delete.csv -a POSIX
+score           = 4.663038
+t_delta         = 145.8822
+t_end           = 2023-03-15 10:28:43
+
+[mdtest-hard-read]
+t_start         = 2023-03-15 10:28:43
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-532325051 -N 1 -F -d /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-1-16-300-1-POSIX/mdtest-hard -x /home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/mdtest-hard-read.csv -a POSIX
+score           = 0.226826
+t_delta         = 220.7360
+t_end           = 2023-03-15 10:32:24
+
+[mdtest-hard-delete]
+t_start         = 2023-03-15 10:32:24
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-532325051 -N 1 -F -d /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-1-16-300-1-POSIX/mdtest-hard -x /home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/quobyte-1-16-300-1-POSIX/mdtest-hard-delete.csv -a POSIX
+score           = 0.272975
+t_delta         = 183.6724
+t_end           = 2023-03-15 10:35:28
+
+[SCORE]
+MD              = 3.626296
+BW              = 0.080966
+SCORE           = 0.541855
+hash            = 78DAC791
+; END 2023-03-15 10:35:39

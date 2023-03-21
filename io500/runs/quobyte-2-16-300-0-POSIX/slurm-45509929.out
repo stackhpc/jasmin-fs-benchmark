@@ -1,0 +1,115 @@
+SLURM_JOB_ID: 45509929
+dimensions: {"nodes": 2, "ntasks_per_node": 16, "filesystem": {"name": "quobyte", "mountpoint": "/gws/nopw/j04/perf_testing3/stackhpc"}, "stonewall": 300, "iters": 0, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host[825-826]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000013" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000012" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000014" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000008" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000006" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000005" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000010" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000021" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000015" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000017" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000004" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000029" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000009" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000007" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000028" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000011" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000016" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000002" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000024" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000003" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000031" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000001" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000019" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000018" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000030" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000023" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000025" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000022" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000020" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000026" exists already and will be overwritten
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/ior-easy/ior_file_easy.00000027" exists already and will be overwritten
+[RESULT]       ior-easy-write        2.748111 GiB/s : time 368.244 seconds
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.15.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.10.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.8.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.13.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.3.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.25.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.17.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.1.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.4.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.9.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.6.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.11.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.7.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.5.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.2.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.12.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.14.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.27.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.23.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.20.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.26.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.29.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.18.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.24.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.28.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.21.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.19.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.31.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.22.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.30.0/'
+WARNING: unable to create tree directory '/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-2-16-300-0-POSIX/mdtest-easy/test-dir.0-0/mdtest_tree.16.0/'
+[RESULT]    mdtest-easy-write        3.510227 kIOPS : time 306.425 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.000317 GiB/s : time 9131.257 seconds
+[RESULT]    mdtest-hard-write        0.144827 kIOPS : time 315.453 seconds
+[RESULT]                 find      556.945446 kIOPS : time 2.010 seconds
+[RESULT]        ior-easy-read        2.142718 GiB/s : time 472.140 seconds
+[RESULT]     mdtest-easy-stat       46.463120 kIOPS : time 24.084 seconds
+[RESULT]        ior-hard-read        0.032182 GiB/s : time 89.956 seconds
+[RESULT]     mdtest-hard-stat        9.235172 kIOPS : time 5.943 seconds
+[RESULT]   mdtest-easy-delete        6.470026 kIOPS : time 170.152 seconds
+[RESULT]     mdtest-hard-read        0.400211 kIOPS : time 114.794 seconds
+[RESULT]   mdtest-hard-delete        0.505257 kIOPS : time 91.355 seconds
+[SCORE ] Bandwidth 0.088037 GiB/s : IOPS 4.468455 kiops : TOTAL 0.627206
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/quobyte-2-16-300-0-POSIX
+[1679069989.352282] [host825:152154:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x26e8c40 was not matched
