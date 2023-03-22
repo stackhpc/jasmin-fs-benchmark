@@ -28,6 +28,8 @@
     creds: "{{ lookup('file', './creds.env') }}"
     max_job_time: "4:00:00"
     max_storage_capacity: 20TB
+    short_run_duration: 60s
+    long_run_duration: 600s
     smatrix_template_src: "s3-warp.sh.j2"
     smatrix_template_dest_dir: ./benchmark-runs
     smatrix_template_basename: s3
@@ -38,18 +40,20 @@
       nodes: [1, 2, 5]
       threads_per_node: [20, 50, 100]
       obj_sizes_and_counts: ['10KiB-100000', '10MiB-100000', '100MiB-10000', '1GiB-5000']
-      duration: [60s, 600s]
+      duration:
+        - "{{ short_run_duration }}"
+        - "{{ long_run_duration }}"
       tag: [v2] #Add tag to distinguish repeated runs
     # Exclude long (short) runs for small (large) objects
     smatrix_exclude:
       - obj_sizes_and_counts: '10KiB-100000'
-        duration: 300s
+        duration: "{{ long_run_duration }}"
       - obj_sizes_and_counts: '10MiB-100000'
-        duration: 300s
+        duration: "{{ long_run_duration }}"
       - obj_sizes_and_counts: '100MiB-10000'
-        duration: 60s
+        duration: "{{ short_run_duration }}"
       - obj_sizes_and_counts: '1GiB-5000'
-        duration: 60s
+        duration: "{{ short_run_duration }}"
     # smatrix_dryrun: true
 
   tasks:
