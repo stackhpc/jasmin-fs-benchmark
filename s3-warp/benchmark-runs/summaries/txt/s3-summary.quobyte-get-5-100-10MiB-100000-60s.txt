@@ -1,0 +1,19 @@
+
+----------------------------------------
+Operation: PUT. Concurrency: 500
+* Average: 3583.14 MiB/s, 358.31 obj/s
+
+Throughput, split into 261 x 1s:
+ * Fastest: 4686.5MiB/s, 468.65 obj/s
+ * 50% Median: 3677.6MiB/s, 367.76 obj/s
+ * Slowest: 1051.3MiB/s, 105.13 obj/s
+
+----------------------------------------
+Operation: GET. Concurrency: 500
+* Average: 3898.31 MiB/s, 389.83 obj/s
+
+Throughput, split into 49 x 1s:
+ * Fastest: 4567.6MiB/s, 456.76 obj/s
+ * 50% Median: 4141.8MiB/s, 414.18 obj/s
+ * Slowest: 1351.9MiB/s, 135.19 obj/s
+Aggregated data saved to ./benchmark-runs/s3-summary.quobyte-get-5-100-10MiB-100000-60s.csv

@@ -1,0 +1,19 @@
+
+----------------------------------------
+Operation: PUT. Concurrency: 100
+* Average: 2921.05 MiB/s, 29.21 obj/s
+
+Throughput, split into 299 x 1s:
+ * Fastest: 3298.6MiB/s, 32.99 obj/s
+ * 50% Median: 2919.1MiB/s, 29.19 obj/s
+ * Slowest: 2602.0MiB/s, 26.02 obj/s
+
+----------------------------------------
+Operation: GET. Concurrency: 100
+* Average: 5053.00 MiB/s, 50.53 obj/s
+
+Throughput, split into 117 x 5s:
+ * Fastest: 5765.6MiB/s, 57.66 obj/s
+ * 50% Median: 5036.6MiB/s, 50.37 obj/s
+ * Slowest: 4152.9MiB/s, 41.53 obj/s
+Aggregated data saved to ./benchmark-runs/s3-summary.pure-get-1-100-100MiB-10000-600s-v2.csv
