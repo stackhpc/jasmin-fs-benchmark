@@ -8,7 +8,6 @@
 #SBATCH --ntasks-per-node={{ item.ntasks_per_node }}
 #SBATCH --dependency=singleton
 #SBATCH --time={{ item.time }}
-{% if item.nodes > 5 %}#SBATCH --begin=18:00{% endif %}
 
 set -euo pipefail
 

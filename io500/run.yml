@@ -4,17 +4,20 @@
   vars:
     smatrix_template_src: '*.j2'
     smatrix_dimensions:
-      nodes: [1] #, 2, 10]
-      ntasks_per_node: [1, 2, 4, 16]
+      #nodes: [1, 2]
+      nodes: [10]
+      #ntasks_per_node: [1, 2, 4, 16, 32]
+      #ntasks_per_node: [2, 16]
+      ntasks_per_node: [2]
       filesystem:
         - name: panasas
           mountpoint: /gws/pw/j07/perf_testing3 # exclusive use
-        - name: quobyte
-          mountpoint: /gws/nopw/j04/perf_testing3/stackhpc
         - name: pure
           mountpoint: /work/stackhpc-pure/
+        - name: quobyte
+          mountpoint: /gws/nopw/j04/perf_testing3/stackhpc
       stonewall: [300]
-      iters: [0, 1, 2]
+      iters: [0] #, 1, 2]
       time: ['4:0:0']
       ior_api: ['POSIX']
       # ior_api: ['MPIIO']
