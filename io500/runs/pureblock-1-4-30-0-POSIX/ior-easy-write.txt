@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Mar 23 18:18:17 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1417976773 -k -e -o /data/azimuth/io500/pureblock-1-4-30-0-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 30 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/ior-easy-write.csv
+Machine             : Linux fs-perf-dev-compute-0.novalocal
+TestID              : 0
+StartTime           : Thu Mar 23 18:18:17 2023
+Path                : /data/azimuth/io500/pureblock-1-4-30-0-POSIX/ior-easy/ior_file_easy.00000000
+FS                  : 245.0 GiB   Used FS: 0.0%   Inodes: 15.6 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /data/azimuth/io500/pureblock-1-4-30-0-POSIX/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 4
+clients per node    : 4
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 37.84 TiB
+stonewallingTime    : 30
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 5296 max: 5330 -- min data: 10.3 GiB mean data: 10.4 GiB time: 30.0s
+WARNING: Expected aggregate file size       = 41607495680000
+WARNING: Stat() of aggregate file size      = 44711280640
+WARNING: Using actual aggregate bytes moved = 44711280640
+WARNING: Maybe caused by deadlineForStonewalling
+write     1253.80    626.90     0.000007    10158080000 2048.00    0.000076   34.01      0.000023   34.01      0   

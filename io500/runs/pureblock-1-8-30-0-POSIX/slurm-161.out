@@ -1,0 +1,34 @@
+SLURM_JOB_ID: 161
+dimensions: {"nodes": 1, "ntasks_per_node": 8, "filesystem": {"name": "pureblock", "mountpoint": "/data"}, "stonewall": 30, "iters": 0, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: fs-perf-dev-compute-0
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+ERROR INVALID (src/phase_dbg.c:13) stonewall-time < 300s
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-easy-write        1.335894 GiB/s : time 32.507 seconds [INVALID]
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-easy-write      175.181287 kIOPS : time 36.821 seconds [INVALID]
+[      ]            timestamp        0.000000 kIOPS : time 0.003 seconds
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-hard-write        0.836185 GiB/s : time 33.950 seconds [INVALID]
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-hard-write       55.112264 kIOPS : time 33.259 seconds [INVALID]
+[RESULT]                 find     1819.896301 kIOPS : time 4.431 seconds
+[RESULT]        ior-easy-read        2.195742 GiB/s : time 19.785 seconds
+[RESULT]     mdtest-easy-stat      421.618519 kIOPS : time 15.872 seconds
+[RESULT]        ior-hard-read        0.556796 GiB/s : time 50.937 seconds
+[RESULT]     mdtest-hard-stat      574.406192 kIOPS : time 4.119 seconds
+[RESULT]   mdtest-easy-delete      146.789577 kIOPS : time 47.665 seconds
+[RESULT]     mdtest-hard-read       26.465760 kIOPS : time 68.203 seconds
+[RESULT]   mdtest-hard-delete       92.933269 kIOPS : time 21.684 seconds
+[SCORE ] Bandwidth 1.081031 GiB/s : IOPS 187.632915 kiops : TOTAL 14.242083 [INVALID]
+
+The result files are stored in the directory: /home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-8-30-0-POSIX
+[1679597738.501463] [fs-perf-dev-compute-0:13497:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x2016d40 was not matched

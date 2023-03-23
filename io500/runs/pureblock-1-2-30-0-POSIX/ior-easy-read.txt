@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Mar 23 17:01:45 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1417983864 -k -e -o /data/azimuth/io500/pureblock-1-2-30-0-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-2-30-0-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-2-30-0-POSIX/ior-easy-read.csv
+Machine             : Linux fs-perf-dev-compute-0.novalocal
+TestID              : 0
+StartTime           : Thu Mar 23 17:01:45 2023
+Path                : /data/azimuth/io500/pureblock-1-2-30-0-POSIX/ior-easy/ior_file_easy.00000000
+FS                  : 245.0 GiB   Used FS: 32.9%   Inodes: 15.6 Mi   Used Inodes: 24.4%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /data/azimuth/io500/pureblock-1-2-30-0-POSIX/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 18.92 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 20803747840000
+WARNING: Stat() of aggregate file size      = 40605057024
+WARNING: Using actual aggregate bytes moved = 40605057024
+read      1038.11    519.06     0.000008    10158080000 2048.00    0.000019   37.30      0.000008   37.30      0   

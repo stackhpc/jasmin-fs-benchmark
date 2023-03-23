@@ -1,0 +1,15 @@
+SLURM_JOB_ID: 156
+dimensions: {"nodes": 1, "ntasks_per_node": 1, "filesystem": {"name": "pureblock", "mountpoint": "/data"}, "stonewall": 30, "iters": 0, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: fs-perf-dev-compute-0
+Lmod has detected the following error: The following module(s) are unknown:
+"eb/OpenMPI/gcc/4.0.0"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "eb/OpenMPI/gcc/4.0.0"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+

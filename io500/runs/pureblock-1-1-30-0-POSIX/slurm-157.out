@@ -1,0 +1,28 @@
+SLURM_JOB_ID: 157
+dimensions: {"nodes": 1, "ntasks_per_node": 1, "filesystem": {"name": "pureblock", "mountpoint": "/data"}, "stonewall": 30, "iters": 0, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: fs-perf-dev-compute-0
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+ERROR INVALID (src/phase_dbg.c:13) stonewall-time < 300s
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-easy-write        1.131077 GiB/s : time 31.773 seconds [INVALID]
+ERROR INVALID (src/main.c:403) Runtime of phase (13.925310) is below stonewall time. This shouldn't happen!
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-easy-write       77.422680 kIOPS : time 13.925 seconds [INVALID]
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-hard-write        1.075435 GiB/s : time 32.548 seconds [INVALID]
+ERROR INVALID (src/main.c:403) Runtime of phase (20.895990) is below stonewall time. This shouldn't happen!
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-hard-write       50.286469 kIOPS : time 20.896 seconds [INVALID]
+[RESULT]                 find     1216.119689 kIOPS : time 1.650 seconds
+[RESULT]        ior-easy-read        0.632140 GiB/s : time 56.839 seconds
+[RESULT]     mdtest-easy-stat      170.456281 kIOPS : time 6.876 seconds
+[RESULT]        ior-hard-read        0.506648 GiB/s : time 69.070 seconds
+[RESULT]     mdtest-hard-stat      165.189840 kIOPS : time 7.063 seconds
+[RESULT]   mdtest-easy-delete       87.490235 kIOPS : time 12.966 seconds
+[RESULT]     mdtest-hard-read        4.294863 kIOPS : time 233.845 seconds
+[RESULT]   mdtest-hard-delete       79.029038 kIOPS : time 14.140 seconds
+[SCORE ] Bandwidth 0.790040 GiB/s : IOPS 89.063233 kiops : TOTAL 8.388296 [INVALID]
+
+The result files are stored in the directory: /home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-1-30-0-POSIX

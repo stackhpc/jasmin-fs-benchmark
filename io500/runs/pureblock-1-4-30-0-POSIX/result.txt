@@ -1,0 +1,117 @@
+[run]
+procs           = 4
+version         = io500-isc22_v1
+config-hash     = 515C6493
+result-dir      = /home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX
+mode            = standard
+; START 2023-03-23 18:18:17
+; ERROR INVALID stonewall-time < 300s
+
+
+[ior-easy-write]
+t_start         = 2023-03-23 18:18:17
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1417976773 -k -e -o /data/azimuth/io500/pureblock-1-4-30-0-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 30 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/ior-easy-write.csv
+throughput-stonewall = 1.38
+; ERROR INVALID Runtime is smaller than expected minimum runtime
+score           = 1.224418
+t_delta         = 34.0205
+t_end           = 2023-03-23 18:18:51
+
+[mdtest-easy-write]
+t_start         = 2023-03-23 18:18:51
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -531798979 -N 1 -d /data/azimuth/io500/pureblock-1-4-30-0-POSIX/mdtest-easy -x /home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/mdtest-easy.stonewall -C -Y -W 30 --saveRankPerformanceDetails=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 159.771871
+; ERROR INVALID Runtime of phase (26.783430) is below stonewall time. This shouldn't happen!
+; ERROR INVALID Runtime is smaller than expected minimum runtime
+score           = 155.192678
+t_delta         = 26.7834
+t_end           = 2023-03-23 18:19:17
+
+[timestamp]
+t_start         = 2023-03-23 18:19:17
+t_delta         = 0.0019
+t_end           = 2023-03-23 18:19:17
+
+[ior-hard-write]
+t_start         = 2023-03-23 18:19:17
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1417966085 -k -e -o /data/azimuth/io500/pureblock-1-4-30-0-POSIX/ior-hard/file -O stoneWallingStatusFile=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 30 -a POSIX -O saveRankPerformanceDetailsCSV=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 0.98
+; ERROR INVALID Runtime is smaller than expected minimum runtime
+score           = 0.957953
+t_delta         = 33.3990
+t_end           = 2023-03-23 18:19:51
+
+[mdtest-hard-write]
+t_start         = 2023-03-23 18:19:51
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-531788291 -N 1 -F -d /data/azimuth/io500/pureblock-1-4-30-0-POSIX/mdtest-hard -x /home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/mdtest-hard.stonewall -C -Y -W 30 --saveRankPerformanceDetails=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 64.286816
+; ERROR INVALID Runtime is smaller than expected minimum runtime
+score           = 59.808558
+t_delta         = 33.6313
+t_end           = 2023-03-23 18:20:25
+
+[find]
+t_start         = 2023-03-23 18:20:25
+exe             = ./pfind /data/azimuth/io500/pureblock-1-4-30-0-POSIX -newer /home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 4
+found           = 73676
+total-files     = 5951061
+score           = 1505.851620
+t_delta         = 3.9563
+t_end           = 2023-03-23 18:20:28
+
+[ior-easy-read]
+t_start         = 2023-03-23 18:20:28
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1417976773 -k -e -o /data/azimuth/io500/pureblock-1-4-30-0-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/ior-easy-read.csv
+score           = 1.636120
+t_delta         = 25.4615
+t_end           = 2023-03-23 18:20:54
+
+[mdtest-easy-stat]
+t_start         = 2023-03-23 18:20:54
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -531798979 -N 1 -d /data/azimuth/io500/pureblock-1-4-30-0-POSIX/mdtest-easy -x /home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/mdtest-easy-stat.csv -a POSIX
+score           = 439.631028
+t_delta         = 10.1079
+t_end           = 2023-03-23 18:21:04
+
+[ior-hard-read]
+t_start         = 2023-03-23 18:21:04
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1417966085 -k -e -o /data/azimuth/io500/pureblock-1-4-30-0-POSIX/ior-hard/file -O stoneWallingStatusFile=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/ior-hard-read.csv
+score           = 0.657470
+t_delta         = 49.3711
+t_end           = 2023-03-23 18:21:53
+
+[mdtest-hard-stat]
+t_start         = 2023-03-23 18:21:53
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-531788291 -N 1 -F -d /data/azimuth/io500/pureblock-1-4-30-0-POSIX/mdtest-hard -x /home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/mdtest-hard-stat.csv -a POSIX
+score           = 397.540582
+t_delta         = 5.9179
+t_end           = 2023-03-23 18:21:59
+
+[mdtest-easy-delete]
+t_start         = 2023-03-23 18:21:59
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -531798979 -N 1 -d /data/azimuth/io500/pureblock-1-4-30-0-POSIX/mdtest-easy -x /home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/mdtest-easy-delete.csv -a POSIX
+score           = 162.573256
+t_delta         = 27.8893
+t_end           = 2023-03-23 18:22:27
+
+[mdtest-hard-read]
+t_start         = 2023-03-23 18:22:27
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-531788291 -N 1 -F -d /data/azimuth/io500/pureblock-1-4-30-0-POSIX/mdtest-hard -x /home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/mdtest-hard-read.csv -a POSIX
+score           = 15.160947
+t_delta         = 129.7002
+t_end           = 2023-03-23 18:24:37
+
+[mdtest-hard-delete]
+t_start         = 2023-03-23 18:24:37
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-531788291 -N 1 -F -d /data/azimuth/io500/pureblock-1-4-30-0-POSIX/mdtest-hard -x /home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-4-30-0-POSIX/mdtest-hard-delete.csv -a POSIX
+score           = 115.052058
+t_delta         = 19.0106
+t_end           = 2023-03-23 18:24:56
+
+[SCORE]
+MD              = 169.851563
+BW              = 1.059842
+SCORE           = 13.416999 [INVALID]
+hash            = A5D187BB
+; END 2023-03-23 18:24:56

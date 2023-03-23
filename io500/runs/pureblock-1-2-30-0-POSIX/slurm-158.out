@@ -1,0 +1,30 @@
+SLURM_JOB_ID: 158
+dimensions: {"nodes": 1, "ntasks_per_node": 2, "filesystem": {"name": "pureblock", "mountpoint": "/data"}, "stonewall": 30, "iters": 0, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: fs-perf-dev-compute-0
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+ERROR INVALID (src/phase_dbg.c:13) stonewall-time < 300s
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-easy-write        1.134745 GiB/s : time 33.339 seconds [INVALID]
+ERROR INVALID (src/main.c:403) Runtime of phase (15.786137) is below stonewall time. This shouldn't happen!
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-easy-write      135.344151 kIOPS : time 15.786 seconds [INVALID]
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]       ior-hard-write        1.062987 GiB/s : time 32.979 seconds [INVALID]
+ERROR INVALID (src/main.c:403) Runtime of phase (27.169903) is below stonewall time. This shouldn't happen!
+ERROR INVALID (src/main.c:409) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-hard-write       76.449595 kIOPS : time 27.170 seconds [INVALID]
+[RESULT]                 find     2383.967306 kIOPS : time 1.682 seconds
+[RESULT]        ior-easy-read        1.013781 GiB/s : time 37.312 seconds
+[RESULT]     mdtest-easy-stat      324.626633 kIOPS : time 7.171 seconds
+[RESULT]        ior-hard-read        0.460874 GiB/s : time 76.045 seconds
+[RESULT]     mdtest-hard-stat      319.534918 kIOPS : time 7.269 seconds
+[RESULT]   mdtest-easy-delete      167.558131 kIOPS : time 13.872 seconds
+[RESULT]     mdtest-hard-read        8.202338 kIOPS : time 244.843 seconds
+[RESULT]   mdtest-hard-delete      144.349199 kIOPS : time 15.720 seconds
+[SCORE ] Bandwidth 0.866439 GiB/s : IOPS 163.377361 kiops : TOTAL 11.897756 [INVALID]
+
+The result files are stored in the directory: /home/azimuth/jasmin-fs-benchmark/io500/runs/pureblock-1-2-30-0-POSIX
+[1679591307.363516] [fs-perf-dev-compute-0:6381 :0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x117ee00 was not matched
