@@ -1,0 +1,111 @@
+[run]
+procs           = 160
+version         = io500-isc22_v1
+config-hash     = 892416F5
+result-dir      = /home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX
+mode            = standard
+; START 2023-03-23 10:07:14
+
+
+[ior-easy-write]
+t_start         = 2023-03-23 10:07:14
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1418009866 -k -e -o /gws/pw/j07/perf_testing3/steveb/io500/panasas-10-16-300-0-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/ior-easy-write.csv
+throughput-stonewall = 28.16
+score           = 18.418785
+t_delta         = 518.0141
+t_end           = 2023-03-23 10:15:52
+
+[mdtest-easy-write]
+t_start         = 2023-03-23 10:15:52
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -531832072 -N 1 -d /gws/pw/j07/perf_testing3/steveb/io500/panasas-10-16-300-0-POSIX/mdtest-easy -x /home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 5.993920
+score           = 5.787050
+t_delta         = 314.4662
+t_end           = 2023-03-23 10:21:06
+
+[timestamp]
+t_start         = 2023-03-23 10:21:06
+t_delta         = 0.0014
+t_end           = 2023-03-23 10:21:06
+
+[ior-hard-write]
+t_start         = 2023-03-23 10:21:06
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1417999178 -k -e -o /gws/pw/j07/perf_testing3/steveb/io500/panasas-10-16-300-0-POSIX/ior-hard/file -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 0.06
+score           = 0.062363
+t_delta         = 1524.3593
+t_end           = 2023-03-23 10:46:31
+
+[mdtest-hard-write]
+t_start         = 2023-03-23 10:46:31
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-531821384 -N 1 -F -d /gws/pw/j07/perf_testing3/steveb/io500/panasas-10-16-300-0-POSIX/mdtest-hard -x /home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 2.872500
+score           = 2.761078
+t_delta         = 316.5140
+t_end           = 2023-03-23 10:51:47
+
+[find]
+t_start         = 2023-03-23 10:51:47
+exe             = ./pfind /gws/pw/j07/perf_testing3/steveb/io500/panasas-10-16-300-0-POSIX -newer /home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 160
+found           = 21980
+total-files     = 2684641
+score           = 356.193643
+t_delta         = 7.5421
+t_end           = 2023-03-23 10:51:55
+
+[ior-easy-read]
+t_start         = 2023-03-23 10:51:55
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1418009866 -k -e -o /gws/pw/j07/perf_testing3/steveb/io500/panasas-10-16-300-0-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/ior-easy-read.csv
+score           = 11.240757
+t_delta         = 848.7699
+t_end           = 2023-03-23 11:06:03
+
+[mdtest-easy-stat]
+t_start         = 2023-03-23 11:06:03
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -531832072 -N 1 -d /gws/pw/j07/perf_testing3/steveb/io500/panasas-10-16-300-0-POSIX/mdtest-easy -x /home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/mdtest-easy-stat.csv -a POSIX
+score           = 51.044282
+t_delta         = 36.6005
+t_end           = 2023-03-23 11:06:40
+
+[ior-hard-read]
+t_start         = 2023-03-23 11:06:40
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1417999178 -k -e -o /gws/pw/j07/perf_testing3/steveb/io500/panasas-10-16-300-0-POSIX/ior-hard/file -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/ior-hard-read.csv
+score           = 0.129426
+t_delta         = 734.5035
+t_end           = 2023-03-23 11:18:55
+
+[mdtest-hard-stat]
+t_start         = 2023-03-23 11:18:55
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-531821384 -N 1 -F -d /gws/pw/j07/perf_testing3/steveb/io500/panasas-10-16-300-0-POSIX/mdtest-hard -x /home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/mdtest-hard-stat.csv -a POSIX
+score           = 35.040229
+t_delta         = 25.9611
+t_end           = 2023-03-23 11:19:21
+
+[mdtest-easy-delete]
+t_start         = 2023-03-23 11:19:21
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -531832072 -N 1 -d /gws/pw/j07/perf_testing3/steveb/io500/panasas-10-16-300-0-POSIX/mdtest-easy -x /home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/mdtest-easy-delete.csv -a POSIX
+score           = 6.575049
+t_delta         = 279.5553
+t_end           = 2023-03-23 11:24:00
+
+[mdtest-hard-read]
+t_start         = 2023-03-23 11:24:00
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-531821384 -N 1 -F -d /gws/pw/j07/perf_testing3/steveb/io500/panasas-10-16-300-0-POSIX/mdtest-hard -x /home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/mdtest-hard-read.csv -a POSIX
+score           = 13.353348
+t_delta         = 66.2685
+t_end           = 2023-03-23 11:25:06
+
+[mdtest-hard-delete]
+t_start         = 2023-03-23 11:25:06
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-531821384 -N 1 -F -d /gws/pw/j07/perf_testing3/steveb/io500/panasas-10-16-300-0-POSIX/mdtest-hard -x /home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/home/users/steveb/io500-lotus/io500/runs/panasas-10-16-300-0-POSIX/mdtest-hard-delete.csv -a POSIX
+score           = 2.512806
+t_delta         = 347.7004
+t_end           = 2023-03-23 11:30:54
+
+[SCORE]
+MD              = 14.754450
+BW              = 1.136975
+SCORE           = 4.095783
+hash            = 2AD1E5EA
+; END 2023-03-23 11:31:09

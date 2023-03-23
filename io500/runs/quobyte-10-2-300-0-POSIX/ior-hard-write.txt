@@ -1,0 +1,30 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Mar 22 21:21:41 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1418243901 -k -e -o /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-10-2-300-0-POSIX/ior-hard/file -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/quobyte-10-2-300-0-POSIX/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/quobyte-10-2-300-0-POSIX/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux host823.jc.rl.ac.uk
+TestID              : 0
+StartTime           : Wed Mar 22 21:21:41 2023
+Path                : /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-10-2-300-0-POSIX/ior-hard/file
+FS                  : 18.2 TiB   Used FS: 31.4%   Inodes: 8796093022208.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-10-2-300-0-POSIX/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 20
+clients per node    : 2
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 8.55 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 

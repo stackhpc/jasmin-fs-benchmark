@@ -8,7 +8,7 @@
 #SBATCH --ntasks-per-node=16
 #SBATCH --dependency=singleton
 #SBATCH --time=4:0:0
-#SBATCH --begin=18:00
+
 set -euo pipefail
 
 export IO500_CONTAINER_TAG="bb942db"

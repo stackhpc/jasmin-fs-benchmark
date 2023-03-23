@@ -1,0 +1,41 @@
+SLURM_JOB_ID: 46024991
+dimensions: {"nodes": 10, "ntasks_per_node": 2, "filesystem": {"name": "pure", "mountpoint": "/work/stackhpc-pure/"}, "stonewall": 300, "iters": 1, "time": "4:0:0", "ior_api": "POSIX"}
+SLURM_JOB_NODELIST: host[823-832]
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+INFO:    Using cached SIF image
+IO500 version io500-isc22_v1 (standard)
+[RESULT]       ior-easy-write        1.878575 GiB/s : time 1023.336 seconds
+[RESULT]    mdtest-easy-write       19.517190 kIOPS : time 314.661 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.327963 GiB/s : time 1126.297 seconds
+[RESULT]    mdtest-hard-write        2.618164 kIOPS : time 307.787 seconds
+[RESULT]                 find        1.914838 kIOPS : time 3616.041 seconds
+[RESULT]        ior-easy-read       10.752762 GiB/s : time 178.790 seconds
+[RESULT]     mdtest-easy-stat       59.416359 kIOPS : time 104.034 seconds
+[RESULT]        ior-hard-read        0.399177 GiB/s : time 925.367 seconds
+[RESULT]     mdtest-hard-stat       35.990322 kIOPS : time 23.329 seconds
+[RESULT]   mdtest-easy-delete       15.479998 kIOPS : time 397.263 seconds
+[RESULT]     mdtest-hard-read       14.160769 kIOPS : time 57.734 seconds
+[RESULT]   mdtest-hard-delete        2.090995 kIOPS : time 385.429 seconds
+[SCORE ] Bandwidth 1.275219 GiB/s : IOPS 9.947893 kiops : TOTAL 3.561704
+
+The result files are stored in the directory: /home/users/steveb/io500-lotus/io500/runs/pure-10-2-300-1-POSIX
+[1679518365.147389] [host823:172012:0]       tag_match.c:62   UCX  WARN  unexpected tag-receive descriptor 0x2451f80 was not matched

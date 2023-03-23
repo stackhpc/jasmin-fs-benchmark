@@ -1,11 +1,11 @@
 IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
-Began               : Sat Mar 11 07:28:01 2023
-Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1419569908 -k -e -o /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-10-2-300-0-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/quobyte-10-2-300-0-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/quobyte-10-2-300-0-POSIX/ior-easy-write.csv
+Began               : Wed Mar 22 20:53:41 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1418254589 -k -e -o /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-10-2-300-0-POSIX/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/steveb/io500-lotus/io500/runs/quobyte-10-2-300-0-POSIX/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/users/steveb/io500-lotus/io500/runs/quobyte-10-2-300-0-POSIX/ior-easy-write.csv
 Machine             : Linux host823.jc.rl.ac.uk
 TestID              : 0
-StartTime           : Sat Mar 11 07:28:01 2023
+StartTime           : Wed Mar 22 20:53:41 2023
 Path                : /gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-10-2-300-0-POSIX/ior-easy/ior_file_easy.00000000
-FS                  : 9.1 TiB   Used FS: 29.4%   Inodes: 8796093022208.0 Mi   Used Inodes: 0.0%
+FS                  : 18.2 TiB   Used FS: 47.8%   Inodes: 8796093022208.0 Mi   Used Inodes: 0.0%
 
 Options: 
 api                 : POSIX
@@ -28,12 +28,13 @@ stonewallingTime    : 300
 stoneWallingWearOut : 1
 
 Results: 
+WARNING: The file "/gws/nopw/j04/perf_testing3/stackhpc/steveb/io500/quobyte-10-2-300-0-POSIX/ior-easy/ior_file_easy.00000000" exists already and will be overwritten
 
 access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
 ------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
-stonewalling pairs accessed min: 30113 max: 123489 -- min data: 58.8 GiB mean data: 133.8 GiB time: 300.4s
+stonewalling pairs accessed min: 6913 max: 45761 -- min data: 13.5 GiB mean data: 36.9 GiB time: 305.6s
 WARNING: Expected aggregate file size       = 208037478400000
-WARNING: Stat() of aggregate file size      = 5179504066560
-WARNING: Using actual aggregate bytes moved = 5179504066560
+WARNING: Stat() of aggregate file size      = 1919355453440
+WARNING: Using actual aggregate bytes moved = 1919355453440
 WARNING: Maybe caused by deadlineForStonewalling
-write     8276       4140       0.000103    10158080000 2048.00    0.056853   596.60     0.164180   596.82     0   
+write     1348.64    674.33     0.000274    10158080000 2048.00    0.018722   1357.23    0.004970   1357.25    0   
