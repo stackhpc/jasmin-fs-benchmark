@@ -161,3 +161,4 @@ INFO:    Using cached SIF image
 INFO:    Using cached SIF image
 INFO:    Using cached SIF image
 INFO:    Using cached SIF image
+slurmstepd: error: *** JOB 46085830 ON host823 CANCELLED AT 2023-03-23T15:32:00 DUE TO TIME LIMIT ***
