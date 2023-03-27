@@ -1,3 +1,4 @@
+**/.DS_STORE
 # Don't track benchmark runs by default
 s3-warp/benchmark-runs/
 # Ignore slurm output file
