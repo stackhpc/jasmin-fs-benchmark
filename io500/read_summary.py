@@ -83,7 +83,7 @@ def df_from_pattern(pattern):
     df = None
     units = {}
     for path in glob.glob(pattern):
-        print('loading %s' % path)
+        # print('loading %s' % path)
         rows = []
         run_dir = os.path.dirname(path)
         results = load_run_dimensions(run_dir)
