@@ -1,21 +1,17 @@
 ---
 
 ###
-# Notes:
+# Working Notes:
 # - Small node + thread counts with large file sizes cause issues due to long upload times
 # - Large thread counts cause issues with small sample sizes
-# - Small object counts + large durations cause issues with large output file sizes (due to too many samples)
+# - Small object counts + large durations cause issues with large output file sizes (due to too API requests)
 # - Large object counts + small durations cause issues with small sample sizes
-# - For 10KiB objects we need minimum 500 objects uploaded per thread in order to combine PUT & GET benchmarks with sufficient PUT sample size
 # 
-# From analysing cases where `warp analyze` returns 'too few samples' it seems that this mainly occurs under the following conditions:
-# - multi-threaded uploads
-# - small file sizes
-# - one or a handful of individual uploads are particularly slow
-# This last point is key because `warp analyze` *starts* its analysis time once the first request of each thread is completed
-# and *stops* analysis after one thread has completed its final request. Therefore, if first request of one of the threads takes
-# particularly long and another thread finishes *all* its requests before this slow thread has completed all its requests, the
-# effective time window which `warp analyze` will consider is of length zero seconds.
+# From analysing cases where `warp analyze` returns 'too few samples', one example of where this might happen is in cases
+# where one or a handful of individual uploads are particularly slow. Since `warp analyze` *starts* its analysis time once
+# the first request of each thread is completed and *stops* analysis after one thread has completed its final request, if 
+# the first request of a thread takes particularly long and another thread finishes *all* its requests before this slow 
+# thread has completed a single request, the effective time window which `warp analyze` will consider is of length zero seconds.
 # This means that the single node, single thread case is particularly special since it is the only one where there is guaranteed
 # to be a sufficient number of requests between the first and last request of the sole thread.
 
@@ -39,7 +35,7 @@
       threads_per_node: [1]
       obj_sizes_and_counts: ['10KiB-10000', '10MiB-1000', '100MiB-250', '1GiB-50']
       duration: ['300s']
-      tag: [v2] #Add tag to distinguish repeated runs
+      # tag: [v1, v2] #Add arbitrary tag trigger repeated runs if desired
     # smatrix_dryrun: true
 
   tasks:
