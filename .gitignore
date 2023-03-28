@@ -1,0 +1,14 @@
+**/.DS_STORE
+**.vscode/
+# Don't track benchmark runs by default
+s3-warp/benchmark-runs/
+# Ignore slurm output file
+s3-warp/*.out
+# Ignore singularity images
+**.sif
+# Ignore install ansible roles
+ansible/
+# Ignore notebook checkpoints
+**/*.ipynb_checkpoints/
+# Ingore env-specific secrets
+**.env

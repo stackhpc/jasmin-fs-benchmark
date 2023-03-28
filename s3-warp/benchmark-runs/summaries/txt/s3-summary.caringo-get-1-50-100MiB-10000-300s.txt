@@ -1,0 +1,19 @@
+
+----------------------------------------
+Operation: PUT. Concurrency: 50
+* Average: 801.09 MiB/s, 8.01 obj/s
+
+Throughput, split into 246 x 5s:
+ * Fastest: 849.7MiB/s, 8.50 obj/s
+ * 50% Median: 811.0MiB/s, 8.11 obj/s
+ * Slowest: 620.7MiB/s, 6.21 obj/s
+
+----------------------------------------
+Operation: GET. Concurrency: 50
+* Average: 1689.69 MiB/s, 16.90 obj/s
+
+Throughput, split into 291 x 1s:
+ * Fastest: 2045.4MiB/s, 20.45 obj/s
+ * 50% Median: 1678.0MiB/s, 16.78 obj/s
+ * Slowest: 1507.9MiB/s, 15.08 obj/s
+Aggregated data saved to ./benchmark-runs/s3-summary.caringo-get-1-50-100MiB-10000-300s.csv

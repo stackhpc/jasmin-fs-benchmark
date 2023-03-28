@@ -1,0 +1,49 @@
+---
+
+###
+# Working Notes:
+# - Small node + thread counts with large file sizes cause issues due to long upload times
+# - Large thread counts cause issues with small sample sizes
+# - Small object counts + large durations cause issues with large output file sizes (due to too API requests)
+# - Large object counts + small durations cause issues with small sample sizes
+# 
+# From analysing cases where `warp analyze` returns 'too few samples', one example of where this might happen is in cases
+# where one or a handful of individual uploads are particularly slow. Since `warp analyze` *starts* its analysis time once
+# the first request of each thread is completed and *stops* analysis after one thread has completed its final request, if 
+# the first request of a thread takes particularly long and another thread finishes *all* its requests before this slow 
+# thread has completed a single request, the effective time window which `warp analyze` will consider is of length zero seconds.
+# This means that the single node, single thread case is particularly special since it is the only one where there is guaranteed
+# to be a sufficient number of requests between the first and last request of the sole thread.
+
+- hosts: localhost
+  gather_facts: no
+
+  vars:
+    partition: stackhpc
+    account: stackhpc
+    creds: "{{ lookup('file', './creds.env') }}"
+    max_job_time: "4:00:00"
+    max_storage_capacity: 20TB
+    smatrix_template_src: "s3-warp.sh.j2"
+    smatrix_template_dest_dir: ./benchmark-runs
+    smatrix_template_basename: s3
+    smatrix_dimensions:
+      # Run all benchmarks
+      storage: ["pure", "quobyte", "caringo"]
+      benchmark_type: ["get"]      
+      nodes: [1, 2, 5]
+      threads_per_node: [1]
+      obj_sizes_and_counts: ['10KiB-10000', '10MiB-1000', '100MiB-250', '1GiB-50']
+      duration: ['300s']
+      # tag: [v1, v2] #Add arbitrary tag trigger repeated runs if desired
+    # smatrix_dryrun: true
+
+  tasks:
+  
+    - name: Run sanity checks
+      import_tasks:
+        file: sanity-checks.yml
+
+    - name: Run object storage benchmarks
+      import_role:
+        name: smatrix
