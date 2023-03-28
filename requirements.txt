@@ -1,2 +1,6 @@
 ansible
 pandas
+jupyter
+notebook
+numpy
+matplotlib
