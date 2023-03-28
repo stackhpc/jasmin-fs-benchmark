@@ -1,0 +1,55 @@
+- hosts: localhost
+  become: no
+  gather_facts: no
+  vars:
+    account: stackhpc
+    partition: stackhpc
+    smatrix_template_src: '*.j2'
+    smatrix_dimensions:
+      nodes: [1] #, 2, 10]
+      ntasks_per_node: [1, 2, 4, 8] #16] #, 32]
+      filesystem:
+        - name: pureblock
+          mountpoint: /data
+        # - name: panasas
+        #   mountpoint: /gws/pw/j07/perf_testing3 # exclusive use
+        # - name: pure
+        #   mountpoint: /work/stackhpc-pure/
+        # - name: quobyte
+        #   mountpoint: /gws/nopw/j04/perf_testing3/stackhpc
+      stonewall: [30]
+      iters: [0] #, 1, 2]
+      time: ['4:0:0']
+      ior_api: ['POSIX'] #, 'MPIIO']
+    run_description: "{{ [item.filesystem.name, item.nodes, item.ntasks_per_node, item.stonewall, item.iters, item.ior_api] | join('-') }}" # only want fs.name, don't want time, git_describe
+    smatrix_template_suffix: ".{{ run_description }}"
+    smatrix_template_dest_dir: "{{ lookup('env', 'PWD') }}/io500/runs/{{ run_description }}"
+    smatrix_submit_src: "{{ smatrix_template_dest_dir }}/io500{{smatrix_template_suffix }}.sh"
+    smatrix_output_path: "{{ smatrix_template_dest_dir }}/result_summary.txt"
+    smatrix_exclude:
+      # MPI on quobyte crashed the nodes
+      - filesystem:
+          name: quobyte
+          mountpoint: /gws/nopw/j04/perf_testing3/stackhpc
+        ior_api: 'MPIIO'
+      - nodes: 10
+        ior_api: MPIIO
+      # only use 2 and 16 processes on 2x nodes
+      - nodes: 2
+        ntasks_per_node: 1
+      - nodes: 2
+        ntasks_per_node: 4
+      - nodes: 2
+        ntasks_per_node: 32
+      # only use 2 and 16 processes on 10x nodes
+      - nodes: 10
+        ntasks_per_node: 1
+      - nodes: 10
+        ntasks_per_node: 4
+      - nodes: 10
+        ntasks_per_node: 32
+
+  tasks:
+    - name: Run test matrix
+      import_role:
+        name: stackhpc.smatrix
