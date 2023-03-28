@@ -1,0 +1,49 @@
+#!/usr/bin/bash
+#SBATCH --job-name={{ smatrix_template_basename }}-{{ item.storage }}
+#SBATCH --time={{ max_job_time }}
+#SBATCH --nodes={{ item.nodes }}
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task={{ (1 + item.threads_per_node / 2) | int }}
+#SBATCH --dependency=singleton
+#SBATCH --partition={{ partition }}
+#SBATCH --account={{ account }}
+
+echo 'Job parameters: {{ item }}'
+OBJ_SIZE={{ item.obj_sizes_and_counts | split("-") | first }}
+OBJ_PER_NODE={{ (item.obj_sizes_and_counts | split("-") | last | int / item.nodes) | int }}
+
+# Set S3 credentials as env vars
+source ./creds.env
+
+# Pull in docker image and build singularity image from it
+CONTAINER_FILENAME=warp.sif
+if [[ ! -f $CONTAINER_FILENAME ]]; then
+    singularity build $CONTAINER_FILENAME docker://ghcr.io/stackhpc/s3-warp-singularity:latest
+fi
+
+# Start a warp client on each job node
+srun --spread-job singularity run warp.sif client --no-color &
+
+#Unpack list of nodes which have a warp client running
+CLIENT_NODES=$(scontrol show hostname $SLURM_JOB_NODELIST | paste -d, -s)
+echo Client nodes: $CLIENT_NODES
+
+# Trigger benchmark run on all clients
+echo "Starting benchmarking process ($(date))"
+OUTPUT_FILE={{ smatrix_template_dest_dir }}/{{ smatrix_template_basename }}-full{{ smatrix_template_suffix }}
+singularity run warp.sif {{ item.benchmark_type }} \
+    --access-key ${{ item.storage | upper }}_ACCESS_KEY \
+    --secret-key ${{ item.storage | upper }}_SECRET_KEY \
+    --host ${{ item.storage | upper }}_ENDPOINT \
+    --concurrent {{ item.threads_per_node }} \
+    --objects $OBJ_PER_NODE \
+    --obj.size $OBJ_SIZE \
+    --benchdata $OUTPUT_FILE \
+    --no-color \
+    --duration {{ item.duration }} \
+    --warp-client $CLIENT_NODES
+
+# Run warp analysis tool on output file
+echo "Writing post-benchmark analysis to disk ($(date))"
+SUMMARY_FILE={{ smatrix_template_dest_dir }}/{{ smatrix_template_basename }}-summary{{ smatrix_template_suffix }}
+singularity run warp.sif analyze $OUTPUT_FILE.csv.zst --analyze.out $SUMMARY_FILE.csv > $SUMMARY_FILE.txt

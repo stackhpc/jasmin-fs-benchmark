@@ -1,0 +1,13 @@
+# Tasks to be imported into run-*.yml
+
+- name: Fail if storage capacity breached
+  fail:
+    msg: "Total storage capacity required for run (= obj_size * nodes * objects_per_node) exceeds max_storage_capacity_TB"
+  when: (max_storage_capacity is defined) and (item | split('-') | first | regex_replace('iB', 'B') | human_to_bytes / 1024**4) * (item | split('-') | last | float) > (max_storage_capacity | human_to_bytes / 1024**4)
+  loop: "{{ smatrix_dimensions.obj_sizes_and_counts }}"
+
+- name: Fail if required credentials are not present in env file
+  fail:
+    msg: No credentials for object store '{{ item }}' found in creds.env
+  when: item | upper + '_ENDPOINT=' not in creds
+  loop: "{{ smatrix_dimensions.storage }}"

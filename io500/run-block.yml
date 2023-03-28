@@ -2,6 +2,8 @@
   become: no
   gather_facts: no
   vars:
+    account: stackhpc
+    partition: stackhpc
     smatrix_template_src: '*.j2'
     smatrix_dimensions:
       nodes: [1]
