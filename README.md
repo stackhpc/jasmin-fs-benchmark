@@ -48,7 +48,7 @@ A more interactive analysis with code for producing relevant summary plots can b
 
 # Object Storage
 
-Configure the desired run parameters in `s3-warp/run-single-thread.yml` or `s3-warp/run-multi-thread.yml` then
+Configure the desired run parameters in `s3-warp/run-single-thread.yml` or `s3-warp/run-multi-thread.yml` (in particular, the `partition` and `account` variables for the desired slurm queue) then
 
 ```
 # from repo root:
