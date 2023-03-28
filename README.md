@@ -41,6 +41,7 @@ A more interactive analysis with code for producing relevant summary plots can b
 
 **Notes**:
 
+- The Slurm `account` and `partition` default to `stackhpc`. To change this modify the appropriate variables in `io500/run.yml`.
 - `sbatch` output goes to `io500/slurm-<jobid>*.out` (NB: From Slurm's point of view, the submission directory is the playbook directory, which is perhaps unexpected)
 - Everything else (templates, outputs) goes to `/runs/`
 - For summary of summary results, see `io500/table.txt`
