@@ -2,8 +2,8 @@
 
 #SBATCH --job-name={{ item.filesystem.name }}
 #SBATCH --output="{{ smatrix_template_dest_dir }}/slurm-%j.out"
-#SBATCH --account=stackhpc
-#SBATCH --partition=stackhpc
+#SBATCH --account="{{ account }}"
+#SBATCH --partition="{{ partition }}"
 #SBATCH --nodes={{ item.nodes }}
 #SBATCH --ntasks-per-node={{ item.ntasks_per_node }}
 #SBATCH --dependency=singleton
